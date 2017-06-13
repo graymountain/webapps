@@ -1,0 +1,67 @@
+body {
+    margin: 0;    
+    font-family: sans-serif;
+}
+
+header {
+    height: 75px;
+    box-shadow: 0px 2px 10px lightgray;
+}
+
+header h2 {
+    padding-top: 5px;
+    margin: auto;
+    text-align: center;
+}
+
+header p {
+    text-align: center;
+    margin: 7.5px;
+}
+
+div.img {
+    display: block;
+    overflow: hidden;
+    position: relative;
+}
+
+img {
+    width: 150vh;
+    display: block;
+    margin: 20px auto;
+}
+
+.pdf {
+    height: 75px;
+    width: 100%;
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+    height: 75px;
+    box-shadow: 0px -2px 10px lightgray;
+}
+
+.pdf a {
+    font-size: 18px;
+    position: absolute;
+    width: 160px;
+    margin: 20px -80px;
+    padding: 5px;
+    color: black;
+    text-decoration: none;
+    border: 1px solid;
+    border-radius: 3px;    
+    -webkit-transition-property: all;    
+    transition-property: all;
+    -webkit-transition-duration: .3s;
+    transition-duration: .3s;
+}
+
+.pdf a:hover {
+    color: white;
+    background-color: lightskyblue;
+    -webkit-transition-property: all;
+    transition-property: all;
+    -webkit-transition-duration: .3s;
+    transition-duration: .3s;
+}
