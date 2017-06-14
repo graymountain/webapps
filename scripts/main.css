@@ -12,6 +12,8 @@ section h2 {
     padding-bottom: 5px;
 }
 
+
+/*Pseudo Classes*/
 .button {
     background-color: #f1f1f1;
     text-align: center;
@@ -71,7 +73,7 @@ section h2 {
     -webkit-transition-property: all;
     transition-property: all;
     -webkit-transition-duration: .3s;
-    transition-duration: .3s;    
+    transition-duration: .3s;
 }
 
 .masterButton:active {
@@ -83,6 +85,7 @@ section h2 {
     -webkit-transition-duration: .3s;
     transition-duration: .3s;
 }
+
 
 /* Controlling the Width of Content*/
 
@@ -396,7 +399,7 @@ ul.tab li a:focus,
     -webkit-transition-property: all;
     transition-property: all;
     -webkit-transition-duration: .3s;
-    transition-duration: .3s;    
+    transition-duration: .3s;
 }
 
 .rows ul li:active {
@@ -405,7 +408,7 @@ ul.tab li a:focus,
     -webkit-transition-property: all;
     transition-property: all;
     -webkit-transition-duration: .3s;
-    transition-duration: .3s;    
+    transition-duration: .3s;
 }
 
 /* Back to Top Image */
