@@ -88,13 +88,11 @@ section h2 {
 
 
 /* Controlling the Width of Content*/
-
 nav,
 section {
     width: 75%;
     margin: auto;
 }
-
 
 /* Navigation Bar */
 
