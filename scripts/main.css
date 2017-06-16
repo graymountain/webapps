@@ -122,6 +122,19 @@ section {
 }
 
 
+/*Universal Selectors*/
+.squareBullets ul li {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    list-style-type: none;
+    margin: 5px 5px 5px auto;
+}
+
+.squareBullets li {
+    list-style-type: square;
+}
+
 /* Menu */
 
 #nav-bar ul {
@@ -225,6 +238,7 @@ ul.tab {
     border: 1px solid #ccc;
     background-color: #f1f1f1;
     box-shadow: 3px 3px 5px lightgray;
+    display: inline-flex;
 }
 
 
@@ -354,13 +368,6 @@ ul.tab li a:focus,
     padding: 0;
 }
 
-#drafting-system ul li ul li {
-    display: -webkit-inline-box;
-    display: -ms-inline-flexbox;
-    display: inline-flex;
-    list-style-type: none;
-    margin: 5px 5px 5px auto;
-}
 
 /* Tutorials */
 
