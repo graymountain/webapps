@@ -3,1315 +3,1232 @@
 <html lang="en">
 
 <head>
-  <meta charset="utf-8" />
-  <!-- Following is motly useful for the mobile devices. -->
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>MSA Central</title>
-  <link rel="icon" type="image/png" href="data/msa-logo/msa-logo.jpg">
-  <link rel="stylesheet" href="scripts/main.css">
-  <!--[if lt IE 9]>
+    <meta charset="utf-8" />
+    <!-- Following is motly useful for the mobile devices. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MSA Central</title>
+    <link rel="icon" type="image/png" href="data/msa-logo/msa-logo.jpg">
+    <link rel="stylesheet" href="scripts/main.css">
+    <!--[if lt IE 9]>
 		<script src="scripts/html5shiv.js></scri<p></p>pt>
 		<![endif]-->
-  <script type="text/javascript" src="scripts/toggle_menu.js"></script>
+    <script type="text/javascript" src="scripts/toggle_menu.js"></script>
+    <script src="scripts/jquery-3.2.1.min.js"></script>
 
 </head>
 
 <body id="body">
 
-  <!-- This is Navigation Bar-->
-  <header id="nav-bar">
-    <nav>
-      <img src="Data/msa-logo/msa-logo.jpg">
-      <h2>MSA Central</h2>
-      <ul>
-        <li id="go-to" onclick="openMenu()">Menu
-          <ul id="drop-down">
-            <li> <a href="#firm">Firm</a> </li>
-            <li> <a href="#policies">Policies &amp; Guidelines</a> </li>
-            <li> <a href="#folder-system">Folder System</a> </li>
-            <li> <a href="#doc-standard">Document Standard</a> </li>
-            <li> <a href="#cad-standard">AutoCAD Standard</a> </li>
-            <li> <a href="#drafting-system">Drafting System</a> </li>
-            <li> <a href="#checklists">Checklists</a> </li>
-            <li> <a href="#design-basis">Design Basis Approach</a> </li>
-            <li> <a href="#email-etiquette">Email Etiquette</a> </li>
-            <li> <a href="#asana-workflow">Asana Workflow</a> </li>
-            <li> <a href="#tutorials">Tutorials</a> </li>
-            <li> <a href="#faq">FAQ</a> </li>
-          </ul>
-        </li>
-      </ul>
-    </nav>
-  </header>
+    <!-- This is Navigation Bar-->
+    <header id="nav-bar">
+        <nav>
+            <img src="Data/msa-logo/msa-logo.jpg">
+            <h2>MSA Central</h2>
+            <ul>
+                <li id="go-to" onclick="openMenu()">Menu
+                    <ul id="drop-down">
+                        <li> <a href="#firm">Firm</a> </li>
+                        <li> <a href="#policies">Policies &amp; Guidelines</a> </li>
+                        <li> <a href="#folder-system">Folder System</a> </li>
+                        <li> <a href="#doc-standard">Document Standard</a> </li>
+                        <li> <a href="#cad-standard">AutoCAD Standard</a> </li>
+                        <li> <a href="#drafting-system">Drafting System</a> </li>
+                        <li> <a href="#checklists">Checklists</a> </li>
+                        <li> <a href="#design-basis">Design Basis Approach</a> </li>
+                        <li> <a href="#email-etiquette">Email Etiquette</a> </li>
+                        <li> <a href="#asana-workflow">Asana Workflow</a> </li>
+                        <li> <a href="#tutorials">Tutorials</a> </li>
+                        <li> <a href="#faq">FAQ</a> </li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
 
-  <!-- This is Main Content-->
-  <article>
+    <!-- This is Main Content-->
+    <article>
 
-    <section id="firm">
-      <header>
-        <h2>The Firm</h2>
-      </header>
-      <p>Mamta Shah &amp; Associates is a team of architects, engineers, and designers offering concept to post-construction services in various sectors. The firm works at the intersection of creative expression and pragmatism for project delivery of high
-        standards.
-        <br />To know more, please <a href="http://www.msain.com/" target="_blank">Click here</a>.</p>
-    </section>
+        <section id="firm">
+            <header>
+                <h2>The Firm</h2>
+            </header>
+            <p>Mamta Shah &amp; Associates is a team of architects, engineers, and designers offering concept to post-construction services in various sectors. The firm works at the intersection of creative expression and pragmatism for project delivery of high standards.
+                <br />To know more, please <a href="http://www.msain.com/" target="_blank">Click here</a>.</p>
+        </section>
 
-    <section id="policies">
-      <header>
-        <h2>Policies &amp; Guidelines</h2>
-      </header>
-      <div>
-        <ul class="tab">
-          <li><a href="javascript:void(0)" class="tablinks" onclick="openCity(event, 'working-hours')">Working Hours</a></li>
-          <li><a href="javascript:void(0)" class="tablinks" onclick="openCity(event, 'leave-policy')">Leave</a></li>
-          <li><a href="javascript:void(0)" class="tablinks" onclick="openCity(event, 'resource-use')">Resource Use</a></li>
-          <li><a href="javascript:void(0)" class="tablinks" onclick="openCity(event, 'data-security')">Data Security</a></li>
-          <li><a href="javascript:void(0)" class="tablinks" onclick="openCity(event, 'password-guidelines')">Password Guidelines</a></li>
-          <li><a href="javascript:void(0)" class="tablinks" onclick="openCity(event, 'confidentiality-agreement')">Confidentiality Agreement</a></li>
-          <li><a href="javascript:void(0)" class="tablinks" onclick="openCity(event, 'dpr-filling')">DPR Filling</a></li>
-          <li><a href="javascript:void(0)" class="tablinks" onclick="openCity(event, 'attire')">Attire</a></li>
-        </ul>
-        <div id="working-hours" class="tabcontent">
-          <p>Typical business hours at MSA are 9:30 A.M. to 6:30 P.M. Monday to Saturday. You are expected to report latest by 9:40 A.M. In case, you are not able to report at time due to some challenge, you are expected to convey the same to MSA admin via
-            a phone call along with your estimated time for arrival.You’re entitled to half an hour paid Lunch Break.</p>
-          <a href="Z:/MSA STANDARDS/Central/data/reference documents/List of Holidays_2017.pdf" class="button" target="_blank">List of Holidays</a>
-          <br>
-        </div>
-        <div id="leave-policy" class="tabcontent">
-          <div>
-            <h4>Entitlement of Leave</h4>
-            <p>All the employees are entitled for 24 leaves in the accounting year and hence 2 leaves will be credited to their account on first day of the month. Accounting year for the purpose of leave will be from January to December. In case if an employee
-              joins in the mid of the year then he will be entitled for leave on the prorata basis for the remaining period of the accounting year.
-              <br>
-              <br> Normally an employee can avail maximum leaves up to available leave balance credit up to that month. In case of continues leaves, intervening weekly offs/ holidays will be treated as leaves. All leaves has to be intimated, applied and
-              sanctioned in advance before going on leave.
+        <section id="policies">
+            <header>
+                <h2>Policies &amp; Guidelines</h2>
+            </header>
+            <div>
+                <ul class="tab">
+                    <li><a href="javascript:void(0)" class="tablinks" onclick="openCity(event, 'working-hours')">Working Hours</a></li>
+                    <li><a href="javascript:void(0)" class="tablinks" onclick="openCity(event, 'leave-policy')">Leave</a></li>
+                    <li><a href="javascript:void(0)" class="tablinks" onclick="openCity(event, 'resource-use')">Resource Use</a></li>
+                    <li><a href="javascript:void(0)" class="tablinks" onclick="openCity(event, 'data-security')">Data Security</a></li>
+                    <li><a href="javascript:void(0)" class="tablinks" onclick="openCity(event, 'password-guidelines')">Password Guidelines</a></li>
+                    <li><a href="javascript:void(0)" class="tablinks" onclick="openCity(event, 'confidentiality-agreement')">Confidentiality Agreement</a></li>
+                    <li><a href="javascript:void(0)" class="tablinks" onclick="openCity(event, 'dpr-filling')">DPR Filling</a></li>
+                    <li><a href="javascript:void(0)" class="tablinks" onclick="openCity(event, 'attire')">Attire</a></li>
+                </ul>
+                <div id="working-hours" class="tabcontent">
+                    <p>Typical business hours at MSA are 9:30 A.M. to 6:30 P.M. Monday to Saturday. You are expected to report latest by 9:40 A.M. In case, you are not able to report at time due to some challenge, you are expected to convey the same to MSA admin via a phone call along with your estimated time for arrival.You’re entitled to half an hour paid Lunch Break.</p>
+                    <a href="Z:/MSA STANDARDS/Central/data/reference documents/List of Holidays_2017.pdf" class="button" target="_blank">List of Holidays</a>
+                    <br>
+                </div>
+                <div id="leave-policy" class="tabcontent">
+                    <div>
+                        <h4>Entitlement of Leave</h4>
+                        <p>All the employees are entitled for 24 leaves in the accounting year and hence 2 leaves will be credited to their account on first day of the month. Accounting year for the purpose of leave will be from January to December. In case if an employee joins in the mid of the year then he will be entitled for leave on the prorata basis for the remaining period of the accounting year.
+                            <br>
+                            <br> Normally an employee can avail maximum leaves up to available leave balance credit up to that month. In case of continues leaves, intervening weekly offs/ holidays will be treated as leaves. All leaves has to be intimated, applied and sanctioned in advance before going on leave.
+                        </p>
+
+                        <h4>Leave without Pay</h4>
+                        <p>If an employee is taking more leaves than accumulated leave balance to his credit due to pressing requirement to go on leave to meet some unavoidable commitments; can be granted leave without pay (LWP) at the sole discretion of management. This is however granted only in exceptional cases. The implications of leave without pay are as follows.
+                            <br>
+                            <br>No salary and no monetary benefits whatsoever during the period of leave.
+                            <br>
+                            <br> An employee taking leave without prior sanction of leave will be treated on LWP. However in these cases reasons for absence and the circumstances under which the employee could not get his/her leave pre-sanctioned are first investigated and then the leave is regularized as paid leave at the sole discretion of management.
+                        </p>
+
+                        <h4>Compensatory Leave</h4>
+                        <p>All employees who are asked to work on weekly-off days or overstay on working days are entitled for compensatory leave. Compensatory leave will be credited as ¼ day for every completed two hours of work. No compensatory leave will be credited for instances of less than 2 hours. Such Compensatory leave will be merged with the leave entitlement. All the compensatory leave shall be entered in the Leave Card immediately on the next day of extra work and submitted for approval.</p>
+
+                        <h4>Short Leave</h4>
+                        <p>All the employees are expected to report to the duty on or before their stipulated reporting time in general but not later than 10 minutes after stipulated reporting time in exceptional circumstances.
+                            <br>
+                            <br>Management recognizes that due to issues related to vehicle or traffic rush an employee might get delayed beyond 10 minutes. Management will grant such delays in reporting to the duty beyond 10 minutes but not later than 30 minutes from stipulated reporting time as SHORT LEAVE. Such instances of grant of Short leaves are two instances per calendar month; third instance and onwards will treated as each of 1/4 leave.
+                            <br>
+                            <br>Management also recognizes need for leave to attend any personal work during working hours. Management will grant one instance per month of 1 hour leave per calendar month during working hours.
+                            <br>
+                            <br>Short leaves shall not be clubbed with each other or merged with any other leave.
+                            <br>
+                            <br>Short leaves shall not be treated as right to claim and hence Short Leaves will not be carried forward. All instances of Short leaves shall be recorded in the leave card and sanctioned by sanctioning authority.
+                        </p>
+
+                        <h4>Leave Accumulation &amp; Encashment</h4>
+                        <p>Accounting of leave is done based on calendar year from January to December. Leave can be accumulated and Leave Balance including Compensatory leave will be carry forwarded to next leave accounting year. At the end of Leave accounting year, employee whose accumulated leave balances exceeds 15 days can opt of encashment of leaves exceeding 15 days.
+                            <br>
+                            <br>The encashment is done at the rate of salary paid for the month of December of that year. Payment for encashed leave however shall be done by 31st January of the following year. If an employee do not opt for encashment, all accumulated balances will be carry forwarded to next Leave accounting year.
+                            <br>
+                            <br>Leave encashment request will not be entertained during mid of the year. Leave encashment request shall be forwarded as per attached format. </p>
+
+                        <h4>Sanctioning Authority</h4>
+                        <p>Leave Cards for each employee will be maintained separately and will be kept with administration department at all the times. Employees can collect their leave card from administration department for leave application and return back to administration after taking sanction of leave from Management. Leave will be sanctioned as per the balance and in line with the exigencies of the work.</p>
+                        <p>All employees are requested to co-operate and follow the company leave rules.</p>
+                    </div>
+                    <a href="Z:/MSA STANDARDS/Forms/Form - Leave Encashment Request.doc" class="button">Leave Encashment Request Form</a>
+                    <br>
+                </div>
+                <div id="resource-use" class="tabcontent">
+                    <p>You are expected to be responsible for the resource of MSA that you use. The admin maintains an inventory of resources, and therefore, you are expected to share with the admin the resources you carry outside of the workplace.
+                        <br>
+                        <br> Use of social media is banned in this workplace. Use of internet shall be limited to project related work.
+                        <br>
+                        <br> Use of personal mobile phone is not allowed inside office premise. You are free to use studio mobiles in case of urgent need.
+                    </p>
+                </div>
+                <div id="data-security" class="tabcontent">
+                    <p>Taking any data or document outside of office premise is strictly forbidden.</p>
+                </div>
+                <div id="password-guidelines" class="tabcontent">
+                    <p>Your password shall contain at least one number, one letter, and one special character. Your password should be at least 8 characters long and it should not contain your name. You will be reminded to change your password automatically by the system. When you change it, make sure you remember it. Password for your user profile must not be shared with anyone.</p>
+                </div>
+                <div id="confidentiality-agreement" class="tabcontent">
+                    <p>You are not to discuss the specifics of any projects, tradecrafts, or intellectual endeavors of this firm outside office premises.</p>
+                </div>
+                <div id="dpr-filling" class="tabcontent">
+                    <p>You are expected to generate report of your daily work. You are not to alter the format of DPR in anyway. Any fancy formatting, change in color of fonts, size of fonts is forbidden.
+                        <br>
+                        <br>Apart from DPR, you will also use a task management workflow from Asana. The Asana workflow will be at the center of your daily project delivery, project updates, communication, and reporting. </p>
+                </div>
+                <div id="attire" class="tabcontent">
+                    <p>You are expected to always present yourself in a formal attire.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="folder-system">
+            <header>
+                <h2>Folder System</h2>
+            </header>
+            <p>Folder system in MSA is as provided in example Template link below:</p>
+            <a href="Z:/MSA STANDARDS/Central/data/reference documents/Folder &amp; File Management System.pdf" class="button" target="_blank">Folder System Reference</a>
+        </section>
+
+        <section id="doc-standard">
+            <header>
+                <h2>Document Standard</h2>
+            </header>
+            <div class="tileContainer">
+                <div class="tiles">
+                    <div>
+                        <h4>DPR Template</h4>
+                        <p>Standard DPR Template to use, Note that It'll be changed on yearly basis</p>
+                        <a href="Z:/MSA STANDARDS/Templates/Your Name_DPR_2016.xlsx" class="masterButton" download>Download</a>
+                    </div>
+                </div>
+                <div class="tiles">
+                    <div>
+                        <h4>DCI Template</h4>
+                        <p>Standard DCI Template to use when new project data is being created</p>
+                        <a href="Z:/MSA STANDARDS/Templates/XXXX_DCI_XX_RXX.xlsx" class="masterButton" download>Download</a>
+                    </div>
+                </div>
+                <div class="tiles">
+                    <div>
+                        <h4>MOM Template</h4>
+                        <p>Standard Minutes of Meeting Template</p>
+                        <a href="Z:/MSA STANDARDS/Templates/XXXX_MOM_YYMMDD.xls" class="masterButton" download>Download</a>
+                    </div>
+                </div>
+                <div class="tiles">
+                    <div>
+                        <h4>Transmittal Template</h4>
+                        <p>Standard Transmittal Template to use, this format can change as per client's requirements</p>
+                        <a href="Z:/MSA STANDARDS/Templates/XXXX_TRA_XXX_YYMMDD.xls" class="masterButton" download>Download</a>
+                    </div>
+                </div>
+                <div class="tiles">
+                    <div>
+                        <h4>Stamps</h4>
+                        <p>Standard Stamps to add in any type of documents before releasing them</p>
+                        <a href="Z:/MSA STANDARDS/AutoCAD/MSA_Standard_Stamps.pdf" class="masterButton" download>Download</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="cad-standard">
+            <header>
+                <h2>AutoCAD Standard</h2>
+            </header>
+            <div class="tileContainer">
+                <div class="tiles">
+                    <div>
+                        <h4>Layers - Working</h4>
+                        <p>Standard Layers for creating Working Drawings</p>
+                        <a href="Z:/MSA STANDARDS/AutoCAD/MSA_Standard Layer_Working.dwg" class="masterButton" download>Download</a>
+                    </div>
+                </div>
+                <div class="tiles">
+                    <div>
+                        <h4>Text, Dimensions &amp; Annotation_MM</h4>
+                        <p>All the items mentioned in title to be used from this Standard file</p>
+                        <a href="Z:/MSA STANDARDS/AutoCAD/MSA_Standard_Text_MM.dwg" class="masterButton" download>Download</a>
+                    </div>
+                </div>
+                <div class="tiles">
+                    <div>
+                        <h4>Text, Dimensions &amp; Annotation_Ft</h4>
+                        <p>All the items mentioned in title to be used from this Standard file</p>
+                        <a href="Z:/MSA STANDARDS/AutoCAD/MSA_Standard_Text_Ft.dwg" class="masterButton" download>Download</a>
+                    </div>
+                </div>
+                <div class="tiles">
+                    <div>
+                        <h4>Title Blocks</h4>
+                        <p>Standard Title Blocks to use in Layouts, Format of Title Blocks can defer in some projects</p>
+                        <a href="Z:/MSA STANDARDS/AutoCAD/MSA_Title Blocks.dwg" class="masterButton" download>Download</a>
+                    </div>
+                </div>
+                <div class="tiles">
+                    <div>
+                        <h4>Layers - Presentation</h4>
+                        <p>Standard Layers for creating Presentation Drawings</p>
+                        <a href="Z:/MSA STANDARDS/AutoCAD/MSA_Standard Layer_Presentation.dwg" class="masterButton" download>Download</a>
+                    </div>
+                </div>
+                <div class="tiles">
+                    <div>
+                        <h4>MColor - CFG</h4>
+                        <p>Standard CFG for MColor Presentation</p>
+                        <a href="../AutoCAD/MSA_MColor_Standard.cfg" class="masterButton" download>Download</a>
+                    </div>
+                </div>
+                <div class="tiles">
+                    <div>
+                        <h4>Hatch - Studio 01</h4>
+                        <p>Standard Layers, Patterns &amp; Types of Hatches used in Studio 01</p>
+                        <a href="Z:/MSA STANDARDS/AutoCAD/MSA_Standard_Hatch_Studio 01.dwg" class="masterButton" download>Download</a>
+                    </div>
+                </div>
+                <div class="tiles">
+                    <div>
+                        <h4>Furniture Blocks</h4>
+                        <p>Standard Furniture Blocks</p>
+                        <a href="Z:/MSA STANDARDS/AutoCAD/MSA_Standard_Furniture_Blocks_Ft.dwg" class="masterButton" download>Download</a>
+                    </div>
+                </div>
+                <div class="tiles">
+                    <div>
+                        <h4>Electrical Elements' Blocks</h4>
+                        <p>Standard Blocks for Electrical Elements</p>
+                        <a href="Z:/MSA STANDARDS/AutoCAD/MSA_Standard_Electrical_Blocks_Ft.dwg" class="masterButton" download>Download</a>
+                    </div>
+                </div>
+                <div class="tiles">
+                    <div>
+                        <h4>False Ceiling Blocks</h4>
+                        <p>Standard False Ceiling Blocks</p>
+                        <a href="Z:/MSA STANDARDS/AutoCAD/MSA_Standard_False Celing_Blocks_Ft.dwg" class="masterButton" download>Download</a>
+                    </div>
+                </div>
+                <div class="tiles">
+                    <div>
+                        <h4>Games' Equipment Blocks</h4>
+                        <p>Standard Blocks of Equipments of different Games</p>
+                        <a href="Z:/MSA STANDARDS/AutoCAD/MSA_Standard_Games Equip_Blocks_Ft.dwg" class="masterButton" download>Download</a>
+                    </div>
+                </div>
+                <div class="tiles">
+                    <div>
+                        <h4>Landscape Blocks</h4>
+                        <p>Standard Blocks for Development of Landscape</p>
+                        <a href="Z:/MSA STANDARDS/AutoCAD/MSA_Standard_Landscape_Blocks_Ft.dwg" class="masterButton" download>Download</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Drafting System -->
+        <section id="drafting-system">
+            <header>
+                <h2>Drafting System</h2>
+            </header>
+            <p>While drafting anything in AutoCAD, Some drafting standards should be followd to make work less time consuming for you and the ones who are going to give their time on it later on.
+                <br>
+                <br> Following are the basic standards to be followed:
             </p>
+            <ul class="noBullets">
+                <li>One should never use lines, only p-lines to be used.</li>
+                <li>Every hatch must be associative and with its Boundary.</li>
+                <li>No separate leaders to be provided, Use Standard Leaders from MSA Standard.</li>
+                <li>Everything Should be aligned in Model Space and Layout Space, Follow the links provided below for reference:
+                    <ul>
+                        <li><a href="pages/alignment-model.html" class="button" target="_blank">Alignment - Model Space</a></li>
+                        <li><a href="pages/alignment-layout.html" class="button" target="_blank">Alignment - Layout Space</a></li>
+                    </ul>
+                </li>
+                <li>In model space, only relevant and final information shall be kept. All the unnecessary information must be deleted.</li>
+                <li>Create blocks as and when necessary. Name of blocks must be relevant.</li>
+                <li>Use of array is forbidden.</li>
+                <li>No layer other than MSA Standard Layers should exist in the drawing. If due to some reason you are not able achieve this, please speak with the team leader.</li>
+                <li>Frozen or Turned Off layers should be deleted before releasing the drawing.</li>
+                <li>Size of Text, Dimensions, and Annotations must be as per the scale of Viewport in Layout.</li>
+                <li>Model Space must contain only the drawing objects. Legends, Key Plan, Tables etc must be in the Layout Space only.</li>
+                <li>Level guides must be kept back in draw order.</li>
+                <li>Grid lines must be kept in front in draw order.</li>
+                <li>Key Plans should not contain any unnecessary Text/Data. Relevent Objects to be Highlighted.</li>
+            </ul>
+        </section>
 
-            <h4>Leave without Pay</h4>
-            <p>If an employee is taking more leaves than accumulated leave balance to his credit due to pressing requirement to go on leave to meet some unavoidable commitments; can be granted leave without pay (LWP) at the sole discretion of management.
-              This is however granted only in exceptional cases. The implications of leave without pay are as follows.
-              <br>
-              <br>No salary and no monetary benefits whatsoever during the period of leave.
-              <br>
-              <br> An employee taking leave without prior sanction of leave will be treated on LWP. However in these cases reasons for absence and the circumstances under which the employee could not get his/her leave pre-sanctioned are first investigated
-              and then the leave is regularized as paid leave at the sole discretion of management.
-            </p>
+        <section id="checklists">
+            <header>
+                <h2>Checklists</h2>
+            </header>
+            <div>
+                <ul class="tab">
+                    <li><a href="javascript:void(0)" class="tablinks" onclick="openCity(event, 'general-notes')">General Notes</a></li>
+                    <li><a href="javascript:void(0)" class="tablinks" onclick="openCity(event, 'title-block')">Title Block</a></li>
+                    <li><a href="javascript:void(0)" class="tablinks" onclick="openCity(event, 'plan')">Plan</a></li>
+                    <li><a href="javascript:void(0)" class="tablinks" onclick="openCity(event, 'section')">Section</a></li>
+                    <li><a href="javascript:void(0)" class="tablinks" onclick="openCity(event, 'master-layout')">Master Layout</a></li>
+                </ul>
 
-            <h4>Compensatory Leave</h4>
-            <p>All employees who are asked to work on weekly-off days or overstay on working days are entitled for compensatory leave. Compensatory leave will be credited as ¼ day for every completed two hours of work. No compensatory leave will be credited
-              for instances of less than 2 hours. Such Compensatory leave will be merged with the leave entitlement. All the compensatory leave shall be entered in the Leave Card immediately on the next day of extra work and submitted for approval.</p>
+                <div id="general-notes" class="tabcontent">
+                    <ol>
+                        <li>All dimensions on the drawings are in feet &amp; inches unless mentioned otherwise.</li>
+                        <li>All dimensions on the drawings are in millimeters unless mentioned otherwise.</li>
+                        <li>All levels are marked from finished floor level unless mentioned otherwise.</li>
+                        <li>Dimensions on the drawings are not to be scaled; only stated dimensions are to be followed.</li>
+                        <li>All dimensions shall be verified on site prior to start of work, any discrepancy shall be brought to the notice of the consultant.</li>
+                        <li>All the porposed openings such as; doors, windows, and cutouts are openings from plaster to plaster.</li>
+                        <li>For building sections, refer latest revision of drawing no. XXX_XXX_XX.</li>
+                        <li>For plumbing detail, refer latest revison of drawing no. XXX_XXX_XX.</li>
+                        <li>For electrical detail, refer latest revision of drawing no. XXX_XXX_XX.</li>
+                        <li>None of structure elements are to be measured from this drawing.</li>
+                        <li>This drawing shall be read in conjunction with all relevant architectural, structural and services drawings. Any discrepancy noticed shall be brought to the attention of the consultants within 3 working days of receiving the drawings, prior to procurement of items or execution of work.</li>
+                    </ol>
+                </div>
 
-            <h4>Short Leave</h4>
-            <p>All the employees are expected to report to the duty on or before their stipulated reporting time in general but not later than 10 minutes after stipulated reporting time in exceptional circumstances.
-              <br>
-              <br>Management recognizes that due to issues related to vehicle or traffic rush an employee might get delayed beyond 10 minutes. Management will grant such delays in reporting to the duty beyond 10 minutes but not later than 30 minutes from
-              stipulated reporting time as SHORT LEAVE. Such instances of grant of Short leaves are two instances per calendar month; third instance and onwards will treated as each of 1/4 leave.
-              <br>
-              <br>Management also recognizes need for leave to attend any personal work during working hours. Management will grant one instance per month of 1 hour leave per calendar month during working hours.
-              <br>
-              <br>Short leaves shall not be clubbed with each other or merged with any other leave.
-              <br>
-              <br>Short leaves shall not be treated as right to claim and hence Short Leaves will not be carried forward. All instances of Short leaves shall be recorded in the leave card and sanctioned by sanctioning authority.
-            </p>
-
-            <h4>Leave Accumulation &amp; Encashment</h4>
-            <p>Accounting of leave is done based on calendar year from January to December. Leave can be accumulated and Leave Balance including Compensatory leave will be carry forwarded to next leave accounting year. At the end of Leave accounting year,
-              employee whose accumulated leave balances exceeds 15 days can opt of encashment of leaves exceeding 15 days.
-              <br>
-              <br>The encashment is done at the rate of salary paid for the month of December of that year. Payment for encashed leave however shall be done by 31st January of the following year. If an employee do not opt for encashment, all accumulated
-              balances will be carry forwarded to next Leave accounting year.
-              <br>
-              <br>Leave encashment request will not be entertained during mid of the year. Leave encashment request shall be forwarded as per attached format. </p>
-
-            <h4>Sanctioning Authority</h4>
-            <p>Leave Cards for each employee will be maintained separately and will be kept with administration department at all the times. Employees can collect their leave card from administration department for leave application and return back to administration
-              after taking sanction of leave from Management. Leave will be sanctioned as per the balance and in line with the exigencies of the work.</p>
-            <p>All employees are requested to co-operate and follow the company leave rules.</p>
-          </div>
-          <a href="Z:/MSA STANDARDS/Forms/Form - Leave Encashment Request.doc" class="button">Leave Encashment Request Form</a>
-          <br>
-        </div>
-        <div id="resource-use" class="tabcontent">
-          <p>You are expected to be responsible for the resource of MSA that you use. The admin maintains an inventory of resources, and therefore, you are expected to share with the admin the resources you carry outside of the workplace.
-            <br>
-            <br> Use of social media is banned in this workplace. Use of internet shall be limited to project related work.
-            <br>
-            <br> Use of personal mobile phone is not allowed inside office premise. You are free to use studio mobiles in case of urgent need.
-          </p>
-        </div>
-        <div id="data-security" class="tabcontent">
-          <p>Taking any data or document outside of office premise is strictly forbidden.</p>
-        </div>
-        <div id="password-guidelines" class="tabcontent">
-          <p>Your password shall contain at least one number, one letter, and one special character. Your password should be at least 8 characters long and it should not contain your name. You will be reminded to change your password automatically by the
-            system. When you change it, make sure you remember it. Password for your user profile must not be shared with anyone.</p>
-        </div>
-        <div id="confidentiality-agreement" class="tabcontent">
-          <p>You are not to discuss the specifics of any projects, tradecrafts, or intellectual endeavors of this firm outside office premises.</p>
-        </div>
-        <div id="dpr-filling" class="tabcontent">
-          <p>You are expected to generate report of your daily work. You are not to alter the format of DPR in anyway. Any fancy formatting, change in color of fonts, size of fonts is forbidden.
-            <br>
-            <br>Apart from DPR, you will also use a task management workflow from Asana. The Asana workflow will be at the center of your daily project delivery, project updates, communication, and reporting. </p>
-        </div>
-        <div id="attire" class="tabcontent">
-          <p>You are expected to always present yourself in a formal attire.</p>
-        </div>
-      </div>
-    </section>
-
-    <section id="folder-system">
-      <header>
-        <h2>Folder System</h2>
-      </header>
-      <p>Folder system in MSA is as provided in example Template link below:</p>
-      <a href="Z:/MSA STANDARDS/Central/data/reference documents/Folder &amp; File Management System.pdf" class="button" target="_blank">Folder System Reference</a>
-    </section>
-
-    <section id="doc-standard">
-      <header>
-        <h2>Document Standard</h2>
-      </header>
-      <div class="tileContainer">
-        <div class="tiles">
-          <div>
-            <h4>DPR Template</h4>
-            <p>Standard DPR Template to use, Note that It'll be changed on yearly basis</p>
-            <a href="Z:/MSA STANDARDS/Templates/Your Name_DPR_2016.xlsx" class="masterButton" download>Download</a>
-          </div>
-        </div>
-        <div class="tiles">
-          <div>
-            <h4>DCI Template</h4>
-            <p>Standard DCI Template to use when new project data is being created</p>
-            <a href="Z:/MSA STANDARDS/Templates/XXXX_DCI_XX_RXX.xlsx" class="masterButton" download>Download</a>
-          </div>
-        </div>
-        <div class="tiles">
-          <div>
-            <h4>MOM Template</h4>
-            <p>Standard Minutes of Meeting Template</p>
-            <a href="Z:/MSA STANDARDS/Templates/XXXX_MOM_YYMMDD.xls" class="masterButton" download>Download</a>
-          </div>
-        </div>
-        <div class="tiles">
-          <div>
-            <h4>Transmittal Template</h4>
-            <p>Standard Transmittal Template to use, this format can change as per client's requirements</p>
-            <a href="Z:/MSA STANDARDS/Templates/XXXX_TRA_XXX_YYMMDD.xls" class="masterButton" download>Download</a>
-          </div>
-        </div>
-        <div class="tiles">
-          <div>
-            <h4>Stamps</h4>
-            <p>Standard Stamps to add in any type of documents before releasing them</p>
-            <a href="Z:/MSA STANDARDS/AutoCAD/MSA_Standard_Stamps.pdf" class="masterButton" download>Download</a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="cad-standard">
-      <header>
-        <h2>AutoCAD Standard</h2>
-      </header>
-      <div class="tileContainer">
-        <div class="tiles">
-          <div>
-            <h4>Layers - Working</h4>
-            <p>Standard Layers for creating Working Drawings</p>
-            <a href="Z:/MSA STANDARDS/AutoCAD/MSA_Standard Layer_Working.dwg" class="masterButton" download>Download</a>
-          </div>
-        </div>
-        <div class="tiles">
-          <div>
-            <h4>Text, Dimensions &amp; Annotation_MM</h4>
-            <p>All the items mentioned in title to be used from this Standard file</p>
-            <a href="Z:/MSA STANDARDS/AutoCAD/MSA_Standard_Text_MM.dwg" class="masterButton" download>Download</a>
-          </div>
-        </div>
-        <div class="tiles">
-          <div>
-            <h4>Text, Dimensions &amp; Annotation_Ft</h4>
-            <p>All the items mentioned in title to be used from this Standard file</p>
-            <a href="Z:/MSA STANDARDS/AutoCAD/MSA_Standard_Text_Ft.dwg" class="masterButton" download>Download</a>
-          </div>
-        </div>
-        <div class="tiles">
-          <div>
-            <h4>Title Blocks</h4>
-            <p>Standard Title Blocks to use in Layouts, Format of Title Blocks can defer in some projects</p>
-            <a href="Z:/MSA STANDARDS/AutoCAD/MSA_Title Blocks.dwg" class="masterButton" download>Download</a>
-          </div>
-        </div>
-        <div class="tiles">
-          <div>
-            <h4>Layers - Presentation</h4>
-            <p>Standard Layers for creating Presentation Drawings</p>
-            <a href="Z:/MSA STANDARDS/AutoCAD/MSA_Standard Layer_Presentation.dwg" class="masterButton" download>Download</a>
-          </div>
-        </div>
-        <div class="tiles">
-          <div>
-            <h4>MColor - CFG</h4>
-            <p>Standard CFG for MColor Presentation</p>
-            <a href="../AutoCAD/MSA_MColor_Standard.cfg" class="masterButton" download>Download</a>
-          </div>
-        </div>
-        <div class="tiles">
-          <div>
-            <h4>Hatch - Studio 01</h4>
-            <p>Standard Layers, Patterns &amp; Types of Hatches used in Studio 01</p>
-            <a href="Z:/MSA STANDARDS/AutoCAD/MSA_Standard_Hatch_Studio 01.dwg" class="masterButton" download>Download</a>
-          </div>
-        </div>
-        <div class="tiles">
-          <div>
-            <h4>Furniture Blocks</h4>
-            <p>Standard Furniture Blocks</p>
-            <a href="Z:/MSA STANDARDS/AutoCAD/MSA_Standard_Furniture_Blocks_Ft.dwg" class="masterButton" download>Download</a>
-          </div>
-        </div>
-        <div class="tiles">
-          <div>
-            <h4>Electrical Elements' Blocks</h4>
-            <p>Standard Blocks for Electrical Elements</p>
-            <a href="Z:/MSA STANDARDS/AutoCAD/MSA_Standard_Electrical_Blocks_Ft.dwg" class="masterButton" download>Download</a>
-          </div>
-        </div>
-        <div class="tiles">
-          <div>
-            <h4>False Ceiling Blocks</h4>
-            <p>Standard False Ceiling Blocks</p>
-            <a href="Z:/MSA STANDARDS/AutoCAD/MSA_Standard_False Celing_Blocks_Ft.dwg" class="masterButton" download>Download</a>
-          </div>
-        </div>
-        <div class="tiles">
-          <div>
-            <h4>Games' Equipment Blocks</h4>
-            <p>Standard Blocks of Equipments of different Games</p>
-            <a href="Z:/MSA STANDARDS/AutoCAD/MSA_Standard_Games Equip_Blocks_Ft.dwg" class="masterButton" download>Download</a>
-          </div>
-        </div>
-        <div class="tiles">
-          <div>
-            <h4>Landscape Blocks</h4>
-            <p>Standard Blocks for Development of Landscape</p>
-            <a href="Z:/MSA STANDARDS/AutoCAD/MSA_Standard_Landscape_Blocks_Ft.dwg" class="masterButton" download>Download</a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-
-    <!-- Drafting System -->
-    <section id="drafting-system">
-      <header>
-        <h2>Drafting System</h2>
-      </header>
-      <p>While drafting anything in AutoCAD, Some drafting standards should be followd to make work less time consuming for you and the ones who are going to give their time on it later on.
-        <br>
-        <br> Following are the basic standards to be followed:
-      </p>
-      <ul class="noBullets">
-        <li>One should never use lines, only p-lines to be used.</li>
-        <li>Every hatch must be associative and with its Boundary.</li>
-        <li>No separate leaders to be provided, Use Standard Leaders from MSA Standard.</li>
-        <li>Everything Should be aligned in Model Space and Layout Space, Follow the links provided below for reference:
-          <ul>
-            <li><a href="pages/alignment-model.html" class="button" target="_blank">Alignment - Model Space</a></li>
-            <li><a href="pages/alignment-layout.html" class="button" target="_blank">Alignment - Layout Space</a></li>
-          </ul>
-        </li>
-        <li>In model space, only relevant and final information shall be kept. All the unnecessary information must be deleted.</li>
-        <li>Create blocks as and when necessary. Name of blocks must be relevant.</li>
-        <li>Use of array is forbidden.</li>
-        <li>No layer other than MSA Standard Layers should exist in the drawing. If due to some reason you are not able achieve this, please speak with the team leader.</li>
-        <li>Frozen or Turned Off layers should be deleted before releasing the drawing.</li>
-        <li>Size of Text, Dimensions, and Annotations must be as per the scale of Viewport in Layout.</li>
-        <li>Model Space must contain only the drawing objects. Legends, Key Plan, Tables etc must be in the Layout Space only.</li>
-        <li>Level guides must be kept back in draw order.</li>
-        <li>Grid lines must be kept in front in draw order.</li>
-        <li>Key Plans should not contain any unnecessary Text/Data. Relevent Objects to be Highlighted.</li>
-      </ul>
-    </section>
-
-    <section id="checklists">
-      <header>
-        <h2>Checklists</h2>
-      </header>
-      <div>
-        <ul class="tab">
-          <li><a href="javascript:void(0)" class="tablinks" onclick="openCity(event, 'general-notes')">General Notes</a></li>
-          <li><a href="javascript:void(0)" class="tablinks" onclick="openCity(event, 'title-block')">Title Block</a></li>
-          <li><a href="javascript:void(0)" class="tablinks" onclick="openCity(event, 'plan')">Plan</a></li>
-          <li><a href="javascript:void(0)" class="tablinks" onclick="openCity(event, 'section')">Section</a></li>
-          <li><a href="javascript:void(0)" class="tablinks" onclick="openCity(event, 'master-layout')">Master Layout</a></li>
-        </ul>
-
-        <div id="general-notes" class="tabcontent">
-          <ol>
-            <li>All dimensions on the drawings are in feet &amp; inches unless mentioned otherwise.</li>
-            <li>All dimensions on the drawings are in millimeters unless mentioned otherwise.</li>
-            <li>All levels are marked from finished floor level unless mentioned otherwise.</li>
-            <li>Dimensions on the drawings are not to be scaled; only stated dimensions are to be followed.</li>
-            <li>All dimensions shall be verified on site prior to start of work, any discrepancy shall be brought to the notice of the consultant.</li>
-            <li>All the porposed openings such as; doors, windows, and cutouts are openings from plaster to plaster.</li>
-            <li>For building sections, refer latest revision of drawing no. XXX_XXX_XX.</li>
-            <li>For plumbing detail, refer latest revison of drawing no. XXX_XXX_XX.</li>
-            <li>For electrical detail, refer latest revision of drawing no. XXX_XXX_XX.</li>
-            <li>None of structure elements are to be measured from this drawing.</li>
-            <li>This drawing shall be read in conjunction with all relevant architectural, structural and services drawings. Any discrepancy noticed shall be brought to the attention of the consultants within 3 working days of receiving the drawings, prior
-              to procurement of items or execution of work.</li>
-          </ol>
-        </div>
-
-        <!-- TitleBlock -->
-        <div id="title-block" class="tabcontent">
-          <label>
-                        <input type="checkbox">
-                        <p>Drawing title and code as per DCI</p>
-                    </label>
-          <label>
-                        <input type="checkbox">
-                        <p>Check number of sheets</p>
-                    </label>
-          <label>
-                        <input type="checkbox">
-                        <p>Check project location</p>
-                    </label>
-          <label>
-                        <input type="checkbox">
-                        <p>Revision history to be as per DCI</p>
-                    </label>
-          <label>
-                        <input type="checkbox">
-                        <p>General notes to be checked. Add if necessary. Remove if unnecessary</p>
-                    </label>
-          <label>
-                        <input type="checkbox">
-                        <p>Reference notes for other drawings to be provided</p>
-                    </label>
-          <label>
-                        <input type="checkbox">
-                        <p>Revision notes</p>
-                    </label>
-          <label>
-                        <input type="checkbox">
-                        <p>List of Abbreviations</p>
-                    </label>
-          <label>
-                        <input type="checkbox">
-                        <p>Define lintel level and Sill level in general notes wherever applicable</p>
-                    </label>
-          <label>
-                        <input type="checkbox">
-                        <p>Mention the level at which plans are cut</p>
-                    </label>
-          <label>
-                        <input type="checkbox">
-                        <p>Key plan with North arrow as per MSA standard</p>
-                    </label>
-          <label>
-                        <input type="checkbox">
-                        <p>In key plan, only keep necessary text and information</p>
-                    </label>
-          <label>
-                        <input type="checkbox">
-                        <p>All the text in key plan, must be readable at print scale</p>
-                    </label>
-          <label>
-                        <input type="checkbox">
-                        <p>Name and Logo to be provided for MSA and Client only</p>
-                    </label>
-          <label>
-                        <input type="checkbox">
-                        <p>Make sure there's no Autodesk Education stamp on the drawing</p>
-                    </label>
-          <label>
-                        <input type="checkbox">
-                        <p>Make sure relevant CTB is applied to the paper space</p>
-                    </label>
-          <label>
-                        <input type="checkbox">
-                        <p>Always mark necessary sections in Key Plan</p>
-                    </label>
-          <label>
-                        <input type="checkbox">
-                        <p>In key plans, make sure the sections heads, elevation heads, and any other necessary text are readable in print scale</p>
-                    </label>
-        </div>
-
-        <!-- Plan -->
-        <div id="plan" class="tabcontent">
-          <h3 id="planDrg">Drawing</h3>
-          <label>
+                <!-- TitleBlock -->
+                <div id="title-block" class="tabcontent"></div>
+                <script src="data/checklists/title-block.js"></script>
+                
+                <!-- Plan -->
+                <div id="plan" class="tabcontent">
+                    <h3 id="planDrg">Drawing</h3>
+                    <label>
                         <input type="checkbox">
                         <p>Proposed materials and details must be as per approved copy of tender or minimum specifications</p>
                     </label>
-          <label>
+                    <label>
                         <input type="checkbox">
                         <p>Structure elements are to be as per latest structure received from consultant</p>
                     </label>
-          <label>
+                    <label>
                         <input type="checkbox">
                         <p>Unit Plan correlation with the cluster plan</p>
                     </label>
-          <label>
+                    <label>
                         <input type="checkbox">
                         <p>Door Window Schedule - Pay special attention to Lintel Level and Sill Level. This schedule is sheet specific. It must only have tags shown in the drawing.</p>
                     </label>
-          <label>
+                    <label>
                         <input type="checkbox">
                         <p>Railing Parapet Schedule for railings shown in the drawing only. This schedule is also sheet specific.
                         </p>
                     </label>
-          <label>
+                    <label>
                         <input type="checkbox">
                         <p>Plinth Level as cordinated with site layout</p>
                     </label>
-          <label>
+                    <label>
                         <input type="checkbox">
                         <p>Electrical Duct, Hosereel, Hose Box Location as per latest PHE drawings</p>
                     </label>
-          <label>
+                    <label>
                         <input type="checkbox">
                         <p>Location of Ducts for Plumbing, Fire- Fighting, Electrical cordinated with latest PHE</p>
                     </label>
-          <label>
+                    <label>
                         <input type="checkbox">
                         <p>Rain water &amp; Plumbing down takes cordinated with latest PHE</p>
                     </label>
-          <label>
+                    <label>
                         <input type="checkbox">
                         <p>Water supply risers condinated with PHE</p>
                     </label>
-          <label>
+                    <label>
                         <input type="checkbox">
                         <p>Fire-fighting risers (if Applicable)</p>
                     </label>
-          <label>
+                    <label>
                         <input type="checkbox">
                         <p>OHWT as per Water tank capacity Calculation in PHE DBR</p>
                     </label>
-          <label>
+                    <label>
                         <input type="checkbox">
                         <p>Space for Solar panels, motors, pressure pumps (if applicable)</p>
                     </label>
-          <label>
+                    <label>
                         <input type="checkbox">
                         <p>Spout for Balcony</p>
                     </label>
-          <label>
+                    <label>
                         <input type="checkbox">
                         <p>Orientation tags</p>
                     </label>
-          <label>
+                    <label>
                         <input type="checkbox">
                         <p>Sections Lines and their direction</p>
                     </label>
-          <label>
+                    <label>
                         <input type="checkbox">
                         <p>Grid Lines coordinated with Structure</p>
                     </label>
-          <label>
+                    <label>
                         <input type="checkbox">
                         <p>Section tags, orientation tags, and grid bubbles are to be properly aligned</p>
                     </label>
-          <label>
+                    <label>
                         <input type="checkbox">
                         <p>All grid lines are to be kept in the front</p>
                     </label>
-          <label>
+                    <label>
                         <input type="checkbox">
                         <p>All RCC and Wall lines are to be kept in the front</p>
                     </label>
-          <label>
+                    <label>
                         <input type="checkbox">
                         <p>Legend for Hatch</p>
                     </label>
-          <label>
+                    <label>
                         <input type="checkbox">
                         <p>All hatch is to be kept back in the draw order</p>
                     </label>
-          <label>
+                    <label>
                         <input type="checkbox">
                         <p>Check XY dimension for all rooms / spaces. Also, make sure dimension are indicated for validation</p>
                     </label>
-          <label>
+                    <label>
                         <input type="checkbox">
                         <p>Check area of all rooms / spaces if mentioned</p>
                     </label>
-          <label>
+                    <label>
                         <input type="checkbox">
                         <p>Mention types of areas such as Carpet area, Built Up Area, FSI Area as per direction of team leader</p>
                     </label>
-          <label>
+                    <label>
                         <input type="checkbox">
                         <p>Floor drop lines</p>
                     </label>
-          <label>
+                    <label>
                         <input type="checkbox">
                         <p>Stair numbering (Always number the risers)</p>
                     </label>
-          <label>
+                    <label>
                         <input type="checkbox">
                         <p>Indicate provisions for differently abled</p>
                     </label>
-          <label>
+                    <label>
                         <input type="checkbox">
                         <p>Cut out lines to be indicate for see through cut outs and open to sky spaces</p>
                     </label>
-          <label>
+                    <label>
                         <input type="checkbox">
                         <p>All Layers have to be as per MSA Standard</p>
                     </label>
-          <label>
+                    <label>
                         <input type="checkbox">
                         <p>Check spelling for the whole file</p>
                     </label>
-          <label>
+                    <label>
                         <input type="checkbox">
                         <p>Make sure furniture elements don't clash / overlap with structure / masonry</p>
                     </label>
-          <label>
+                    <label>
                         <input type="checkbox">
                         <p>Make sure text &amp; dimension don't overlap with drawing objects</p>
                     </label>
-          <label>
+                    <label>
                         <input type="checkbox">
                         <p>Make sure revision clouds don't overlap with the drawing objects</p>
                     </label>
-          <label>
+                    <label>
                         <input type="checkbox">
                         <p>In the drawing space, make sure all the plans are aligned by grid lines or any other line</p>
                     </label>
-          <label>
+                    <label>
                         <input type="checkbox">
                         <p>Nomenclature tags of plans are to be aligned with the drawing as well</p>
                     </label>
-          <label>
+                    <label>
                         <input type="checkbox">
                         <p>Text height of nomenclature and dimension must be the same throughout the sheet</p>
                     </label>
-          <label>
+                    <label>
                         <input type="checkbox">
                         <p>All the nomenclature must be readable at print scale</p>
                     </label>
 
-          <h3 id="planDim">Dimension</h3>
-          <label>
+                    <h3 id="planDim">Dimension</h3>
+                    <label>
                         <input type="checkbox">
                         <p>All architectural elements</p>
                     </label>
-          <label>
+                    <label>
                         <input type="checkbox">
                         <p>Wall thickness at all places</p>
                     </label>
-          <label>
+                    <label>
                         <input type="checkbox">
                         <p>Parapet thickness</p>
                     </label>
-          <label>
+                    <label>
                         <input type="checkbox">
                         <p>Corridor width</p>
                     </label>
-          <label>
+                    <label>
                         <input type="checkbox">
                         <p>Room (X x Y) dimension (Un-finished) cordinated with nomenclature</p>
                     </label>
-          <label>
+                    <label>
                         <input type="checkbox">
                         <p>Windows and ventilators</p>
                     </label>
-          <label>
+                    <label>
                         <input type="checkbox">
                         <p>Stair width</p>
                     </label>
-          <label>
+                    <label>
                         <input type="checkbox">
                         <p>Stair Tread cordinated with sections</p>
                     </label>
-          <label>
+                    <label>
                         <input type="checkbox">
                         <p>Stair Landing cordinated with sections</p>
                     </label>
-          <label>
+                    <label>
                         <input type="checkbox">
                         <p>Stair Start Point</p>
                     </label>
-          <label>
+                    <label>
                         <input type="checkbox">
                         <p>Location of spouts</p>
                     </label>
-          <label>
+                    <label>
                         <input type="checkbox">
                         <p>Location of Manholes</p>
                     </label>
-          <label>
+                    <label>
                         <input type="checkbox">
                         <p>Location of ramps</p>
                     </label>
-          <label>
+                    <label>
                         <input type="checkbox">
                         <p>Location of Plumbing fixures</p>
                     </label>
-          <label>
+                    <label>
                         <input type="checkbox">
                         <p>Location of kitchen fixures</p>
                     </label>
-          <label>
+                    <label>
                         <input type="checkbox">
                         <p>Dimension for Structure elements are not to be provided</p>
                     </label>
-          <label>
+                    <label>
                         <input type="checkbox">
                         <p>Critical Dimension (Clear width of stair, clear width of ramp, Etc.)</p>
                     </label>
-          <label>
+                    <label>
                         <input type="checkbox">
                         <p>All the dimension must be readable at print scale</p>
                     </label>
-        </div>
+                </div>
 
-        <!-- Section -->
-        <div id="section" class="tabcontent">
-          <h3 id="secDrg">Drawing</h3>
-          <label>
+                <!-- Section -->
+                <div id="section" class="tabcontent">
+                    <h3 id="secDrg">Drawing</h3>
+                    <label>
                         <input type="checkbox">
                         <p>Proposed materials and details must be as per approved copy of tender or minimum specifications</p>
                     </label>
-          <label>
+                    <label>
                         <input type="checkbox">
                         <p>Structure elements are to be as per latest structure received from consultant</p>
                     </label>
-          <label>
+                    <label>
                         <input type="checkbox">
                         <p>Door Window Schedule - Pay special attention to Lintel Level and Sill Level. This schedule is sheet specific. It must only have tags shown in the drawing.</p>
                     </label>
-          <label>
+                    <label>
                         <input type="checkbox">
                         <p>Railing Parapet Schedule for railings shown in the drawing only. This schedule is also sheet specific.</p>
                     </label>
-          <label>
+                    <label>
                         <input type="checkbox">
                         <p>Finished Levels (Only if the team leader requires)</p>
                     </label>
-          <label>
+                    <label>
                         <input type="checkbox">
                         <p>Plinth Level coordinated with plans and site layout</p>
                     </label>
-          <label>
+                    <label>
                         <input type="checkbox">
                         <p>Unfinished Levels and Level Tags</p>
                     </label>
-          <label>
+                    <label>
                         <input type="checkbox">
                         <p>For text in level tags, strictly use abbreviations. Also, avoid using the word, "lvl." It is self-explanatory.</p>
                     </label>
-          <label>
+                    <label>
                         <input type="checkbox">
                         <p>OHWT as per Water tank capacity Calculation in PHE and cordinated with plan</p>
                     </label>
-          <label>
+                    <label>
                         <input type="checkbox">
                         <p>Spout for Balcony</p>
                     </label>
-          <label>
+                    <label>
                         <input type="checkbox">
                         <p>Grid Lines coordinated with Plan</p>
                     </label>
-          <label>
+                    <label>
                         <input type="checkbox">
                         <p>All grid lines are to be kept in the front in draw order</p>
                     </label>
-          <label>
+                    <label>
                         <input type="checkbox">
                         <p>All RCC and Wall lines are to be kept in the front in draw order</p>
                     </label>
-          <label>
+                    <label>
                         <input type="checkbox">
                         <p>Legend for Hatch</p>
                     </label>
-          <label>
+                    <label>
                         <input type="checkbox">
                         <p>All hatch is to be kept back in the draw order</p>
                     </label>
-          <label>
+                    <label>
                         <input type="checkbox">
                         <p>Elevation elements</p>
                     </label>
-          <label>
+                    <label>
                         <input type="checkbox">
                         <p>Hinge position for Doors</p>
                     </label>
-          <label>
+                    <label>
                         <input type="checkbox">
                         <p>Beams as per structure</p>
                     </label>
-          <label>
+                    <label>
                         <input type="checkbox">
                         <p>Ventilators and windows as per plan</p>
                     </label>
-          <label>
+                    <label>
                         <input type="checkbox">
                         <p>Stair numbering (Always number the risers) as per plan</p>
                     </label>
-          <label>
+                    <label>
                         <input type="checkbox">
                         <p>Cut out lines to be indicate for see through cut outs</p>
                     </label>
-          <label>
+                    <label>
                         <input type="checkbox">
                         <p>Indicate provisions for differently abled</p>
                     </label>
-          <label>
+                    <label>
                         <input type="checkbox">
                         <p>All Layers have to be as per MSA Standard</p>
                     </label>
-          <label>
+                    <label>
                         <input type="checkbox">
                         <p>Check spelling for the whole file</p>
                     </label>
-          <label>
+                    <label>
                         <input type="checkbox">
                         <p>Make sure revision clouds don't overlap with the drawing objects</p>
                     </label>
-          <label>
+                    <label>
                         <input type="checkbox">
                         <p>In the drawing space, make sure all the sections are aligned by levels or any other line</p>
                     </label>
-          <label>
+                    <label>
                         <input type="checkbox">
                         <p>Nomenclature tags of sections are to be aligned with the drawing as well</p>
                     </label>
-          <label>
+                    <label>
                         <input type="checkbox">
                         <p>Text height of nomenclature and dimension must be the same throughout the sheet</p>
                     </label>
-          <label>
+                    <label>
                         <input type="checkbox">
                         <p>All the nomenclature must be readable at print scale</p>
                     </label>
-          <label>
+                    <label>
                         <input type="checkbox">
                         <p>In case of louvre windows, direction of louvers to be checked. Louvers shall be sloped outside</p>
                     </label>
-          <label>
+                    <label>
                         <input type="checkbox">
                         <p>For any building, plinth height must be greater than or equal to minimum plinth height recommended in GDCR</p>
                     </label>
-          <label>
+                    <label>
                         <input type="checkbox">
                         <p>Ground line must be made substantially dark in all the sections and elevations</p>
                     </label>
 
-          <h3 id="secDim">Dimension</h3>
-          <label>
+                    <h3 id="secDim">Dimension</h3>
+                    <label>
                         <input type="checkbox">
                         <p>Building height as defined in GDCR</p>
                     </label>
-          <label>
+                    <label>
                         <input type="checkbox">
                         <p>Floor height</p>
                     </label>
-          <label>
+                    <label>
                         <input type="checkbox">
                         <p>Clear height in rooms</p>
                     </label>
-          <label>
+                    <label>
                         <input type="checkbox">
                         <p>False ceiling level if required by the team leader</p>
                     </label>
-          <label>
+                    <label>
                         <input type="checkbox">
                         <p>Railing / Parapet height from finished levels</p>
                     </label>
-          <label>
+                    <label>
                         <input type="checkbox">
                         <p>Dimension for all architectural elements</p>
                     </label>
-          <label>
+                    <label>
                         <input type="checkbox">
                         <p>Dimension for Structure elements are not to be provided</p>
                     </label>
-          <label>
+                    <label>
                         <input type="checkbox">
                         <p>Dimension for railing / parapet height</p>
                     </label>
-          <label>
+                    <label>
                         <input type="checkbox">
                         <p>Level Difference between level guides</p>
                     </label>
-          <label>
+                    <label>
                         <input type="checkbox">
                         <p>Stair rise and tread cordinated with plan</p>
                     </label>
-          <label>
+                    <label>
                         <input type="checkbox">
                         <p>Stair start point cordinated with plan</p>
                     </label>
-          <label>
+                    <label>
                         <input type="checkbox">
                         <p>Stair landing cordinated with plan</p>
                     </label>
-          <label>
+                    <label>
                         <input type="checkbox">
                         <p>Clear height as defined in applicable GDCR</p>
                     </label>
-          <label>
+                    <label>
                         <input type="checkbox">
                         <p>It is advisable not to repeat horizontal dimension that are already mentioned in plans</p>
                     </label>
-        </div>
+                </div>
 
-        <!-- Master Layout -->
-        <div id="master-layout" class="tabcontent">
-          <h3 id="masterDrg">Drawing</h3>
-          <label>
+                <!-- Master Layout -->
+                <div id="master-layout" class="tabcontent">
+                    <h3 id="masterDrg">Drawing</h3>
+                    <label>
                         <input type="checkbox">
                         <p>All Grid Lines must be coordinated with Plan</p>
                     </label>
-          <label>
+                    <label>
                         <input type="checkbox">
                         <p>All grid lines are to be kept in the front</p>
                     </label>
-          <label>
+                    <label>
                         <input type="checkbox">
                         <p>All RCC and Wall lines are to be kept in the front</p>
                     </label>
-          <label>
+                    <label>
                         <input type="checkbox">
                         <p>Legend for Hatch to be provided</p>
                     </label>
-          <label>
+                    <label>
                         <input type="checkbox">
                         <p>Legend for Service Infrastructure</p>
                     </label>
-          <label>
+                    <label>
                         <input type="checkbox">
                         <p>Legend for horticulture elements to be provided if indicated</p>
                     </label>
-          <label>
+                    <label>
                         <input type="checkbox">
                         <p>All hatch is to be kept back in the draw order</p>
                     </label>
-          <label>
+                    <label>
                         <input type="checkbox">
                         <p>Finished Ground Levels and slopes with gradient to be indicated</p>
                     </label>
-          <label>
+                    <label>
                         <input type="checkbox">
                         <p>OGL and Contours to be provided if required from the team leader. However, the same shall be faded.</p>
                     </label>
-          <label>
+                    <label>
                         <input type="checkbox">
                         <p>Main Entrance Tag</p>
                     </label>
-          <label>
+                    <label>
                         <input type="checkbox">
                         <p>Plinth Levels of All Buildings</p>
                     </label>
-          <label>
+                    <label>
                         <input type="checkbox">
                         <p>Building Name, Numbers &amp; storeys</p>
                     </label>
-          <label>
+                    <label>
                         <input type="checkbox">
                         <p>Parking Spaces with Driveway dimension as per GDCR</p>
                     </label>
-          <label>
+                    <label>
                         <input type="checkbox">
                         <p>Area Table</p>
                     </label>
-          <label>
+                    <label>
                         <input type="checkbox">
                         <p>List of Cordinates</p>
                     </label>
-          <label>
+                    <label>
                         <input type="checkbox">
                         <p>Compound Wall</p>
                     </label>
-          <label>
+                    <label>
                         <input type="checkbox">
                         <p>Entry Gate</p>
                     </label>
-          <label>
+                    <label>
                         <input type="checkbox">
                         <p>Security Cabin</p>
                     </label>
-          <label>
+                    <label>
                         <input type="checkbox">
                         <p>Location of Water Tank</p>
                     </label>
-          <label>
+                    <label>
                         <input type="checkbox">
                         <p>Location of DG Room</p>
                     </label>
-          <label>
+                    <label>
                         <input type="checkbox">
                         <p>Location of Transformers</p>
                     </label>
-          <label>
+                    <label>
                         <input type="checkbox">
                         <p>Location of Existing Buildings in and around site</p>
                     </label>
-          <label>
+                    <label>
                         <input type="checkbox">
                         <p>Location of Existing trees if preserved</p>
                     </label>
-          <label>
+                    <label>
                         <input type="checkbox">
                         <p>Area for Common Plot if applicable</p>
                     </label>
-          <label>
+                    <label>
                         <input type="checkbox">
                         <p>Area for forestation if applicable</p>
                     </label>
-          <label>
+                    <label>
                         <input type="checkbox">
                         <p>Area for Parking</p>
                     </label>
-          <label>
+                    <label>
                         <input type="checkbox">
                         <p>Area for Visitor's Parking</p>
                     </label>
-          <label>
+                    <label>
                         <input type="checkbox">
                         <p>All Layers have to be as per MSA Standard</p>
                     </label>
-          <label>
+                    <label>
                         <input type="checkbox">
                         <p>Check spelling for the whole file</p>
                     </label>
-          <label>
+                    <label>
                         <input type="checkbox">
                         <p>Text and dimension must not overlap</p>
                     </label>
-          <label>
+                    <label>
                         <input type="checkbox">
                         <p>Revision Clouds</p>
                     </label>
-          <label>
+                    <label>
                         <input type="checkbox">
                         <p>Make sure revision clouds don't overlap with the drawing objects</p>
                     </label>
-          <label>
+                    <label>
                         <input type="checkbox">
                         <p>Text height of nomenclature and dimension must be the same throughout the sheet</p>
                     </label>
-          <label>
+                    <label>
                         <input type="checkbox">
                         <p>Nomenclature tags must be aligned with drawing elements</p>
                     </label>
 
-          <h3 id="masterDim">Dimension</h3>
-          <label>
+                    <h3 id="masterDim">Dimension</h3>
+                    <label>
                         <input type="checkbox">
                         <p>Site Boundary</p>
                     </label>
-          <label>
+                    <label>
                         <input type="checkbox">
                         <p>Road Width</p>
                     </label>
-          <label>
+                    <label>
                         <input type="checkbox">
                         <p>Road Length</p>
                     </label>
-          <label>
+                    <label>
                         <input type="checkbox">
                         <p>Turning Radius of road</p>
                     </label>
-          <label>
+                    <label>
                         <input type="checkbox">
                         <p>Building Out to Out X and Y Direction</p>
                     </label>
-          <label>
+                    <label>
                         <input type="checkbox">
                         <p>Common Plot</p>
                     </label>
-          <label>
+                    <label>
                         <input type="checkbox">
                         <p>Angle Between Common Plot Edges</p>
                     </label>
-          <label>
+                    <label>
                         <input type="checkbox">
                         <p>Forestation width</p>
                     </label>
-          <label>
+                    <label>
                         <input type="checkbox">
                         <p>Road Side Margin</p>
                     </label>
-          <label>
+                    <label>
                         <input type="checkbox">
                         <p>Side Margin</p>
                     </label>
-          <label>
+                    <label>
                         <input type="checkbox">
                         <p>Between Building Margin</p>
                     </label>
-          <label>
+                    <label>
                         <input type="checkbox">
                         <p>Common Plot to Building</p>
                     </label>
-          <label>
+                    <label>
                         <input type="checkbox">
                         <p>Building to Existing Building if applicable</p>
                     </label>
-          <label>
+                    <label>
                         <input type="checkbox">
                         <p>Other Landscape Elements if any</p>
                     </label>
-          <label>
+                    <label>
                         <input type="checkbox">
                         <p>Footpath width</p>
                     </label>
-          <label>
+                    <label>
                         <input type="checkbox">
                         <p>Width of Entrance gate as per GDCR</p>
                     </label>
-          <label>
+                    <label>
                         <input type="checkbox">
                         <p>Dimension of any other buildings such as; Pump Room, Security Cabin, DG Room</p>
                     </label>
 
-          <h3 id="masterAT">Area Table</h3>
-          <label>
+                    <h3 id="masterAT">Area Table</h3>
+                    <label>
                         <input type="checkbox">
                         <p>Site Area</p>
                     </label>
-          <label>
+                    <label>
                         <input type="checkbox">
                         <p>Road Cutting Area if applicable</p>
                     </label>
-          <label>
+                    <label>
                         <input type="checkbox">
                         <p>Net Area for Planning</p>
                     </label>
-          <label>
+                    <label>
                         <input type="checkbox">
                         <p>Permissible FSI as per GDCR</p>
                     </label>
-          <label>
+                    <label>
                         <input type="checkbox">
                         <p>Permissible Building Height as per GDCR</p>
                     </label>
-          <label>
+                    <label>
                         <input type="checkbox">
                         <p>Permissible Ground Coverage as per GDCR if applicable</p>
                     </label>
-          <label>
+                    <label>
                         <input type="checkbox">
                         <p>Minimum Required Parking Area as per GDCR for different uses such as; residential, commercial, visitors, etc.</p>
                     </label>
-          <label>
+                    <label>
                         <input type="checkbox">
                         <p>Minimum Required Common Plot Area as per GDCR if applicable</p>
                     </label>
-          <label>
+                    <label>
                         <input type="checkbox">
                         <p>Minimum Required Forestation Area as per GDCR if applicable</p>
                     </label>
-          <label>
+                    <label>
                         <input type="checkbox">
                         <p>Consumed FSI Area per category (Residential , Commercial, Etc.)</p>
                     </label>
-          <label>
+                    <label>
                         <input type="checkbox">
                         <p>Built up area total for the site, building wise, and floor wise breakdown</p>
                     </label>
-          <label>
+                    <label>
                         <input type="checkbox">
                         <p>No. of Units Provided if applicable</p>
                     </label>
-          <label>
+                    <label>
                         <input type="checkbox">
                         <p>Percentage Ground Coverage</p>
                     </label>
-          <label>
+                    <label>
                         <input type="checkbox">
                         <p>Provide Parking Area for all categories such as; residential, commercial, visitors, etc.</p>
                     </label>
-          <label>
+                    <label>
                         <input type="checkbox">
                         <p>Provide Common Plot Area if applicable</p>
                     </label>
-          <label>
+                    <label>
                         <input type="checkbox">
                         <p>Provide Forestation Area if applicable</p>
                     </label>
-          <label>
+                    <label>
                         <input type="checkbox">
                         <p>No. of units (Dwelling, Shops, Etc.) accommodated</p>
                     </label>
-          <label>
+                    <label>
                         <input type="checkbox">
                         <p>No. of Two-Wheelers Accommodated</p>
                     </label>
-          <label>
+                    <label>
                         <input type="checkbox">
                         <p>No. of Four-Wheelers Accommodated</p>
                     </label>
-        </div>
-      </div>
-    </section>
+                </div>
+            </div>
+        </section>
 
-    <section id="design-basis">
-      <header>
-        <h2>Design Basis Approach</h2>
-      </header>
-      <p>Contrary to what one is led to believe in college/ institute, architecture is not simply an art. Creativity is always appreciated; however, a lot of money, time, and resources are at stake in a typical project. Therefore, you are supposed to justify
-        your ideas. Design basis approach will help you achieve that.
-        <br>
-        <br> At MSA, at whatever level you are engaged in, you are expected to present your ideas with some design basis. Examples of design basis would be official specification document, official client requirements, local bylaws, national standards,
-        Handbooks, reference guides, scientific papers, etc.
-        <br>
-        <br> Work or ideas without a solid design basis will almost always invite revisions. Therefore, you are requested to understand this concept and adopt it in your daily project delivery.
-      </p>
-    </section>
+        <section id="design-basis">
+            <header>
+                <h2>Design Basis Approach</h2>
+            </header>
+            <p>Contrary to what one is led to believe in college/ institute, architecture is not simply an art. Creativity is always appreciated; however, a lot of money, time, and resources are at stake in a typical project. Therefore, you are supposed to justify your ideas. Design basis approach will help you achieve that.
+                <br>
+                <br> At MSA, at whatever level you are engaged in, you are expected to present your ideas with some design basis. Examples of design basis would be official specification document, official client requirements, local bylaws, national standards, Handbooks, reference guides, scientific papers, etc.
+                <br>
+                <br> Work or ideas without a solid design basis will almost always invite revisions. Therefore, you are requested to understand this concept and adopt it in your daily project delivery.
+            </p>
+        </section>
 
 
-    <!-- Email Etiquette -->
-    <section id="email-etiquette">
-      <header>
-        <h2>Email Etiquette</h2>
-      </header>
-      <h4>General Email Guidelines</h4>
-      <ol>
-        <li>Subject of email should be <strong>relevant</strong> to the items being sent via email. The subject of email must have the name of the project_Site / plot name if applicable_Type of Drawings / Documents being sent. Following are a few examples;
-          <ul class="squareBullets">
-            <li>GSRTC Bus Terminal_Navsari_Site Layout</li>
-            <li>GSRTC Bus Terminal_Navsari_Sections &amp; elevations</li>
-            <li>GSRTC Bus Terminal_Navsari_Tender Documents</li>
-            <li>GSRTC Bus Terminal_Navsari_Electrical Drawings</li>
-            <li>CCEL Head Office_UGWT</li>
-          </ul>
-        </li>
+        <!-- Email Etiquette -->
+        <section id="email-etiquette">
+            <header>
+                <h2>Email Etiquette</h2>
+            </header>
+            <h4>General Email Guidelines</h4>
+            <ol>
+                <li>Subject of email should be <strong>relevant</strong> to the items being sent via email. The subject of email must have the name of the project_Site / plot name if applicable_Type of Drawings / Documents being sent. Following are a few examples;
+                    <ul class="squareBullets">
+                        <li>GSRTC Bus Terminal_Navsari_Site Layout</li>
+                        <li>GSRTC Bus Terminal_Navsari_Sections &amp; elevations</li>
+                        <li>GSRTC Bus Terminal_Navsari_Tender Documents</li>
+                        <li>GSRTC Bus Terminal_Navsari_Electrical Drawings</li>
+                        <li>CCEL Head Office_UGWT</li>
+                    </ul>
+                </li>
 
-        <li>If you are writing a follow email, make sure you send the email in response to your <strong>earlier email</strong>. The follow up email must always have a trail mail.</li>
+                <li>If you are writing a follow email, make sure you send the email in response to your <strong>earlier email</strong>. The follow up email must always have a trail mail.</li>
 
-        <li>If you are issuing drawings / documents to clients, consultants, or contractors, make sure the link to outbox folder is embedded in the email.</li>
+                <li>If you are issuing drawings / documents to clients, consultants, or contractors, make sure the link to outbox folder is embedded in the email.</li>
 
-        <li>Readable PDF copies should always accompany the drawings / documents you decide to release via email.</li>
+                <li>Readable PDF copies should always accompany the drawings / documents you decide to release via email.</li>
 
-        <li>File titles of all the documents / drawings shall be strictly as per DCI.</li>
+                <li>File titles of all the documents / drawings shall be strictly as per DCI.</li>
 
-        <li>Attach a PDF copy of Transmittal mentioning all the documents / drawings being sent through the email</li>
+                <li>Attach a PDF copy of Transmittal mentioning all the documents / drawings being sent through the email</li>
 
-        <li>Any drawing being released must never have Autodesk Educational stamp. This also applies to drawings from other consultants that you release.</li>
-      </ol>
+                <li>Any drawing being released must never have Autodesk Educational stamp. This also applies to drawings from other consultants that you release.</li>
+            </ol>
 
-      <!-- Internal Communication -->
-      <h4>Internal Communication via Emails</h4>
-      <ol>
-        <li>Team members shall send their work to their leaders via email. <strong>'For Checking'</strong> shall be used in the beginning of email subject body.</li>
+            <!-- Internal Communication -->
+            <h4>Internal Communication via Emails</h4>
+            <ol>
+                <li>Team members shall send their work to their leaders via email. <strong>'For Checking'</strong> shall be used in the beginning of email subject body.</li>
 
-        <li>Leaders shall send their comments to their team members via email. <strong>'Comments'</strong> shall be used in the beginning of email subject body.</li>
+                <li>Leaders shall send their comments to their team members via email. <strong>'Comments'</strong> shall be used in the beginning of email subject body.</li>
 
-        <li>You all are also requested to use email to share your work with Interior, estimating, and 3D visualization teams. While sending you files, <strong>'For Working'</strong> shall be used in the beginning of email subject body.</li>
+                <li>You all are also requested to use email to share your work with Interior, estimating, and 3D visualization teams. While sending you files, <strong>'For Working'</strong> shall be used in the beginning of email subject body.</li>
 
-        <li>You are requested to self checked drawings/ documents.</li>
-        <li>Please also make sure you document your own comments remarks on the drawing / document using AutoDesk Design Review. </li>
-        <li>Revise the drawing / document based on your own assessment.</li>
-        <li>Send the revised drawing / document to the team leader for checking along with Commented copy (your own comments).</li>
-      </ol>
-    </section>
-
-
-    <!-- ASANA Workflow -->
-    <section id="asana-workflow">
-      <header>
-        <h2>Asana Workflow</h2>
-      </header>
-      <p>To know more about the Asana workflow, please refer the tutorial attached:</p>
-      <a href="Z:/MSA STANDARDS/Central/data/reference documents/Asana Workflow.pdf" class="button" target="_blank">Asana Workflow</a>
-    </section>
+                <li>You are requested to self checked drawings/ documents.</li>
+                <li>Please also make sure you document your own comments remarks on the drawing / document using AutoDesk Design Review. </li>
+                <li>Revise the drawing / document based on your own assessment.</li>
+                <li>Send the revised drawing / document to the team leader for checking along with Commented copy (your own comments).</li>
+            </ol>
+        </section>
 
 
-    <!-- Tutorials -->
-    <section id="tutorials">
-      <header>
-        <h2>Tutorials</h2>
-      </header>
-      <div class="rows">
-        <ul>
-          <li><a href="../Tutorials/Tutorial - Commenting in Design Review &amp; Generating PDF.html" target="_blank">Commenting in Design Review &amp; Generating PDF</a></li>
-          <li><a href="../Tutorials/Tutorial - FSI Concept &amp; Calculation.html" target="_blank">FSI Concept &amp; Calculation</a></li>
-          <li><a href="../Tutorials/Tutorial - Layer State Manager.html" target="_blank">Layer State Manager</a></li>
-          <li><a href="../Tutorials/Tutorial - LayISO &amp; LayUNISO.html" target="_blank">LayISO &amp; LayUNISO</a></li>
-          <li><a href="../Tutorials/Tutorial - Loading CTB &amp; Plotting.html" target="_blank">Loading CTB &amp; Plotting</a></li>
-          <li><a href="../Tutorials/Tutorial - Page Layout Setup in Excel.html" target="_blank">Page Layout Setup in Excel</a></li>
-          <li><a href="../Tutorials/Tutorial - Reducing file size in AutoCAD 2015 LT.html" target="_blank">Reducing file size in AutoCAD 2015 LT</a></li>
-          <li><a href="../Tutorials/Tutorial - Reducing file size in AutoCAD.html" target="_blank">Reducing file size in AutoCAD</a></li>
-          <li><a href="../Tutorials/Tutorial - Standard AutoCAD Settings.html" target="_blank">Standard AutoCAD Settings</a></li>
-          <li><a href="../Tutorials/Tutorial - Workspaces.html" target="_blank">Workspaces</a></li>
-          <li><a href="../Tutorials/Tutorial - Setup Layout Space.html" target="_blank">Setup Layout Space</a></li>
-          <li><a href="../Tutorials/Tutorial - Dimensioning Method.html" target="_blank">Dimensioning Method</a></li>
-        </ul>
-      </div>
-    </section>
+        <!-- ASANA Workflow -->
+        <section id="asana-workflow">
+            <header>
+                <h2>Asana Workflow</h2>
+            </header>
+            <p>To know more about the Asana workflow, please refer the tutorial attached:</p>
+            <a href="Z:/MSA STANDARDS/Central/data/reference documents/Asana Workflow.pdf" class="button" target="_blank">Asana Workflow</a>
+        </section>
 
 
-    <!-- Frequently Asked Questions -->
-    <section id="faq">
-      <header>
-        <h2>FAQ</h2>
-      </header>
-      <div>
-        <ul class="tab">
-          <li><a href="javascript:void(0)" class="tablinks" onclick="openCity(event, 'faq-01')">How to request a leave?</a></li>
-        </ul>
-        <div id="faq-01" class="tabcontent">
-          <p>You discuss with your superior, fill the leave card with details and give the signed copy to admin on your way out the day before you are on leave.</p>
-        </div>
-      </div>
-      <div>
-        <ul class="tab">
-          <li><a href="javascript:void(0)" class="tablinks" onclick="openCity(event, 'faq-02')">How to seek help?</a></li>
-        </ul>
-        <div id="faq-02" class="tabcontent">
-          <p>In case you need help from anyone, please present yourself with what you have tried already to solve the problem. Showing up with a list of solutions you deem appropriate will be much appreciated.</p>
-        </div>
-      </div>
-      <div>
-        <ul class="tab">
-          <li><a href="javascript:void(0)" class="tablinks" onclick="openCity(event, 'faq-03')">Who to contact in case of hardware challenge?</a></li>
-        </ul>
-        <div id="faq-03" class="tabcontent">
-          <p>Please get in touch with admin directly. Seeking solutions from neighboring colleagues is discouraged.</p>
-        </div>
-      </div>
-      <div>
-        <ul class="tab">
-          <li><a href="javascript:void(0)" class="tablinks" onclick="openCity(event, 'faq-04')">What if you have a general concern or suggestion and wish to be heard?</a></li>
-        </ul>
-        <div id="faq-04" class="tabcontent">
-          <p>In such a case, you are encouraged to speak with Nitin Shah.</p>
-        </div>
-      </div>
-    </section>
+        <!-- Tutorials -->
+        <section id="tutorials">
+            <header>
+                <h2>Tutorials</h2>
+            </header>
+            <div class="rows">
+                <ul>
+                    <li><a href="../Tutorials/Tutorial - Commenting in Design Review &amp; Generating PDF.html" target="_blank">Commenting in Design Review &amp; Generating PDF</a></li>
+                    <li><a href="../Tutorials/Tutorial - FSI Concept &amp; Calculation.html" target="_blank">FSI Concept &amp; Calculation</a></li>
+                    <li><a href="../Tutorials/Tutorial - Layer State Manager.html" target="_blank">Layer State Manager</a></li>
+                    <li><a href="../Tutorials/Tutorial - LayISO &amp; LayUNISO.html" target="_blank">LayISO &amp; LayUNISO</a></li>
+                    <li><a href="../Tutorials/Tutorial - Loading CTB &amp; Plotting.html" target="_blank">Loading CTB &amp; Plotting</a></li>
+                    <li><a href="../Tutorials/Tutorial - Page Layout Setup in Excel.html" target="_blank">Page Layout Setup in Excel</a></li>
+                    <li><a href="../Tutorials/Tutorial - Reducing file size in AutoCAD 2015 LT.html" target="_blank">Reducing file size in AutoCAD 2015 LT</a></li>
+                    <li><a href="../Tutorials/Tutorial - Reducing file size in AutoCAD.html" target="_blank">Reducing file size in AutoCAD</a></li>
+                    <li><a href="../Tutorials/Tutorial - Standard AutoCAD Settings.html" target="_blank">Standard AutoCAD Settings</a></li>
+                    <li><a href="../Tutorials/Tutorial - Workspaces.html" target="_blank">Workspaces</a></li>
+                    <li><a href="../Tutorials/Tutorial - Setup Layout Space.html" target="_blank">Setup Layout Space</a></li>
+                    <li><a href="../Tutorials/Tutorial - Dimensioning Method.html" target="_blank">Dimensioning Method</a></li>
+                </ul>
+            </div>
+        </section>
 
 
-    <!-- Contact info -->
-    <section id="contact">
-      <div class="content-wrap">
-        <header>
-          <h2>Contact</h2>
-        </header>
-        <p>This is website is maintained by Bijit and Devang. For any help regarding this page, the content uploaded on it, or if you have any suggestion, feel free to <a href="mailto:bsoni@msa.com; dchauhan@msa.com">write</a> to us.</p>
-      </div>
-    </section>
+        <!-- Frequently Asked Questions -->
+        <section id="faq">
+            <header>
+                <h2>FAQ</h2>
+            </header>
+            <div>
+                <ul class="tab">
+                    <li><a href="javascript:void(0)" class="tablinks" onclick="openCity(event, 'faq-01')">How to request a leave?</a></li>
+                </ul>
+                <div id="faq-01" class="tabcontent">
+                    <p>You discuss with your superior, fill the leave card with details and give the signed copy to admin on your way out the day before you are on leave.</p>
+                </div>
+            </div>
+            <div>
+                <ul class="tab">
+                    <li><a href="javascript:void(0)" class="tablinks" onclick="openCity(event, 'faq-02')">How to seek help?</a></li>
+                </ul>
+                <div id="faq-02" class="tabcontent">
+                    <p>In case you need help from anyone, please present yourself with what you have tried already to solve the problem. Showing up with a list of solutions you deem appropriate will be much appreciated.</p>
+                </div>
+            </div>
+            <div>
+                <ul class="tab">
+                    <li><a href="javascript:void(0)" class="tablinks" onclick="openCity(event, 'faq-03')">Who to contact in case of hardware challenge?</a></li>
+                </ul>
+                <div id="faq-03" class="tabcontent">
+                    <p>Please get in touch with admin directly. Seeking solutions from neighboring colleagues is discouraged.</p>
+                </div>
+            </div>
+            <div>
+                <ul class="tab">
+                    <li><a href="javascript:void(0)" class="tablinks" onclick="openCity(event, 'faq-04')">What if you have a general concern or suggestion and wish to be heard?</a></li>
+                </ul>
+                <div id="faq-04" class="tabcontent">
+                    <p>In such a case, you are encouraged to speak with Nitin Shah.</p>
+                </div>
+            </div>
+        </section>
 
 
-    <!-- Back to Top link -->
-    <a href="#nav-bar">
+        <!-- Contact info -->
+        <section id="contact">
+            <div class="content-wrap">
+                <header>
+                    <h2>Contact</h2>
+                </header>
+                <p>This is website is maintained by Bijit and Devang. For any help regarding this page, the content uploaded on it, or if you have any suggestion, feel free to <a href="mailto:bsoni@msa.com; dchauhan@msa.com">write</a> to us.</p>
+            </div>
+            
+            
+            
+        </section>
+
+
+        <!-- Back to Top link -->
+        <a href="#nav-bar">
             <img src="data/icons/backtotop.png" class="back-to-top">
         </a>
 
-  </article>
-  <!-- JS for Tabs-->
-  <script type="text/javascript" src="scripts/tabs.js"></script>
-  <!-- JS for Copy Button
+    </article>
+    <!-- JS for Tabs-->
+    <script type="text/javascript" src="scripts/tabs.js"></script>
+    <!-- JS for Copy Button
     <script type="text/javascript" src="scripts/copy-button.js"></script>-->
 </body>
 
