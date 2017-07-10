@@ -436,6 +436,17 @@ ul.tab li a:focus,
     transition-duration: .3s;
 }
 
+/*Contact List*/
+table{
+  /*border: 0.5px solid black;*/
+  width:100%;
+}
+th{
+  background:#7cd9ff;
+}
+tr:nth-child(odd){
+  background: #e0e2e2;
+}
 
 /* FAQ */
 
