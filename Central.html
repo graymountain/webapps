@@ -8,11 +8,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>MSA Central</title>
   <link rel="icon" type="image/png" href="data/msa-logo/msa-logo.jpg">
-  <link rel="stylesheet" href="scripts/main.css">
+  <link rel="stylesheet" href="css/main.css">
   <!--[if lt IE 9]>
 		<script src="scripts/html5shiv.js></scri<p></p>pt>
 		<![endif]-->
-  <script type="text/javascript" src="scripts/toggle_menu.js"></script>
+  <script type="text/javascript" src="js/toggle_menu.js"></script>
+  <script src="js/jquery-3.2.1.min.js"></script>
 
 </head>
 
@@ -37,6 +38,7 @@
             <li> <a href="#email-etiquette">Email Etiquette</a> </li>
             <li> <a href="#asana-workflow">Asana Workflow</a> </li>
             <li> <a href="#tutorials">Tutorials</a> </li>
+            <li> <a href="ContactList.html">Intercom</a> </li>
             <li> <a href="#faq">FAQ</a> </li>
           </ul>
         </li>
@@ -47,6 +49,8 @@
   <!-- This is Main Content-->
   <article>
 
+
+    <!-- The Firm -->
     <section id="firm">
       <header>
         <h2>The Firm</h2>
@@ -56,6 +60,8 @@
         <br />To know more, please <a href="http://www.msain.com/" target="_blank">Click here</a>.</p>
     </section>
 
+
+    <!-- Policies -->
     <section id="policies">
       <header>
         <h2>Policies &amp; Guidelines</h2>
@@ -160,6 +166,8 @@
       </div>
     </section>
 
+
+    <!-- Folder-System -->
     <section id="folder-system">
       <header>
         <h2>Folder System</h2>
@@ -168,6 +176,8 @@
       <a href="Z:/MSA STANDARDS/Central/data/reference documents/Folder &amp; File Management System.pdf" class="button" target="_blank">Folder System Reference</a>
     </section>
 
+
+    <!-- Document Standards -->
     <section id="doc-standard">
       <header>
         <h2>Document Standard</h2>
@@ -211,6 +221,8 @@
       </div>
     </section>
 
+
+    <!-- Cad-Standards -->
     <section id="cad-standard">
       <header>
         <h2>AutoCAD Standard</h2>
@@ -336,6 +348,8 @@
       </ul>
     </section>
 
+
+    <!-- Checklists -->
     <section id="checklists">
       <header>
         <h2>Checklists</h2>
@@ -367,80 +381,8 @@
         </div>
 
         <!-- TitleBlock -->
-        <div id="title-block" class="tabcontent">
-          <label>
-                        <input type="checkbox">
-                        <p>Drawing title and code as per DCI</p>
-                    </label>
-          <label>
-                        <input type="checkbox">
-                        <p>Check number of sheets</p>
-                    </label>
-          <label>
-                        <input type="checkbox">
-                        <p>Check project location</p>
-                    </label>
-          <label>
-                        <input type="checkbox">
-                        <p>Revision history to be as per DCI</p>
-                    </label>
-          <label>
-                        <input type="checkbox">
-                        <p>General notes to be checked. Add if necessary. Remove if unnecessary</p>
-                    </label>
-          <label>
-                        <input type="checkbox">
-                        <p>Reference notes for other drawings to be provided</p>
-                    </label>
-          <label>
-                        <input type="checkbox">
-                        <p>Revision notes</p>
-                    </label>
-          <label>
-                        <input type="checkbox">
-                        <p>List of Abbreviations</p>
-                    </label>
-          <label>
-                        <input type="checkbox">
-                        <p>Define lintel level and Sill level in general notes wherever applicable</p>
-                    </label>
-          <label>
-                        <input type="checkbox">
-                        <p>Mention the level at which plans are cut</p>
-                    </label>
-          <label>
-                        <input type="checkbox">
-                        <p>Key plan with North arrow as per MSA standard</p>
-                    </label>
-          <label>
-                        <input type="checkbox">
-                        <p>In key plan, only keep necessary text and information</p>
-                    </label>
-          <label>
-                        <input type="checkbox">
-                        <p>All the text in key plan, must be readable at print scale</p>
-                    </label>
-          <label>
-                        <input type="checkbox">
-                        <p>Name and Logo to be provided for MSA and Client only</p>
-                    </label>
-          <label>
-                        <input type="checkbox">
-                        <p>Make sure there's no Autodesk Education stamp on the drawing</p>
-                    </label>
-          <label>
-                        <input type="checkbox">
-                        <p>Make sure relevant CTB is applied to the paper space</p>
-                    </label>
-          <label>
-                        <input type="checkbox">
-                        <p>Always mark necessary sections in Key Plan</p>
-                    </label>
-          <label>
-                        <input type="checkbox">
-                        <p>In key plans, make sure the sections heads, elevation heads, and any other necessary text are readable in print scale</p>
-                    </label>
-        </div>
+        <div id="title-block" class="tabcontent"></div>
+        <script src="data/checklists/title-block.js"></script>
 
         <!-- Plan -->
         <div id="plan" class="tabcontent">
@@ -1156,6 +1098,8 @@
       </div>
     </section>
 
+
+    <!-- Design Basis -->
     <section id="design-basis">
       <header>
         <h2>Design Basis Approach</h2>
@@ -1300,6 +1244,9 @@
         </header>
         <p>This is website is maintained by Bijit and Devang. For any help regarding this page, the content uploaded on it, or if you have any suggestion, feel free to <a href="mailto:bsoni@msa.com; dchauhan@msa.com">write</a> to us.</p>
       </div>
+
+
+
     </section>
 
 
@@ -1310,7 +1257,7 @@
 
   </article>
   <!-- JS for Tabs-->
-  <script type="text/javascript" src="scripts/tabs.js"></script>
+  <script type="text/javascript" src="js/tabs.js"></script>
   <!-- JS for Copy Button
     <script type="text/javascript" src="scripts/copy-button.js"></script>-->
 </body>
