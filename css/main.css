@@ -440,11 +440,11 @@ ul.tab li a:focus,
 
 #fixedHeader {
   position: fixed;
+  width: 100%;
 }
 
-#whiteSpace {
-  width: 100%;
-  height: 75px;
+#tableContent {
+  padding-top: 35px;
 }
 
 table{
