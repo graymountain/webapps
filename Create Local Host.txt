@@ -1,3 +1,0 @@
-C:\Users\bsoni\Dropbox\Central
-
-C:\Users\bsoni\AppData\Local\Programs\Python\Python36-32\python.exe -m http.server
