@@ -437,6 +437,16 @@ ul.tab li a:focus,
 }
 
 /*Contact List*/
+
+#fixedHeader {
+  position: fixed;
+}
+
+#whiteSpace {
+  width: 100%;
+  height: 75px;
+}
+
 table{
   /*border: 0.5px solid black;*/
   width:100%;
