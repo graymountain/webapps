@@ -16,14 +16,14 @@ footer a{
   border: 1px solid white;
   border-radius: 5px;
   padding: 5px;
-  background-color: rgba(94, 142, 237, 0.3);
+  background-color: rgba(209, 105, 64, 0.3);
   transition-duration: .2s;
 }
 footer a:link{
   text-decoration: none;
 }
 footer a:hover{
-  background-color: rgba(94, 142, 237, 0.7);
+  background-color: rgba(209, 105, 64, 0.7);
   transition: ease-in-out;
   transition-duration: .2s;
 }
@@ -34,7 +34,8 @@ footer a:hover{
 h4{
   font-family: 'Open Sans Condensed', sans-serif;
   font-size: 20px;
-  color: black;
+  color: rgb(209, 105, 64);
+  text-shadow: 0.5px 0.5px gray;
   text-align:center;
   padding-top:50px;
 }
