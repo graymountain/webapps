@@ -8,16 +8,24 @@ footer {
   padding: 1rem;
   /*background-color:red;*/
   text-align: center;
+
 }
 footer a{
   color:white;
   font-family: 'Montserrat', sans-serif;
+  border: 1px solid white;
+  border-radius: 5px;
+  padding: 5px;
+  background-color: rgba(94, 142, 237, 0.3);
+  transition-duration: .2s;
 }
 footer a:link{
   text-decoration: none;
 }
 footer a:hover{
-  text-decoration: underline;
+  background-color: rgba(94, 142, 237, 0.7);
+  transition: ease-in-out;
+  transition-duration: .2s;
 }
 
 
@@ -26,7 +34,7 @@ footer a:hover{
 h4{
   font-family: 'Open Sans Condensed', sans-serif;
   font-size: 20px;
-  color: #cccccc;
+  color: black;
   text-align:center;
   padding-top:50px;
 }
@@ -35,7 +43,7 @@ h4{
 /*background Image
 *********************/
 html {
-  background: url(../images/01.jpg) no-repeat center center fixed;
+  background: url(../images/02.jpg) no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
