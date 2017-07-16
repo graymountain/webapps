@@ -6,9 +6,7 @@ footer {
   bottom: 0;
   left: 0;
   padding: 1rem;
-  /*background-color:red;*/
   text-align: center;
-
 }
 footer a{
   color:white;
@@ -34,17 +32,27 @@ footer a:hover{
 h4{
   font-family: 'Open Sans Condensed', sans-serif;
   font-size: 20px;
-  color: rgb(209, 105, 64);
+  color: rgb(1, 145, 13);
   text-shadow: 0.5px 0.5px gray;
   text-align:center;
   padding-top:50px;
+  /*Following keeps the background limited to the text within*/
+  display:inline-block;
+  border: 1px solid white;
+  border-radius: 5px;
+  padding: 5px;
+  background-color: rgba(252, 252, 252, 0.8);
+}
+/*Following makes the caption text horizontal aligned*/
+div{
+  text-align: center;
 }
 
 
 /*background Image
 *********************/
 html {
-  background: url(../images/02.jpg) no-repeat center center fixed;
+  background: url(../images/170715.jpg) no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
