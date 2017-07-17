@@ -1,0 +1,27 @@
+section{
+  background: rgb(159, 225, 237);
+  width:20%;
+  padding: 20px;
+  border-radius: 10%;
+  display: inline-table;
+}
+#secondPoint{
+  margin-left: 10px;
+}
+div {
+  display: inline-block;
+}
+label{
+    display: inline;
+    float: left;
+    clear: left;
+    width: 60px;
+    text-align: left;
+}
+.radio{
+margin-bottom: 10px;
+}
+.inputs input {
+  display: inline-block;
+  float:left;
+}

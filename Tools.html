@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>MSA Tools</title>
+  <!-- Link to CSS -->
+  <link rel="stylesheet" href="css/tools.css" />
+  <!-- Link to javascript -->
+  <script src="js/tools.js" defer></script>
+  <!-- Link to MSA Logo -->
+  <link rel="icon" type="image/png" href="images/msaLogo.png">
+</head>
+
+
+<body>
+  <!-- Following function calculates slope between two points a certain distance -->
+  <section id="slopeCalc">
+    <h3>Calculate slope</h3>
+    <p>Please maintain same units for all inputs</p>
+    <div class="inputs">
+      <label>PointA:</label><input type="number" id="pointA">
+      <label>PointB:</label><input type="number" id="pointB">
+      <label>Distance:</label><input type="number" id="distance">
+    </div>
+    <p><button type="button" onclick="slopeCalc()">Calculate Slope</button></p>
+    <p id="slopeResult"></p>
+  </section>
+
+  <!-- following function calculates the level of the second point based on the level of the first point, slope to be maintained, and the distance of the second point from the first point -->
+  <section id="secondPoint">
+    <h3>Calculate level of next point</h3>
+    <p>Please maintain same units for all inputs</p>
+
+    <div class="radio">
+      <lable><input type="radio" name="direction" value="-1" id="down" />Down</lable>
+      <label><input type="radio" name="direction" value="1" id="up" />Up</label>
+    </div>
+
+    <div class="inputs">
+      <label>PointA:</label><input type="number" id="firstPoint">
+      <label>Distance:</label><input type="number" id="distanceToSecond">
+      <label>Slope:</label><input type="number" id="slope">
+    </div>
+    <p><button type="button" onclick="levelOfSecond()">Calculate Slope</button></p>
+    <p id="levelOfSecond"></p>
+  </section>
+</body>
+
+</html>
