@@ -1,3 +1,7 @@
+/*This style sheet is for all the MSA tools*/
+
+
+/*Sections that contain tools*/
 section{
   background: rgb(159, 225, 237);
   width:20%;
@@ -5,9 +9,12 @@ section{
   border-radius: 10%;
   display: inline-table;
 }
+
+/*Adding margin to the tool on the right*/
 #secondPoint{
   margin-left: 10px;
 }
+
 div {
   display: inline-block;
 }
@@ -18,9 +25,11 @@ label{
     width: 60px;
     text-align: left;
 }
+
 .radio{
 margin-bottom: 10px;
 }
+
 .inputs input {
   display: inline-block;
   float:left;

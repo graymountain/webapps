@@ -5,6 +5,7 @@ function toInteger(number){
   );
 };
 
+
 // Following function calculates slope between two points a certain distance
 function slopeCalc (){
   // Taking input
