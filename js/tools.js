@@ -1,10 +1,8 @@
 // Following function takes a numebrs and returns a rounded off number
 function toInteger(number){
-  return Math.round(  // round to nearest integer
-    Number(number)    // type cast your input
-  );
+  // Making float to show 2 decimal places
+  return parseFloat(number).toFixed(2);
 };
-
 
 // Following function calculates slope between two points a certain distance
 function slopeCalc (){
