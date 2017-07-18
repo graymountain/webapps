@@ -1,5 +1,6 @@
 /*Link to MSA Central
 *********************/
+
 footer {
   position: absolute;
   right: 0;
@@ -8,53 +9,61 @@ footer {
   padding: 1rem;
   text-align: center;
 }
-footer a{
-  color:white;
+
+footer a {
+  color: white;
   font-family: 'Montserrat', sans-serif;
   border: 1px solid white;
   border-radius: 5px;
   padding: 5px;
   background-color: rgba(209, 105, 64, 0.3);
+  -webkit-transition-duration: .2s;
   transition-duration: .2s;
 }
-footer a:link{
+
+footer a:link {
   text-decoration: none;
 }
-footer a:hover{
+
+footer a:hover {
   background-color: rgba(209, 105, 64, 0.7);
+  -webkit-transition: ease-in-out;
   transition: ease-in-out;
+  -webkit-transition-duration: .2s;
   transition-duration: .2s;
 }
 
 
 /*Caption for the Image
 *********************/
-h4{
+
+h4 {
   font-family: 'Open Sans Condensed', sans-serif;
   font-size: 20px;
   color: rgb(1, 145, 13);
   text-shadow: 0.5px 0.5px gray;
-  text-align:center;
-  padding-top:50px;
+  text-align: center;
+  padding-top: 50px;
   /*Following keeps the background limited to the text within*/
-  display:inline-block;
+  display: inline-block;
   border: 1px solid white;
   border-radius: 5px;
   padding: 5px;
   background-color: rgba(252, 252, 252, 0.8);
 }
+
+
 /*Following makes the caption text horizontal aligned*/
-div{
+
+div {
   text-align: center;
 }
 
 
 /*background Image
 *********************/
+
 html {
   background: url(../images/170715.jpg) no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
   background-size: cover;
 }
