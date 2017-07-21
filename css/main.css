@@ -228,6 +228,21 @@ article #intro {
     color: royalblue;
 }
 
+/* Presentation */
+
+#presentation iframe {
+  width: 100%;
+  height: 300px;
+  border: none;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+#tableContent a {
+  text-decoration: none;
+  color: royalblue;
+}
+
 /* Policies */
 
 ul.tab {
