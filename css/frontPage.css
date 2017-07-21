@@ -26,7 +26,7 @@ footer a:link {
 }
 
 footer a:hover {
-  background-color: rgba(226, 211, 147, 0.7);
+  background-color: #cce6ff;
   -webkit-transition: ease-in-out;
   transition: ease-in-out;
   -webkit-transition-duration: .2s;
