@@ -62,6 +62,6 @@ div {
 *********************/
 
 html {
-  background: url(../images/170721.jpg) no-repeat center center fixed;
+  background: url(../../data/frontPage/170721.jpg) no-repeat center center fixed;
   background-size: cover;
 }
