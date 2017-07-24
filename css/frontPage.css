@@ -1,6 +1,40 @@
 /*Link to MSA Central
 *********************/
 
+/*background Image
+*********************/
+
+body {
+  background: url(../../data/frontPage/170724.jpg) no-repeat center center fixed;
+  background-size: 60%;
+  background-repeat: no-repeat;
+}
+
+/*Following makes the caption text horizontal aligned*/
+
+div {
+  text-align: center;
+}
+
+/*Caption for the Image
+*********************/
+
+h4 {
+  font-family: 'Open Sans Condensed', sans-serif;
+  font-size: 20px;
+  color: black;
+  text-align: center;
+  padding-top: 50px;
+  /*Following keeps the background limited to the text within*/
+  display: inline-block;
+  border: 1px solid rgba(252, 252, 252, 0.5);
+  padding: 5px;
+  background-color: rgba(252, 252, 252, 0.5);
+}
+
+/*Style Footer Button
+*********************/
+
 footer {
   position: absolute;
   right: 0;
@@ -31,37 +65,4 @@ footer a:hover {
   transition: ease-in-out;
   -webkit-transition-duration: .2s;
   transition-duration: .2s;
-}
-
-
-/*Caption for the Image
-*********************/
-
-h4 {
-  font-family: 'Open Sans Condensed', sans-serif;
-  font-size: 20px;
-  color: black;
-  text-align: center;
-  padding-top: 50px;
-  /*Following keeps the background limited to the text within*/
-  display: inline-block;
-  border: 1px solid rgba(252, 252, 252, 0.5);
-  padding: 5px;
-  background-color: rgba(252, 252, 252, 0.5);
-}
-
-
-/*Following makes the caption text horizontal aligned*/
-
-div {
-  text-align: center;
-}
-
-
-/*background Image
-*********************/
-
-html {
-  background: url(../../data/frontPage/170724.jpg) no-repeat center center fixed;
-  background-size: cover;
 }
