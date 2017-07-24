@@ -26,7 +26,7 @@ footer a:link {
 }
 
 footer a:hover {
-  background-color: #cce6ff;
+  background-color: #ffff01;
   -webkit-transition: ease-in-out;
   transition: ease-in-out;
   -webkit-transition-duration: .2s;
@@ -62,6 +62,6 @@ div {
 *********************/
 
 html {
-  background: url(../../data/frontPage/170721.jpg) no-repeat center center fixed;
+  background: url(../../data/frontPage/170724.jpg) no-repeat center center fixed;
   background-size: cover;
 }
