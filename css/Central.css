@@ -5,8 +5,9 @@
 *********************/
 
 body {
-  background: url(../../data/images/170724.jpg) no-repeat center center fixed;
-  background-size: 60%;
+  background: url(../../data/images/170729.jpg) no-repeat center center fixed;
+  /*background-size: 60%;*/
+  background-size: cover;
   background-repeat: no-repeat;
 }
 
@@ -22,14 +23,15 @@ div {
 h4 {
   font-family: 'Open Sans Condensed', sans-serif;
   font-size: 20px;
-  color: black;
+  color:black;
   text-align: center;
   padding-top: 50px;
   /*Following keeps the background limited to the text within*/
   display: inline-block;
   border: 1px solid rgba(252, 252, 252, 0.5);
+  border-radius: 10px;
   padding: 5px;
-  background-color: rgba(252, 252, 252, 0.5);
+  background-color: rgba(252, 252, 252, 0.8);
 }
 
 /*Style Footer Button
@@ -45,12 +47,12 @@ footer {
 }
 
 footer a {
-  color: black;
+  color: white;
   font-family: 'Montserrat', sans-serif;
-  border: 1px solid black;
+  border: 1px solid white;
   border-radius: 5px;
   padding: 5px;
-  background-color: rgb(226, 211, 147, 0.3);
+  background-color: rgb(226, 211, 147, 0.8);
   -webkit-transition-duration: .2s;
   transition-duration: .2s;
 }
@@ -60,7 +62,7 @@ footer a:link {
 }
 
 footer a:hover {
-  background-color: #ffff01;
+  background-color: #071b1c;
   -webkit-transition: ease-in-out;
   transition: ease-in-out;
   -webkit-transition-duration: .2s;
