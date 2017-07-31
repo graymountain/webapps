@@ -223,7 +223,7 @@ article #intro {
 
 /* Firm */
 
-#firm p a {
+#central p a {
     text-decoration: none;
     color: royalblue;
 }
@@ -379,7 +379,7 @@ ul.tab li a:focus,
 
 /* Drafting System */
 
-#drafting-system ul li ul {
+#CAD-guidelines ul li ul {
     padding: 0;
 }
 
