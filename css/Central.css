@@ -5,7 +5,7 @@
 *********************/
 
 body {
-  background: url(../../data/images/170729.jpg) no-repeat center center fixed;
+  background: url(../../data/images/170804.jpg) no-repeat center center fixed;
   /*background-size: 60%;*/
   background-size: cover;
   background-repeat: no-repeat;
@@ -28,10 +28,11 @@ h4 {
   padding-top: 50px;
   /*Following keeps the background limited to the text within*/
   display: inline-block;
-  border: 1px solid rgba(252, 252, 252, 0.5);
+  border: 1px solid rgba(252, 252, 252, 0.3);
   border-radius: 10px;
   padding: 5px;
-  background-color: rgba(252, 252, 252, 0.8);
+  background-color: rgba(252, 252, 252, 0.3);
+  margin-top: 0;
 }
 
 /*Style Footer Button
@@ -47,12 +48,12 @@ footer {
 }
 
 footer a {
-  color: white;
+  color: black;
   font-family: 'Montserrat', sans-serif;
-  border: 1px solid white;
+  border: 1px solid black;
   border-radius: 5px;
   padding: 5px;
-  background-color: rgb(226, 211, 147, 0.8);
+  background-color: rgb(101, 110, 54, 0.8);
   -webkit-transition-duration: .2s;
   transition-duration: .2s;
 }
@@ -62,7 +63,7 @@ footer a:link {
 }
 
 footer a:hover {
-  background-color: #071b1c;
+  background-color: #60564c;
   -webkit-transition: ease-in-out;
   transition: ease-in-out;
   -webkit-transition-duration: .2s;
