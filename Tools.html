@@ -55,6 +55,23 @@
     <p id="levelOfSecond"></p>
 
   </section>
+
+  <!-- following function calculates the coplanar distance between two points based on the location of the first point, second point & provided slope -->
+  <section id="distanceCalc">
+    <h3>Calculate distance between two points</h3>
+    <p>Please maintain same units for all inputs</p>
+
+    <!-- User Inputs -->
+    <div class="inputs">
+      <label>PointA:</label><input type="number" id="levelA">
+      <label>PointB:</label><input type="number" id="levelB">
+      <label>Slope:</label><input type="number" id="givenSlope">
+    </div>
+
+    <!-- Output -->
+    <p><button type="button" onclick="distanceBwPoints()">Calculate Distance</button></p>
+    <p id="distanceBwPoints"></p>
+  </section>
 </body>
 
 </html>
