@@ -51,14 +51,15 @@ window.onload = function() {
     //  alert( this.value ); // or $(this).val()
     if (this.value == "arcLength") {
       $('#div1').show();
-      $('#div2,#div3,#selectionNote').hide();
+      $('#div2,#div3,#selectionMsg').hide();
     } else if (this.value == "arcRadius") {
       $('#div2').show();
-      $('#div1,#div3,#selectionNote').hide();
+      $('#div1,#div3,#selectionMsg').hide();
     } else if (this.value == "centreAngle") {
       $('#div3').show();
-      $('#div1,#div2,#selectionNote').hide();
+      $('#div1,#div2,#selectionMsg').hide();
     } else {
+      $('#selectionMsg').show();
       $('#div1,#div2,#div3').hide();
       document.getElementById('selectionMsg').innerHTML = "Please select any of options";
     }
