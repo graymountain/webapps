@@ -38,3 +38,7 @@ label {
   display: inline-block;
   float: left;
 }
+
+#inputs {
+  margin-top: 10px;
+}
