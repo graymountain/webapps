@@ -43,12 +43,27 @@ function levelOfSecond() {
   document.getElementById('levelOfSecond').innerHTML = output;
 }
 
-// following function calculates the coplanar distance between two points based on the location of the first point, second point & provided slope
+// Following function calculates the coplanar distance between two points based on the location of the first point, second point & provided slope
 
+function distanceBwPoints() {
+  // Taking input
+  var a = document.getElementById('levelA').valueAsNumber;
+  var b = document.getElementById('levelB').valueAsNumber;
+  var slope = document.getElementById('givenSlope').valueAsNumber;
+  // Calculating distance
+  var result = toInteger(slope * (b - a));
+  var positiveResult = Math.abs(result);
+
+  document.getElementById('distanceBwPoints').innerHTML = "The distance is: " + positiveResult;
+}
+
+// Following functions calculate the arc length / arc raduis / centre angle of an arc
+
+// Run script on page load
 window.onload = function() {
 
+  // Following are the loops for hiding / showing particular divisitions on option selection
   $('#this').on('change', function() {
-    //  alert( this.value ); // or $(this).val()
     if (this.value == "arcLength") {
       $('#div1').show();
       $('#div2,#div3,#selectionMsg').hide();
@@ -66,6 +81,7 @@ window.onload = function() {
   });
 };
 
+// Function for calculating arc length
 function resultArcLength() {
   // Taking input
   var a = document.getElementById('inputRadius').valueAsNumber;
@@ -73,28 +89,30 @@ function resultArcLength() {
   // Calculating Arc Length
   var result = 2 * Math.PI * a * (b / 360);
   var positiveResult = Math.abs(result);
-
+  // Appending result
   document.getElementById('arcValue').innerHTML = "The result is: " + positiveResult;
 }
 
+// Function for calculating arc radius
 function resultArcRadius() {
   // Taking input
   var a = document.getElementById('inputArcLength').valueAsNumber;
   var b = document.getElementById('inputAngle2').valueAsNumber;
-  // Calculating Arc Length
+  // Calculating Arc Radius
   var result = (a * 360) / (2 * Math.PI * b);
   var positiveResult = Math.abs(result);
-
+  // Appending result
   document.getElementById('arcValue').innerHTML = "The result is: " + positiveResult;
 }
 
+// Function for calculating arc radius
 function resultCentreAngle() {
   // Taking input
   var a = document.getElementById('inputArcLength2').valueAsNumber;
   var b = document.getElementById('inputRadius2').valueAsNumber;
-  // Calculating Arc Length
+  // Calculating Centre Angle
   var result = (a * 360) / (2 * Math.PI * b);
   var positiveResult = Math.abs(result);
-
+  // Appending result
   document.getElementById('arcValue').innerHTML = "The result is: " + positiveResult;
 }
