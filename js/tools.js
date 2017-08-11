@@ -88,7 +88,7 @@ function resultArcLength() {
   var b = document.getElementById('inputAngle').valueAsNumber;
   // Calculating Arc Length
   var result = 2 * Math.PI * a * (b / 360);
-  var positiveResult = Math.abs(result);
+  var positiveResult = toInteger(Math.abs(result));
   // Appending result
   document.getElementById('arcValue').innerHTML = "The result is: " + positiveResult;
 }
@@ -100,7 +100,7 @@ function resultArcRadius() {
   var b = document.getElementById('inputAngle2').valueAsNumber;
   // Calculating Arc Radius
   var result = (a * 360) / (2 * Math.PI * b);
-  var positiveResult = Math.abs(result);
+  var positiveResult = toInteger(Math.abs(result));
   // Appending result
   document.getElementById('arcValue').innerHTML = "The result is: " + positiveResult;
 }
@@ -112,7 +112,7 @@ function resultCentreAngle() {
   var b = document.getElementById('inputRadius2').valueAsNumber;
   // Calculating Centre Angle
   var result = (a * 360) / (2 * Math.PI * b);
-  var positiveResult = Math.abs(result);
+  var positiveResult = toInteger(Math.abs(result));
   // Appending result
   document.getElementById('arcValue').innerHTML = "The result is: " + positiveResult;
 }
