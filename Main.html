@@ -21,10 +21,10 @@
 <body id="body">
 
   <!-- This is Navigation Bar-->
-  <header id="nav-bar">
-    <nav>
+  <nav id="nav-bar">
+    <section>
       <img src="../data/images/msaLogo.png">
-      <h2>MSA Central</h2>
+      <h2 id="withoutBottomBorder">MSA Central</h2>
       <ul>
         <li id="go-to" onclick="openMenu()">Menu
           <ul id="drop-down">
@@ -45,26 +45,19 @@
           </ul>
         </li>
       </ul>
-    </nav>
-  </header>
+    </section>
+  </nav>
+
+
 
   <!-- This is Main Content-->
-  <article>
-
+  <main>
 
     <!-- The Firm -->
-    <section id="central">
-      <header>
-        <h2>Central</h2>
-      </header>
+    <section id="central" class="top-less">
+      <h2>Central</h2>
       <p>This is an internal website of MSA. The purpose of this website is to offer latest standards, tools, tutorials, policies, and other resources to the team MSA. The standards hosted on this page are evolving in nature. Therefore, you are expected
         to regularly check and keep yourself updated about the latest standards. Adherence to the standards mentioned on this page is mandatory.</p>
-      <!-- <header>
-        <h2>The Firm</h2>
-      </header>
-      <p>Mamta Shah &amp; Associates is a team of architects, engineers, and designers offering concept to post-construction services in various sectors. The firm works at the intersection of creative expression and pragmatism for project delivery of high
-        standards.
-        <br />To know more, please <a href="http://www.msain.com/" target="_blank">Click here</a>.</p> -->
     </section>
 
 
@@ -1340,32 +1333,61 @@
       </div>
     </section>
 
+  </main>
 
-    <!-- Contact info -->
+  <!-- Contact info -->
+  <footer>
     <section id="contact">
       <div class="content-wrap">
         <header>
           <h2>Contact</h2>
         </header>
-        <p>This is website is maintained by Bijit and Devang. For any help regarding this page, the content uploaded on it, or if you have any suggestion, feel free to <a href="mailto:bsoni@msa.com; dchauhan@msa.com">write</a> to us.</p>
+        <p>This is website is maintained by Bijit and Devang. For any help regarding this page, tourself with what you have tried already to solve the problem. Showing up with a list of solutions you deem appropriate will be much appreciated.</p>
       </div>
-
-
-
+      </div>
+      <div>
+        <ul class="tab">
+          <li><a href="javascript:void(0)" class="tablinks" onclick="openCity(event, 'faq-03')">Who to contact in case of hardware challenge?</a></li>
+        </ul>
+        <div id="faq-03" class="tabcontent">
+          <p>Please get in touch with admin directly. Seeking solutions from neighboring colleagues is discouraged.</p>
+        </div>
+      </div>
+      <div>
+        <ul class="tab">
+          <li><a href="javascript:void(0)" class="tablinks" onclick="openCity(event, 'faq-04')">What if you have a general concern or suggestion and wish to be heard?</a></li>
+        </ul>
+        <div id="faq-04" class="tabcontent">
+          <p>In such a case, you are encouraged to speak with Nitin Shah.</p>
+        </div>
+      </div>
     </section>
+
+    </main>
+
+    <!-- Contact info -->
+    <footer>
+      <section id="contact">
+        <div class="content-wrap">
+          <header>
+            <h2>Contact</h2>
+          </header>
+          <p>This is website is maintained by Bijit and Devang. For any help regarding this page, the content uploaded on it, or if you have any suggestion, feel free to <a href="mailto:bsoni@msa.com; dchauhan@msa.com">write</a> to us.</p>
+        </div>
+      </section>
+    </footer>
 
 
     <!-- Back to Top link -->
-    <a href="#nav-bar">
+    <a href=#central>
             <img src="../data/images/backtotop.png" class="back-to-top">
         </a>
 
-  </article>
-  <!-- JS for Tabs-->
-  <script type="text/javascript" src="js/tabs.js"></script>
-  <!-- JS for Copy Button
+    <!-- JS for Tabs-->
+    <script type="text/javascript" src="js/tabs.js"></script>
+    <!-- JS for Copy Button
     <script type="text/javascript" src="scripts/copy-button.js"></script>-->
+
 </body>
 
 </html>
-/html>
