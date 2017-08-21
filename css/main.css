@@ -26,6 +26,9 @@ section h2 {
     list-style-type: square;
 }
 
+ol{
+  line-height: 30px;
+}
 
 /*Pseudo Classes*/
 .button {
