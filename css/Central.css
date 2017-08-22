@@ -5,7 +5,7 @@
 *********************/
 
 body {
-  background: url(../../data/images/170817.jpg) no-repeat center center fixed;
+  background: url(../../data/images/170822.jpg) no-repeat center center fixed;
   /*background-size: 60%;*/
   background-size: cover;
   background-repeat: no-repeat;
@@ -23,7 +23,7 @@ div {
 h4 {
   font-family: 'Open Sans Condensed', sans-serif;
   font-size: 20px;
-  color:red;
+  color: black;
   text-align: center;
   padding-top: 10px;
   /*Following keeps the background limited to the text within*/
@@ -31,7 +31,7 @@ h4 {
   border: 1px solid rgba(252, 252, 252, 0.3);
   border-radius: 10px;
   padding: 5px;
-  background-color: rgba(252, 252, 252, 0.3);
+  background-color: rgba(252, 252, 252, 0.8);
   margin-top: 0;
 }
 
@@ -63,7 +63,7 @@ footer a:link {
 }
 
 footer a:hover {
-  background-color: #41a0f2;
+  background-color: #b1927d;
   -webkit-transition: ease-in-out;
   transition: ease-in-out;
   -webkit-transition-duration: .2s;
