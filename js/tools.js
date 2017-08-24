@@ -134,7 +134,7 @@ function resultCentreAngle() {
   document.getElementById('arcValue').innerHTML = "The result is: " + positiveResult;
 }
 
-
+//Sanitary Ware Calculator
 function calcPax() {
   // Taking input
   var a = document.getElementById('carpetArea').valueAsNumber;
@@ -143,7 +143,7 @@ function calcPax() {
   var positiveResult = Math.abs(result);
 
   return positiveResult;
-}
+};
 
 function calcMale() {
   // Calculating Number of Male
@@ -152,7 +152,7 @@ function calcMale() {
   var positiveResult = Math.ceil(result);
 
   return positiveResult;
-}
+};
 
 function calcFemale() {
   // Calculating Number of Male
@@ -161,33 +161,69 @@ function calcFemale() {
   var positiveResult = Math.ceil(result);
 
   return positiveResult;
-}
+};
 
 function calcUrinals() {
   // Calculating Number of Urinals
-  var result = calcMale() / 50;
-  var positiveResult = Math.ceil(result);
+  if (calcMale() > 0 && calcMale() <= 20) {
+    var positiveResult = 1;
+  } else if (calcMale() > 20 && calcMale() <= 100) {
+    var result = calcMale() / 25;
+    var positiveResult = Math.ceil(result);
+  } else if (calcMale() > 100 && calcMale() <= 500) {
+    var result = calcMale() / 50;
+    var positiveResult = Math.ceil(result);
+  } else if (calcMale() > 500) {
+    var result = calcMale() / 50;
+    var positiveResult = Math.ceil(result);
+  } else {
+    var positiveResult = 0;
+  }
 
   return positiveResult;
-}
+};
 
 function calcWCMale() {
   // Calculating Number of WC for Male
-  var result = calcMale() / 100;
-  var positiveResult = Math.ceil(result);
+  if (calcMale() > 0 && calcMale() <= 20){
+    var positiveResult = 1;
+  } else if (calcMale() > 20 && calcMale() <= 100) {
+    var result = calcMale() / 25;
+    var positiveResult = Math.ceil(result);
+  } else if (calcMale() > 100 && calcMale() <= 500) {
+    var result = calcMale() / 50;
+    var positiveResult = Math.ceil(result);
+  } else if (calcMale() > 500) {
+    var result = calcMale() / 100;
+    var positiveResult = Math.ceil(result);
+  } else {
+    var positiveResult = 0;
+  }
 
   return positiveResult;
-}
+};
 
 function calcWCFemale() {
   // Calculating Number of WC for Male
-  var result = calcFemale() / 100;
-  var positiveResult = Math.ceil(result);
+  if (calcFemale() > 0 && calcFemale() <= 20){
+    var positiveResult = 1;
+  } else if (calcFemale() > 20 && calcFemale() <= 100) {
+    var result = calcFemale() / 25;
+    var positiveResult = Math.ceil(result);
+  } else if (calcFemale() > 100 && calcFemale() <= 500) {
+    var result = calcFemale() / 50;
+    var positiveResult = Math.ceil(result);
+  } else if (calcFemale() > 500) {
+    var result = calcFemale() / 100;
+    var positiveResult = Math.ceil(result);
+  } else {
+    var positiveResult = 0;
+  }
 
   return positiveResult;
-}
+};
 
 function resultSanitaryWare() {
   // Declaring Result
   document.getElementById('resultSanitaryWare').innerHTML = "Urinals: " + calcUrinals() + "<br/>" + "WC for Male:" + calcWCMale() + "<br/>" + "WC for Female:" + calcWCFemale();
-}
+};//Sanitary Ware Calculator
