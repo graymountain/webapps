@@ -5,8 +5,8 @@
 *********************/
 
 body {
-  background: url(../../data/images/170822.gif) no-repeat center center fixed;
-  /*background-size: 30%;*/
+  background: url(../../data/images/170825.jpg) no-repeat center center fixed;
+  /*background-size: 50%;*/
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -63,7 +63,7 @@ footer a:link {
 }
 
 footer a:hover {
-  background-color: #9e7050;
+  background-color: #757170;
   -webkit-transition: ease-in-out;
   transition: ease-in-out;
   -webkit-transition-duration: .2s;
