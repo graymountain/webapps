@@ -17,20 +17,19 @@
 <body>
   <!-- Following function calculates slope between two points a certain distance -->
   <section id="slopeCalc">
-    <h3>Calculate slope</h3>
-    <p>Please maintain same units for all inputs</p>
+      <h3>Calculate slope</h3>
+      <p>Please maintain same units for all inputs</p>
 
-    <!-- User Inputs -->
-    <div class="inputs">
-      <label>PointA:</label><input type="number" id="pointA">
-      <label>PointB:</label><input type="number" id="pointB">
-      <label>Distance:</label><input type="number" id="distance">
-    </div>
+      <!-- User Inputs -->
+      <div class="inputs">
+        <label>PointA:</label><br /><input type="number" id="pointA">
+        <label>PointB:</label><br /><input type="number" id="pointB">
+        <label>Distance:</label><br /><input type="number" id="distance">
+      </div>
 
-    <!-- Output -->
-    <p><button type="button" onclick="slopeCalc()">Calculate Slope</button></p>
-    <p id="slopeResult"></p>
-
+      <!-- Output -->
+      <p><button type="button" onclick="slopeCalc()">Calculate Slope</button></p>
+      <p id="slopeResult"></p>
   </section>
 
   <!-- following function calculates the level of the second point based on the level of the first point, slope to be maintained, and the distance of the second point from the first point -->
@@ -42,13 +41,13 @@
     <div class="radio">
       <lable><input type="radio" name="direction" value="-1" id="down" />Down</lable>
       <label><input type="radio" name="direction" value="1" id="up" />Up</label>
-    </div>
+    </div> <br />
 
     <!-- User Inputs -->
     <div class="inputs">
-      <label>PointA:</label><input type="number" id="firstPoint">
-      <label>Distance:</label><input type="number" id="distanceToSecond">
-      <label>Slope:</label><input type="number" id="slope">
+      <label>PointA:</label><br /><input type="number" id="firstPoint">
+      <label>Distance:</label><br /><input type="number" id="distanceToSecond">
+      <label>Slope:</label><br /><input type="number" id="slope">
     </div>
 
     <!-- Output -->
@@ -64,16 +63,15 @@
 
     <!-- User Inputs -->
     <div class="inputs">
-      <label>PointA:</label><input type="number" id="levelA">
-      <label>PointB:</label><input type="number" id="levelB">
-      <label>Slope:</label><input type="number" id="givenSlope">
+      <label>PointA:</label><br /><input type="number" id="levelA">
+      <label>PointB:</label><br /><input type="number" id="levelB">
+      <label>Slope:</label><br /><input type="number" id="givenSlope">
     </div>
 
     <!-- Output -->
     <p><button type="button" onclick="distanceBwPoints()">Calculate Distance</button></p>
     <p id="distanceBwPoints"></p>
   </section>
-</br>
 
   <section id="arcProperty">
     <h3>Calculate Arc length or Radious or Angle</h3>
@@ -87,25 +85,25 @@
           <option value="arcRadius">Arc Radius</option>
           <option value="centreAngle">Centre Angle</option>
         </select>
-    </div>
+    </div> <br /><br />
 
-    <div id="inputs">
+    <div>
 
       <div id="div1" style="display:none;">
-        <label>Radius:</label><input type="number" id="inputRadius">
-        <label>Angle:</label><input type="number" id="inputAngle">
+        <label>Radius:</label><br /><input type="number" id="inputRadius">
+        <label>Angle:</label><br /><input type="number" id="inputAngle">
         <p><button type="button" onclick="resultArcLength()">Calculate Arc Length</button></p>
       </div>
 
       <div id="div2" style="display:none;">
-        <label>Arc Length:</label><input type="number" id="inputArcLength">
-        <label>Angle:</label><input type="number" id="inputAngle2">
+        <label>Arc Length:</label><br /><input type="number" id="inputArcLength">
+        <label>Angle:</label><br /><input type="number" id="inputAngle2">
         <p><button type="button" onclick="resultArcRadius()">Calculate Arc Radius</button></p>
       </div>
 
       <div id="div3" style="display:none;">
-        <label>Arc Length:</label><input type="number" id="inputArcLength2">
-        <label>Radius:</label><input type="number" id="inputRadius2">
+        <label>Arc Length:</label><br /><input type="number" id="inputArcLength2">
+        <label>Radius:</label><br /><input type="number" id="inputRadius2">
         <p><button type="button" onclick="resultCentreAngle()">Calculate Centre Angle</button></p>
       </div>
 
@@ -117,45 +115,47 @@
     <p id="arcValue"></p>
   </section>
 
+
+  <!-- following function calculates the number of Sanitary Ware to be provided according to Comprehensive GDCR -->
   <section id="sanitaryWare">
     <h3>Sanitary Ware Calculator</h3>
-    <p>This tool works according to AUDA GDCR clauses.<br />
-      Tool expects you to enter Carpet Area and the Percentage you expect for the male population. Tool assumes percentage of Female population accordingly</p>
+    <p>Tool expects you to enter Carpet Area and the Percentage you expect for the male population. Tool assumes percentage of Female population accordingly</p>
 
     <!-- User Inputs -->
     <div class="options">
       <select id="buildingType">
           <<option>Select One</option>
-          <option value="commercial">Commercial</option>
+          <option value="educational">Educational</option>
+          <option value="business">Business</option>
           <option value="industrial">Industrial</option>
-          <option value="institutional">Institutional</option>
+          <option value="special">Special Buildings</option>
         </select>
-    </div>
+    </div> <br /><br />
 
-    <div id="inputs">
+    <div>
 
-      <div id="commercial" style="display:none;">
-        <div>
-          <p>As per GDCR, One person requires 4 m² of carpet area. So dividing Carpet Area with 4 will give total population.<br />
-            After that, Male and Female population is derived from the Percentage of Male, which is provided by you.<br />
-            As per GDCR, ## of Urinals to be provided for ## of Male Population and, ## of WC to be provided for ## of Male Population<br />
-            As per GDCR, ## of WC to be provided for ## of FeMale Population</p>
-        </div>
-        <label>Carpet Area:</label><input type="number" id="carpetArea">
-        <label>Male (%):</label><input type="number" id="percentageOfMale">
-        <p><button type="button" onclick="resultSanitaryWare()">Calculate Sanitary Ware</button></p>
+      <div id="educational" style="display:none;">
+        <label>Carpet Area: </label><br /><input type="number" id="carpetArea-educational">
+        <label>Male (%): </label><br /><input type="number" id="percentageOfMale-educational">
+        <p><button type="button" onclick="educationalType()">Calculate Sanitary Ware</button></p>
+      </div>
+
+      <div id="business" style="display:none;">
+        <label>Carpet Area: </label><br /><input type="number" id="carpetArea-business">
+        <label>Male (%): </label><br /><input type="number" id="percentageOfMale-business">
+        <p><button type="button" onclick="businessType()">Calculate Sanitary Ware</button></p>
       </div>
 
       <div id="industrial" style="display:none;">
-        <label>??</label><input type="number" id="inputArcLength">
-        <label>??</label><input type="number" id="inputAngle2">
-        <p><button type="button" onclick="resultArcRadius()">??</button></p>
+        <label>carpet Area: </label><br /><input type="number" id="carpetArea-industrial">
+        <label>Male (%): </label><br /><input type="number" id="percentageOfMale-industrial">
+        <p><button type="button" onclick="industrialType()">Calculate Sanitary Ware</button></p>
       </div>
 
-      <div id="institutional" style="display:none;">
-        <label>??</label><input type="number" id="inputArcLength2">
-        <label>??</label><input type="number" id="inputRadius2">
-        <p><button type="button" onclick="resultCentreAngle()">??</button></p>
+      <div id="special" style="display:none;">
+        <label>Number of Seats: </label><br /><input type="number" id="seats-special">
+        <label>Male (%): </label><br /><input type="number" id="percentageOfMale-special">
+        <p><button type="button" onclick="specialType()">Calculate Sanitary Ware</button></p>
       </div>
 
     </div>

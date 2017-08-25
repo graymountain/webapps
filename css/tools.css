@@ -1,21 +1,18 @@
 /*This style sheet is for all the MSA tools*/
 
+body {
+  width: 75%;
+  margin: auto;
+}
 
 /*Sections that contain tools*/
 
 section {
-  background: rgb(159, 225, 237);
-  width: 20%;
+  background-color: #f1f1f1;
+  box-shadow: 3px 3px 5px lightgray;
   padding: 20px;
-  border-radius: 10%;
-  display: inline-table;
-}
-
-
-/*Adding margin to the tool on the right*/
-
-section {
-  margin-left: 10px;
+  width: 50%;
+  margin: 10px auto;
 }
 
 div {
@@ -26,7 +23,6 @@ label {
   display: inline;
   float: left;
   clear: left;
-  width: 60px;
   text-align: left;
 }
 
@@ -39,6 +35,6 @@ label {
   float: left;
 }
 
-#inputs {
+.inputs {
   margin-top: 10px;
 }
