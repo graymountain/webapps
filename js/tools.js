@@ -95,6 +95,7 @@ window.onload = function() {
       $('#special').show();
       $('#business,#industrial,#educational,#selectionErr').hide();
     } else {
+      $('#selectionErr').show();
       $('#business,#industrial,#educational,#special').hide();
       document.getElementById('selectionErr').innerHTML = "Please select any of options";
     }
