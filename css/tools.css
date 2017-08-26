@@ -1,11 +1,8 @@
 /*This style sheet is for all the MSA tools*/
 
 body {
-  width: 75%;
   margin: auto;
 }
-
-/*Sections that contain tools*/
 
 section {
   background-color: #f1f1f1;
