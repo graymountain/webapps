@@ -84,16 +84,16 @@ window.onload = function() {
     //  alert( this.value ); // or $(this).val()
     if (this.value == "business") {
       $('#business').show();
-      $('#industrial,#educational,#special').hide();
+      $('#industrial,#educational,#special,#selectionErr').hide();
     } else if (this.value == "industrial") {
       $('#industrial').show();
-      $('#business,#educational,#special').hide();
+      $('#business,#educational,#special,#selectionErr').hide();
     } else if (this.value == "educational") {
       $('#educational').show();
-      $('#business,#industrial,#special').hide();
+      $('#business,#industrial,#special,#selectionErr').hide();
     } else if (this.value == "special") {
       $('#special').show();
-      $('#business,#industrial,#educational').hide();
+      $('#business,#industrial,#educational,#selectionErr').hide();
     } else {
       $('#business,#industrial,#educational,#special').hide();
       document.getElementById('selectionErr').innerHTML = "Please select any of options";
