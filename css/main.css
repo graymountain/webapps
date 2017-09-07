@@ -513,3 +513,19 @@ tr:nth-child(odd){
     text-align: left;
     width: 200vh;
 }
+
+
+/*Notes for opening a file directly
+--------------------------------------- */
+
+.notes {
+  border-left: 3px solid rgb(240, 111, 114);
+  padding-left: 10px;
+  margin-left: 30px;
+}
+
+.info {
+  display: inline-block;
+  float: left;
+  width: 25px;
+}
