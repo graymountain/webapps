@@ -34,7 +34,7 @@ else:
     endLine = "Someone has more than one copy of DPRs"
 
 # Path of Report file to be created
-csvPath = r"Z:\DPR\2017\DPR Update Status.csv"
+csvPath = r"C:\Users\dchauhan\Desktop\DPR Update Status.csv"
 f = open(csvPath, "w")
 
 # Header for the file
