@@ -20,12 +20,19 @@ for folder in dirs:  # For every DPR in the folder extract last modified time
                 fileList.append(file)
                 filepath = folderpath + "\\" + str(file)
                 catchTime = time.ctime(os.stat(filepath).st_mtime)
-                catchTime = catchTime.replace(" ", ",")
-                timeList.append(catchTime)
+                # When the date is in single digit
+                if catchTime[8] == " ":
+                    catchTime = catchTime[:8] + "0" + catchTime[9:]
+                    catchTime = catchTime.replace(" ", ",")
+                    timeList.append(catchTime)
+                # when the date is not in single digit
+                elif catchTime[8] != " ":
+                    catchTime = catchTime.replace(" ", ",")
+                    timeList.append(catchTime)
 
 result = dict(zip(fileList, timeList))
 keyList = result.keys()
-keyList.sort()
+keyList = sorted(keyList)
 
 # Error Report
 if employeeCount == len(keyList):
@@ -33,22 +40,25 @@ if employeeCount == len(keyList):
 else:
     endLine = "Someone has more than one copy of DPRs"
 
+# Take user input
+name = input("Please type your user name: ")
+
 # Path of Report file to be created
-csvPath = r"C:\Users\dchauhan\Desktop\DPR Update Status.csv"
-f = open(csvPath, "w")
-
-# Header for the file
-updateTime = str(datetime.now().strftime('%Y-%m-%d %H:%M:%S'))
-f.write("This is an auto generated DPR update report. It shows when was a DPR last updated." + "\n")
-f.write("This report was last generated on " + updateTime + "\n")
-f.write(endLine + "\n")
-f.write("Developed By : MSA R & D" + "\n")
-f.write("\n")
-
-# DPR report
-for key in keyList:
-    line = key + "," + result[key]
-    f.write(line + "\n")
-
-f.close()
-print("File written successfully! Yeah!")
+try:
+    csvPath = r"C:\Users\{}\Desktop\DPR Update Status.csv".format(name)
+    f = open(csvPath, "w")
+    # Header for the file
+    updateTime = str(datetime.now().strftime('%Y-%m-%d %H:%M:%S'))
+    f.write("This is an auto generated DPR update report. It shows when was a DPR last updated." + "\n")
+    f.write("This report was last generated on " + updateTime + "\n")
+    f.write(endLine + "\n")
+    f.write("Developed By : MSA R & D" + "\n")
+    f.write("\n")
+    # DPR report
+    for key in keyList:
+        line = key + "," + result[key]
+        f.write(line + "\n")
+    f.close()
+    print("File written successfully! Yeah!")
+except Exception as e:
+    print("\n" + "Something is wrong! File was not written!" + "\n" +  str(e))
