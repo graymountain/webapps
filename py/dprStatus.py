@@ -39,7 +39,7 @@ for folder in dirs:  # For every DPR in the folder extract last modified time
                     timeList.append(catchTime)
                     day = catchTime[8:10]
                     month = catchTime[4:7]
-                    if day != todayDate and month != todayMonth:
+                    if day != todayDate or  month != todayMonth:
                         catchFileList.append(str(file))
                         catchTimeList.append(catchTime)
 
@@ -49,7 +49,7 @@ for folder in dirs:  # For every DPR in the folder extract last modified time
                     timeList.append(catchTime)
                     day = catchTime[8:10]
                     month = catchTime[4:7]
-                    if day != todayDate and month != todayMonth:
+                    if day != todayDate or month != todayMonth:
                         catchFileList.append(str(file))
                         catchTimeList.append(catchTime)
 
