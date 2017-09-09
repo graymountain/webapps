@@ -30,6 +30,10 @@ ol{
   line-height: 30px;
 }
 
+.update{
+  background-color: #80bfff ;
+}
+
 /*Pseudo Classes*/
 .button {
     background-color: #f1f1f1;
