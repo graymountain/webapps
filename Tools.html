@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="css/tools.css" />
   <!-- Link to javascript -->
   <script src="js\tools.js" defer></script>
+  <script src="js\unitConverter.js"></script>
   <script src="js\jquery-3.2.1.min.js"></script>
   <!-- Link to MSA Logo -->
   <link rel="icon" type="image/png" href="images/msaLogo.png">
@@ -15,6 +16,32 @@
 
 
 <body>
+
+  <section id="unitConverter">
+    <h3>Unit Converter</h3>
+    <p>Please maintain relative units for all inputs</p>
+
+    <!-- User Inputs -->
+    <div>
+
+      <div id="unitInput">
+        <label>inch:</label><br /><input type="number" id="inputInch" oninput="inchTo()" value=""><br />
+
+        <label>ft-in:</label><br /><input type="number" id="inputFt" oninput="ftInchTo()" value="">
+          ' <input type="number" id="inputFtIn" oninput="ftInchTo()" value="0">
+            "<br />
+
+        <label>mm:</label><br /><input type="number" id="inputMm" oninput="mmTo()" value=""><br />
+
+        <label>cm:</label><br /><input type="number" id="inputCm" oninput="cmTo()" value=""><br />
+
+        <label>m:</label><br /><input type="number" id="inputM" oninput="mTo()" value=""><br />
+      </div>
+
+    </div>
+
+  </section>
+
   <!-- Following function calculates slope between two points a certain distance -->
   <section id="slopeCalc">
       <h3>Calculate slope</h3>
