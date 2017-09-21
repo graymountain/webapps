@@ -14,7 +14,7 @@ function inchTo() {
   var inFt = Math.floor(a / 12);
   var inIn = (a % 12);
   // Appending result
-  document.getElementById('inputFt').value = inFt.toFixed(2);
+  document.getElementById('inputFt').value = inFt;
   document.getElementById('inputFtIn').value = inIn.toFixed(2);
 
   // inch to mm
@@ -88,7 +88,7 @@ function mmTo() {
   var mmFt = Math.floor(a / 304.8); // 1 ft = 304.8 mm
   var mmFtIn = (a * 0.0393701) % 12; // 1 mm = 0.0393701 inch
   // Appending result
-  document.getElementById('inputFt').value = mmFt.toFixed(2);
+  document.getElementById('inputFt').value = mmFt;
   document.getElementById('inputFtIn').value = mmFtIn.toFixed(2);
 
   // mm to cm
@@ -121,7 +121,7 @@ function cmTo() {
   var cmFt = Math.floor(a / 30.48);
   var cmFtIn = (a * 0.393701) % 12;
   // Appending result
-  document.getElementById('inputFt').value = cmFt.toFixed(2);
+  document.getElementById('inputFt').value = cmFt;
   document.getElementById('inputFtIn').value = cmFtIn.toFixed(2);
 
   // cm to mm
@@ -154,7 +154,7 @@ function mTo() {
   var mFt = Math.floor(a / 0.3048);
   var mFtIn = (a * 39.3701) % 12;
   // Appending result
-  document.getElementById('inputFt').value = mFt.toFixed(2);
+  document.getElementById('inputFt').value = mFt;
   document.getElementById('inputFtIn').value = mFtIn.toFixed(2);
 
   // m to mm
