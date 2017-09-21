@@ -14,26 +14,26 @@ function inchTo() {
   var inFt = Math.floor(a / 12);
   var inIn = (a % 12);
   // Appending result
-  document.getElementById('inputFt').value = inFt;
-  document.getElementById('inputFtIn').value = inIn;
+  document.getElementById('inputFt').value = inFt.toFixed(2);
+  document.getElementById('inputFtIn').value = inIn.toFixed(2);
 
   // inch to mm
 
   var inMm = (a * 25.4);
   var inchToMm = Math.abs(inMm);
-  document.getElementById('inputMm').value = inchToMm;
+  document.getElementById('inputMm').value = inchToMm.toFixed(2);
 
   // inch to cm
 
   var inCm = (a * 2.54);
   var inchToCm = Math.abs(inCm);
-  document.getElementById('inputCm').value = inchToCm;
+  document.getElementById('inputCm').value = inchToCm.toFixed(2);
 
   // inch to m
 
   var inM = (a * 0.0254);
   var inchToM = Math.abs(inM);
-  document.getElementById('inputM').value = inchToM;
+  document.getElementById('inputM').value = inchToM.toFixed(2);
 
 };
 
@@ -47,28 +47,28 @@ function ftInchTo() {
   var ftToIn = Math.abs(a * 12);
   var inToIn = Math.abs(b);
   var ftInToIn = ftToIn + inToIn;
-  document.getElementById('inputInch').value = ftInToIn;
+  document.getElementById('inputInch').value = ftInToIn.toFixed(2);
 
   // ft-in to mm
 
   var ftToMm = Math.abs(a * 304.8);
   var inToMm = Math.abs(b * 25.4);
   var ftInToMm = ftToMm + inToMm;
-  document.getElementById('inputMm').value = ftInToMm;
+  document.getElementById('inputMm').value = ftInToMm.toFixed(2);
 
   // ft-in to cm
 
   var ftToCm = Math.abs(a * 30.48);
   var inToCm = Math.abs(b * 2.54);
   var ftInToCm = ftToCm + inToCm;
-  document.getElementById('inputCm').value = ftInToCm;
+  document.getElementById('inputCm').value = ftInToCm.toFixed(2);
 
   // ft-in to m
 
   var ftToM = Math.abs(a * 0.3048);
   var inToM = Math.abs(b * 0.0254);
   var ftInToM = ftToM + inToM;
-  document.getElementById('inputM').value = ftInToM;
+  document.getElementById('inputM').value = ftInToM.toFixed(2);
 
 };
 
@@ -81,27 +81,27 @@ function mmTo() {
 
   var mmIn = (a * 0.0393701);
   var mmToIn = Math.abs(mmIn);
-  document.getElementById('inputInch').value = mmToIn;
+  document.getElementById('inputInch').value = mmToIn.toFixed(2);
 
   // mm to ft-in
 
   var mmFt = Math.floor(a / 304.8); // 1 ft = 304.8 mm
   var mmFtIn = (a * 0.0393701) % 12; // 1 mm = 0.0393701 inch
   // Appending result
-  document.getElementById('inputFt').value = mmFt;
-  document.getElementById('inputFtIn').value = mmFtIn;
+  document.getElementById('inputFt').value = mmFt.toFixed(2);
+  document.getElementById('inputFtIn').value = mmFtIn.toFixed(2);
 
   // mm to cm
 
   var mmCm = (a * 0.1);
   var mmToCm = Math.abs(mmCm);
-  document.getElementById('inputCm').value = mmToCm;
+  document.getElementById('inputCm').value = mmToCm.toFixed(2);
 
   // mm to m
 
   var mmM = (a * 0.001);
   var mmToM = Math.abs(mmM);
-  document.getElementById('inputM').value = mmToM;
+  document.getElementById('inputM').value = mmToM.toFixed(2);
 
 };
 
@@ -114,27 +114,27 @@ function cmTo() {
 
   var cmIn = (a * 0.393701);
   var cmToIn = Math.abs(cmIn);
-  document.getElementById('inputInch').value = cmToIn;
+  document.getElementById('inputInch').value = cmToIn.toFixed(2);
 
   // cm to ft-in
 
   var cmFt = Math.floor(a / 30.48);
   var cmFtIn = (a * 0.393701) % 12;
   // Appending result
-  document.getElementById('inputFt').value = cmFt;
-  document.getElementById('inputFtIn').value = cmFtIn;
+  document.getElementById('inputFt').value = cmFt.toFixed(2);
+  document.getElementById('inputFtIn').value = cmFtIn.toFixed(2);
 
   // cm to mm
 
   var cmMm = (a * 10);
   var cmToMm = Math.abs(cmMm);
-  document.getElementById('inputMm').value = cmToMm;
+  document.getElementById('inputMm').value = cmToMm.toFixed(2);
 
   // cm to m
 
   var cmM = (a * 0.01);
   var cmToM = Math.abs(cmM);
-  document.getElementById('inputM').value = cmToM;
+  document.getElementById('inputM').value = cmToM.toFixed(2);
 
 };
 
@@ -147,26 +147,26 @@ function mTo() {
 
   var mIn = (a * 39.3701);
   var mToIn = Math.abs(mIn);
-  document.getElementById('inputInch').value = mToIn;
+  document.getElementById('inputInch').value = mToIn.toFixed(2);
 
   // m to ft-in
 
   var mFt = Math.floor(a / 0.3048);
   var mFtIn = (a * 39.3701) % 12;
   // Appending result
-  document.getElementById('inputFt').value = mFt;
-  document.getElementById('inputFtIn').value = mFtIn;
+  document.getElementById('inputFt').value = mFt.toFixed(2);
+  document.getElementById('inputFtIn').value = mFtIn.toFixed(2);
 
   // m to mm
 
   var mMm = (a * 1000);
   var mToMm = Math.abs(mMm);
-  document.getElementById('inputMm').value = mToMm;
+  document.getElementById('inputMm').value = mToMm.toFixed(2);
 
   // m to cm
 
   var mCm = (a * 100);
   var mToCm = Math.abs(mCm);
-  document.getElementById('inputCm').value = mToCm;
+  document.getElementById('inputCm').value = mToCm.toFixed(2);
 
 };
