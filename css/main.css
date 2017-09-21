@@ -523,13 +523,18 @@ tr:nth-child(odd){
 --------------------------------------- */
 
 .notes {
-  border-left: 3px solid rgb(240, 111, 114);
+  display: none;
+  border-left: 2px solid rgb(240, 111, 114);
   padding-left: 10px;
-  margin-left: 30px;
 }
 
 .info {
   display: inline-block;
-  float: left;
+  float: right;
   width: 25px;
+  cursor: help;
+}
+
+.info:hover ~ .notes {
+  display: inline-block;
 }
