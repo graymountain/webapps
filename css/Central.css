@@ -63,7 +63,8 @@ footer a:link {
 
 footer a:hover {
   color: Black;
-  background-color: #9f5564;
+  background-color: white;
+  border: 1px solid white;
   -webkit-transition: ease-in-out;
   transition: ease-in-out;
   -webkit-transition-duration: .2s;
