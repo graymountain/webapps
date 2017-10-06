@@ -119,24 +119,6 @@ section {
 /* Navigation Bar
 --------------------------------------- */
 
-.naviCons {
-  float: right;
-  margin-right: 210px;
-}
-
-.naviCons a img{
-  padding-right: 10px;
-  opacity: .5;
-  transition-property: opacity;
-  transition-duration: .3s;
-}
-
-.naviCons a img:hover {
-  opacity: 1;
-  transition-property: opacity;
-  transition-duration: .3s;
-}
-
 #nav-bar {
     margin: 0;
     width: 100%;
@@ -152,7 +134,7 @@ section {
     height: 50px;
 }
 
-#nav-bar img {
+#nav-bar > section > img {
     float: left;
     width: 40px;
     margin: 5px 10px auto auto;
@@ -165,6 +147,26 @@ section {
     vertical-align: middle;
     padding-top: 0;
     padding-bottom: 0;
+}
+
+.naviCons {
+  float: right;
+  margin-right: 210px;
+}
+
+.naviCons a img{
+  width: 30px;
+  padding-right: 10px;
+  margin: 10px 10px auto auto;
+  opacity: .5;
+  transition-property: opacity;
+  transition-duration: .3s;
+}
+
+.naviCons a img:hover {
+  opacity: 1;
+  transition-property: opacity;
+  transition-duration: .3s;
 }
 
 /*Following is done to keep the header fixed*/
