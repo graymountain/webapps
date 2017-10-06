@@ -119,6 +119,24 @@ section {
 /* Navigation Bar
 --------------------------------------- */
 
+.naviCons {
+  float: right;
+  margin-right: 210px;
+}
+
+.naviCons a img{
+  padding-right: 10px;
+  opacity: .5;
+  transition-property: opacity;
+  transition-duration: .3s;
+}
+
+.naviCons a img:hover {
+  opacity: 1;
+  transition-property: opacity;
+  transition-duration: .3s;
+}
+
 #nav-bar {
     margin: 0;
     width: 100%;
