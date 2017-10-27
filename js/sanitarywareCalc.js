@@ -117,7 +117,7 @@ function businessType() {
 
   var calcUrinals = function() {
     // Calculating Number of Urinals
-    if (calcMale() > 0 && calcMale() < 20) {
+    if (calcMale() > 0 && calcMale() <= 20) {
       var positiveResult = 1;
     } else if (calcMale() > 20 && calcMale() <= 100) {
       var result = calcMale() / 25;
@@ -137,7 +137,7 @@ function businessType() {
 
   var calcWCMale = function() {
     // Calculating Number of WC for Male
-    if (calcMale() > 0 && calcMale() < 20) {
+    if (calcMale() > 0 && calcMale() <= 20) {
       var positiveResult = 1;
     } else if (calcMale() > 20 && calcMale() <= 100) {
       var result = calcMale() / 25;
@@ -157,7 +157,7 @@ function businessType() {
 
   var calcWCFemale = function() {
     // Calculating Number of WC for Male
-    if (calcFemale() > 0 && calcFemale() < 20) {
+    if (calcFemale() > 0 && calcFemale() <= 20) {
       var positiveResult = 1;
     } else if (calcFemale() > 20 && calcFemale() <= 100) {
       var result = calcFemale() / 25;
