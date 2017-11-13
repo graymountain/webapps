@@ -5,9 +5,10 @@
 *********************/
 
 body {
-  background: url(../../data/images/171013.jpg) no-repeat center center fixed;
-  background-size: 80%;
+  background: url(../../data/images/171103.jpg) no-repeat center center fixed;
+  background-size: cover;
   background-repeat: no-repeat;
+  background-position: bottom;
 }
 
 /*Following makes the caption text horizontal aligned*/
@@ -63,7 +64,7 @@ footer a:link {
 
 footer a:hover {
   color: Black;
-  background-color: rgba(57, 164, 242, .5);
+  background-color: rgba(215, 174, 152, .5);
   border: 1px solid black;
   -webkit-transition: ease-in-out;
   transition: ease-in-out;
