@@ -26,13 +26,17 @@ function levelOfSecond() {
   // If "up" is selected, provide point higher than the first point
   if (document.getElementById('up').checked == true) {
     var result = uptoTwoDecimal(a + (distance / slope));
+    var result2 = uptoTwoDecimal(result - a);
     output = "The level of second point is " + result;
+    diffBWPoints = "The difference between two points is " + result2;
   };
 
   // If "down" is selected, provide point lower than the first point
   if (document.getElementById('down').checked == true) {
     var result = uptoTwoDecimal(a - (distance / slope));
+    var result2 = uptoTwoDecimal(a - result);
     output = "The level of second point is " + result;
+    diffBWPoints = "The difference between two points is " + result2;
   };
 
   // If neither "up" or "down" is selected, give a message
@@ -41,6 +45,7 @@ function levelOfSecond() {
   };
   // Send output back to HTML
   document.getElementById('levelOfSecond').innerHTML = output;
+  document.getElementById('diffBWpoints').innerHTML = diffBWPoints;
 };
 
 // Following function calculates the coplanar distance between two points based on the location of the first point, second point & provided slope
