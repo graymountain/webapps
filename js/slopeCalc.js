@@ -1,5 +1,5 @@
 // Following function takes a numebrs and returns a rounded off number
-function toInteger(number) {
+function uptoTwoDecimal(number) {
   // Making float to show 2 decimal places
   return parseFloat(number).toFixed(2);
 };
@@ -11,7 +11,7 @@ function slopeCalc() {
   var b = document.getElementById('pointB').valueAsNumber;
   var distance = document.getElementById('distance').valueAsNumber;
   // Calculating slope
-  var result = toInteger(distance / (b - a));
+  var result = uptoTwoDecimal(distance / (b - a));
 
   document.getElementById('slopeResult').innerHTML = "The slope is 1: " + result;
 };
@@ -25,13 +25,13 @@ function levelOfSecond() {
 
   // If "up" is selected, provide point higher than the first point
   if (document.getElementById('up').checked == true) {
-    var result = toInteger(a + (distance / slope));
+    var result = uptoTwoDecimal(a + (distance / slope));
     output = "The level of second point is " + result;
   };
 
   // If "down" is selected, provide point lower than the first point
   if (document.getElementById('down').checked == true) {
-    var result = toInteger(a - (distance / slope));
+    var result = uptoTwoDecimal(a - (distance / slope));
     output = "The level of second point is " + result;
   };
 
@@ -51,7 +51,7 @@ function distanceBwPoints() {
   var b = document.getElementById('levelB').valueAsNumber;
   var slope = document.getElementById('givenSlope').valueAsNumber;
   // Calculating distance
-  var result = toInteger(slope * (b - a));
+  var result = uptoTwoDecimal(slope * (b - a));
   var positiveResult = Math.abs(result);
 
   document.getElementById('distanceBwPoints').innerHTML = "The distance is: " + positiveResult;
