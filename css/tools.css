@@ -4,14 +4,14 @@ body {
   margin: auto;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: center;
 }
 
 section {
   background-color: #f1f1f1;
   box-shadow: 3px 3px 5px lightgray;
   padding: 20px;
-  margin: 10px auto;
+  margin: 2px;
   flex: 0 1 30%;
 }
 
