@@ -2,14 +2,17 @@
 
 body {
   margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 section {
   background-color: #f1f1f1;
   box-shadow: 3px 3px 5px lightgray;
   padding: 20px;
-  width: 50%;
   margin: 10px auto;
+  flex: 0 1 30%;
 }
 
 div {
