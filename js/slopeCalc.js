@@ -11,7 +11,7 @@ function slopeCalc() {
   var b = document.getElementById('pointB').valueAsNumber;
   var distance = document.getElementById('distance').valueAsNumber;
   // Calculating slope
-  var result = uptoTwoDecimal(distance / (b - a));
+  var result = Math.abs(uptoTwoDecimal(distance / (b - a)));
 
   document.getElementById('slopeResult').innerHTML = "The slope is 1: " + result;
 };
