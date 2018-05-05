@@ -550,6 +550,12 @@ tr:nth-child(odd){
   background: #f1f1f1;
 }
 
+@media print{
+    body{
+        font-size: larger;
+    }
+}
+
 
 /* FAQ
 --------------------------------------- */
