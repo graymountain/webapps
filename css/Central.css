@@ -5,10 +5,10 @@
 *********************/
 
 body {
-  background: url(../../data/images/180326.jpg) no-repeat center center fixed;
-  background-size: 60%;
+  background: url(../../data/images/180613.jpg) no-repeat center center fixed;
+  background-size: cover;
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: top;
 }
 
 /*Following makes the caption text horizontal aligned*/
@@ -31,7 +31,7 @@ h4 {
   border: 1px solid rgba(252, 252, 252, 0.6);
   border-radius: 10px;
   padding: 5px;
-  background-color: rgba(252, 252, 252, 0.9);
+  background-color: rgba(252, 252, 252, 0.5);
   margin-top: 0;
 }
 
@@ -60,11 +60,12 @@ footer a {
 
 footer a:link {
   text-decoration: none;
+  background-color: rgba(252, 252, 252, 0.3);
 }
 
 footer a:hover {
   color: Black;
-  background-color: rgba(89, 102, 32,.5);
+  background-color: rgba(252, 252, 252, 0.5);
   border: 1px solid black;
   -webkit-transition: ease-in-out;
   transition: ease-in-out;
