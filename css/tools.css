@@ -38,3 +38,24 @@ label {
 .inputs {
   margin-top: 10px;
 }
+
+/*Description of Tools
+--------------------------------------- */
+
+.notes {
+  display: none;
+  border-left: 2px solid rgb(240, 111, 114);
+  padding-left: 10px;
+}
+
+.info {
+  display: inline-block;
+  float: right;
+  width: 25px;
+  cursor: help;
+}
+
+.info:hover ~ .notes {
+  display: inline-block;
+}
+

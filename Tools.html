@@ -47,7 +47,22 @@
 
   <!-- Following function calculates slope between two points a certain distance -->
   <section id="slopeCalc">
+      
+      <img src="..\data\images\info.png" class="info" />
+        
       <h3>Calculate slope</h3>
+      
+      <div class="notes">
+        <p>
+            This tool is used to calculate slope ratio, <strong>PointA</strong> below is the first level, <strong>PointB</strong> is the second level and <strong>Distance</strong> indicates the distance between two points.</p>
+        <ol>
+          <lh><strong>Calculation Method</strong></lh>
+          <li>A = Subtract PointA and PointB</li>
+          <li>B = Divide distance with A </li>
+          <li>Resulting value indicates slope ratio</li>
+        </ol>
+      </div>
+      
       <p>Please maintain same units for all inputs</p>
 
       <!-- User Inputs -->
@@ -64,7 +79,23 @@
 
   <!-- following function calculates the level of the second point based on the level of the first point, slope to be maintained, and the distance of the second point from the first point -->
   <section id="secondPoint">
+      
+    <img src="..\data\images\info.png" class="info" />
+      
     <h3>Calculate level of next point</h3>
+      
+    <div class="notes">
+        <p>
+            This tool is used to calculate the level of next point, <strong>PointA</strong> below is the first level, <strong>Distance</strong> indicates the distance between two points and <strong>Slope</strong> indicates the slope ratio</p>
+        <ol>
+          <lh><strong>Calculation Method</strong></lh>
+          <li>A = Divide distance with slope</li>
+          <li>B = Add (If location of point is Up) or subtract (If location of point is Down) A with PointA </li>
+          <li>Resulting value gives value of second point</li>
+          <li>D =Subtract PointA from B, will give difference between two points</li>
+        </ol>
+      </div>
+      
     <p>Please maintain same units for all inputs</p>
 
     <!-- Radio buttons for "Up" and "Down" -->
@@ -89,7 +120,23 @@
 
   <!-- following function calculates the coplanar distance between two points based on the location of the first point, second point & provided slope -->
   <section id="distanceCalc">
+      
+    <img src="..\data\images\info.png" class="info" />
+      
     <h3>Calculate distance between two points</h3>
+      
+    <div class="notes">
+        <p>
+            This tool is used to calculate the level of next point, <strong>PointA</strong> below is the first level, <strong>Distance</strong> indicates the distance between two points and <strong>Slope</strong> indicates the slope ratio</p>
+        <ol>
+          <lh><strong>Calculation Method</strong></lh>
+          <li>A = Divide distance with slope</li>
+          <li>B = Add (If location of point is Up) or subtract (If location of point is Down) A with PointA </li>
+          <li>Resulting value gives value of second point</li>
+          <li>D =Subtract PointA from B, will give difference between two points</li>
+        </ol>
+      </div>
+      
     <p>Please maintain same units for all inputs</p>
 
     <!-- User Inputs -->
@@ -111,11 +158,11 @@
     <!-- User Inputs -->
     <div class="options">
       <select id="this">
-          <<option value="selectionNote">Select One</option>
+          <option value="selectionNote">Select One</option>
           <option value="arcLength">Arc Length</option>
           <option value="arcRadius">Arc Radius</option>
           <option value="centreAngle">Centre Angle</option>
-        </select>
+       </select>
     </div> <br /><br />
 
     <div>
@@ -156,7 +203,7 @@
     <!-- User Inputs -->
     <div class="options">
       <select id="buildingType">
-          <<option>Select One</option>
+          <option>Select One</option>
           <option value="educational">Educational</option>
           <option value="business">Business</option>
           <option value="industrial">Industrial</option>
