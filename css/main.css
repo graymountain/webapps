@@ -156,7 +156,6 @@ section {
 
 .naviCons a img{
   width: 30px;
-  padding-right: 10px;
   margin: 10px 10px auto auto;
   opacity: .5;
   transition-property: opacity;
@@ -181,11 +180,11 @@ section {
 
 @keyframes shakeTools {
   from {
-    -webkit-transform: rotate(-10deg);
+    -webkit-transform: rotate(0deg);
  }
  to {
    -webkit-transform-origin:center center;
-   -webkit-transform: rotate(0deg);
+   -webkit-transform: rotate(359deg);
  }
 }
 
@@ -194,7 +193,7 @@ section {
 }
 
 .toolsIcon:hover {
-  -webkit-animation: shakeTools .5s ease-in-out 0.1s infinite alternate;
+  -webkit-animation: shakeTools 3s infinite linear;
 }
 
 /*Following is done to keep the header fixed*/
