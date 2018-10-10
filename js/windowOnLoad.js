@@ -39,5 +39,23 @@ window.onload = function() {
       document.getElementById('selectionErr').innerHTML = "Please select any of options";
     }
   });
+    
+  $('#conversionType').on('change', function() {
+    if (this.value == "convLength") {
+      $('#unitInput').show();
+      $('#areaInput,#volumeInput,#selectionMsg').hide();
+    } else if (this.value == "convArea") {
+      $('#areaInput').show();
+      $('#unitInput,#volumeInput,#selectionMsg').hide();
+    } else if (this.value == "convVolume") {
+      $('#volumeInput').show();
+      $('#unitInput,#areaInput,#selectionMsg').hide();
+    } else {
+      $('#selectionMsg').show();
+      $('#unitInput,#areaInput,#volumeInput').hide();
+      document.getElementById('selectionMsg').innerHTML = "Please select any of options";
+    }
+  });
+
 
 };

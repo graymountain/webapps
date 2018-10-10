@@ -23,11 +23,20 @@
   <section id="unitConverter">
     <h3>Unit Converter</h3>
     <p>Please maintain relative units for all inputs</p>
+    <div class="options">
+      <select id="conversionType">
+          <option value="selectionNote">Select One</option>
+          <option value="convLength">Length</option>
+          <option value="convArea">Area</option>
+          <option value="convVolume">Volume</option>
+       </select>
+    </div> <br /><br />
+    <p id="selectionMsg"></p>
 
     <!-- User Inputs -->
     <div>
 
-      <div id="unitInput">
+      <div id="unitInput" style="display:none">
         <label>inch:</label><br /><input type="number" id="inputInch" oninput="inchTo()" value="0"><br />
 
         <label>ft-in:</label><br /><input type="number" id="inputFt" oninput="ftInchTo()" value="0">
@@ -39,6 +48,22 @@
         <label>cm:</label><br /><input type="number" id="inputCm" oninput="cmTo()" value="0"><br />
 
         <label>m:</label><br /><input type="number" id="inputM" oninput="mTo()" value="0"><br />
+      </div>
+        
+      <div id="areaInput" style="display:none">
+        <label>Square inch:</label><br /><input type="number" id="inputSqInch" oninput="SqInchTo()" value="0"><br />
+        <label>Square ft:</label><br /><input type="number" id="inputSqFt" oninput="SqFtTo()" value="0"><br />
+        <label>Square mm:</label><br /><input type="number" id="inputSqMm" oninput="SqMmTo()" value="0"><br />
+        <label>Square cm:</label><br /><input type="number" id="inputSqCm" oninput="SqCmTo()" value="0"><br />
+        <label>Square m:</label><br /><input type="number" id="inputSqM" oninput="SqMTo()" value="0"><br />
+      </div>
+        
+      <div id="volumeInput" style="display:none">
+        <label>Cubic inch:</label><br /><input type="number" id="inputCuInch" oninput="CuInchTo()" value="0"><br />
+        <label>Cubic ft:</label><br /><input type="number" id="inputCuFt" oninput="CuFtTo()" value="0"><br />
+        <label>Cubic mm:</label><br /><input type="number" id="inputCuMm" oninput="CuMmTo()" value="0"><br />
+        <label>Cubic cm:</label><br /><input type="number" id="inputCuCm" oninput="CuCmTo()" value="0"><br />
+        <label>Cubic m:</label><br /><input type="number" id="inputCuM" oninput="CuMTo()" value="0"><br />
       </div>
 
     </div>
