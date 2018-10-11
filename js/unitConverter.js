@@ -327,3 +327,159 @@ function SqMTo() {
   document.getElementById('inputSqCm').value = SqMToSqCm.toFixed(5);
 
 };
+
+// Functions for Volume Converter
+
+function CuInchTo() {
+  // Taking input
+  var a = document.getElementById('inputCuInch').valueAsNumber;
+
+  // CuIn to CuFt
+
+  var CuInFt = (a * 0.000578704);
+  var CuInToCuFt = Math.abs(CuInFt);
+  document.getElementById('inputCuFt').value = CuInToCuFt.toFixed(5);
+
+  // CuIn to CuMm
+
+  var CuInMm = (a * 16387.1);
+  var CuInToCuMm = Math.abs(CuInMm);
+  document.getElementById('inputCuMm').value = CuInToCuMm.toFixed(5);
+
+  // CuIn to CuCm
+
+  var CuInCm = (a * 16.3871);
+  var CuInToCuCm = Math.abs(CuInCm);
+  document.getElementById('inputCuCm').value = CuInToCuCm.toFixed(5);
+    
+  // CuIn to CuM
+
+  var CuInM = (a * 0.00001638706);
+  var CuInToCuM = Math.abs(CuInM);
+  document.getElementById('inputCuM').value = CuInToCuM.toFixed(5);
+
+};
+
+
+function CuFtTo() {
+  // Taking input
+  var a = document.getElementById('inputCuFt').valueAsNumber;
+
+  // CuFt to CuIn
+
+  var CuFtIn = (a * 1728);
+  var CuFtToCuIn = Math.abs(CuFtIn);
+  document.getElementById('inputCuInch').value = CuFtToCuIn.toFixed(5);
+
+  // CuFt to CuMm
+
+  var CuFtMm = (a * 28316846.59);
+  var CuFtToCuMm = Math.abs(CuFtMm);
+  document.getElementById('inputCuMm').value = CuFtToCuMm.toFixed(5);
+
+  // CuFt to CuCm
+
+  var CuFtCm = (a * 28316.8);
+  var CuFtToCuCm = Math.abs(CuFtCm);
+  document.getElementById('inputCuCm').value = CuFtToCuCm.toFixed(5);
+    
+  // CuFt to CuM
+
+  var CuFtM = (a * 0.0283168);
+  var CuFtToCuM = Math.abs(CuFtM);
+  document.getElementById('inputCuM').value = CuFtToCuM.toFixed(5);
+
+};
+
+
+function CuMmTo() {
+  // Taking input
+  var a = document.getElementById('inputCuMm').valueAsNumber;
+
+  // CuMm to CuIn
+
+  var CuMmIn = (a * 0.000061024);
+  var CuMmToCuIn = Math.abs(CuMmIn);
+  document.getElementById('inputCuInch').value = CuMmToCuIn.toFixed(5);
+
+  // CuMm to CuFt
+
+  var CuMmFt = (a * 0.000000035);
+  var CuMmToCuFt = Math.abs(CuMmFt);
+  document.getElementById('inputCuFt').value = CuMmToCuFt.toFixed(5);
+
+  // CuIn to CuCm
+
+  var CuMmCm = (a * 0.001);
+  var CuMmToCuCm = Math.abs(CuMmCm);
+  document.getElementById('inputCuCm').value = CuMmToCuCm.toFixed(5);
+    
+  // CuIn to CuM
+
+  var CuMmM = (a * 0.000000001);
+  var CuMmToCuM = Math.abs(CuMmM);
+  document.getElementById('inputCuM').value = CuMmToCuM.toFixed(5);
+
+};
+
+
+function CuCmTo() {
+  // Taking input
+  var a = document.getElementById('inputCuCm').valueAsNumber;
+
+  // CuCm to CuIn
+
+  var CuCmIn = (a * 0.0610237);
+  var CuCmToCuIn = Math.abs(CuCmIn);
+  document.getElementById('inputCuInch').value = CuCmToCuIn.toFixed(5);
+
+  // CuCm to CuFt
+
+  var CuCmFt = (a * 0.00003531466672);
+  var CuCmToCuFt = Math.abs(CuCmFt);
+  document.getElementById('inputCuFt').value = CuCmToCuFt.toFixed(5);
+
+  // CuCm to Cumm
+
+  var CuCmMm = (a * 1000);
+  var CuCmToCuMm = Math.abs(CuCmMm);
+  document.getElementById('inputCuMm').value = CuCmToCuMm.toFixed(5);
+    
+  // CuIn to CuM
+
+  var CuCmM = (a * 0.000001);
+  var CuCmToCuM = Math.abs(CuCmM);
+  document.getElementById('inputCuM').value = CuCmToCuM.toFixed(5);
+
+};
+
+
+function CuMTo() {
+  // Taking input
+  var a = document.getElementById('inputCuM').valueAsNumber;
+
+  // CuCm to CuIn
+
+  var CuMIn = (a * 61023.7);
+  var CuMToCuIn = Math.abs(CuMIn);
+  document.getElementById('inputCuInch').value = CuMToCuIn.toFixed(5);
+
+  // CuCm to CuFt
+
+  var CuMFt = (a * 35.3147);
+  var CuMToCuFt = Math.abs(CuMFt);
+  document.getElementById('inputCuFt').value = CuMToCuFt.toFixed(5);
+
+  // CuCm to Cumm
+
+  var CuMMm = (a * 1000000000);
+  var CuMToCuMm = Math.abs(CuMMm);
+  document.getElementById('inputCuMm').value = CuMToCuMm.toFixed(5);
+    
+  // CuIn to CuM
+
+  var CuMCm = (a * 1000000);
+  var CuMToCuCm = Math.abs(CuMCm);
+  document.getElementById('inputCuCm').value = CuMToCuCm.toFixed(5);
+
+};
