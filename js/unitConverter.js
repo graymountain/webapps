@@ -357,6 +357,12 @@ function CuInchTo() {
   var CuInM = (a * 0.00001638706);
   var CuInToCuM = Math.abs(CuInM);
   document.getElementById('inputCuM').value = CuInToCuM.toFixed(5);
+    
+ // CuIn to Litre
+
+  var CuInLtr = (a * 0.0163871);
+  var CuInToLtr = Math.abs(CuInLtr);
+  document.getElementById('inputLtr').value = CuInToLtr.toFixed(5);
 
 };
 
@@ -388,6 +394,12 @@ function CuFtTo() {
   var CuFtM = (a * 0.0283168);
   var CuFtToCuM = Math.abs(CuFtM);
   document.getElementById('inputCuM').value = CuFtToCuM.toFixed(5);
+    
+  // CuFt to Litre
+
+  var CuFtLtr = (a * 28.3168);
+  var CuFtToLtr = Math.abs(CuFtLtr);
+  document.getElementById('inputLtr').value = CuFtToLtr.toFixed(5);
 
 };
 
@@ -419,6 +431,12 @@ function CuMmTo() {
   var CuMmM = (a * 0.000000001);
   var CuMmToCuM = Math.abs(CuMmM);
   document.getElementById('inputCuM').value = CuMmToCuM.toFixed(5);
+    
+  // CuMm to Litre
+
+  var CuMmLtr = (a * 0.000001000);
+  var CuMmToLtr = Math.abs(CuMmLtr);
+  document.getElementById('inputLtr').value = CuMmToLtr.toFixed(5);
 
 };
 
@@ -445,11 +463,17 @@ function CuCmTo() {
   var CuCmToCuMm = Math.abs(CuCmMm);
   document.getElementById('inputCuMm').value = CuCmToCuMm.toFixed(5);
     
-  // CuIn to CuM
+  // CuCm to CuM
 
   var CuCmM = (a * 0.000001);
   var CuCmToCuM = Math.abs(CuCmM);
   document.getElementById('inputCuM').value = CuCmToCuM.toFixed(5);
+    
+  // CuCm to Litre
+
+  var CuCmLtr = (a * 0.001);
+  var CuCmToLtr = Math.abs(CuCmLtr);
+  document.getElementById('inputLtr').value = CuCmToLtr.toFixed(5);
 
 };
 
@@ -481,5 +505,48 @@ function CuMTo() {
   var CuMCm = (a * 1000000);
   var CuMToCuCm = Math.abs(CuMCm);
   document.getElementById('inputCuCm').value = CuMToCuCm.toFixed(5);
+    
+  // CuM to Litre
+
+  var CuMLtr = (a * 1000);
+  var CuMToLtr = Math.abs(CuMLtr);
+  document.getElementById('inputLtr').value = CuMToLtr.toFixed(5);
+
+};
+
+
+function LtrTo() {
+  // Taking input
+  var a = document.getElementById('inputLtr').valueAsNumber;
+
+  // Litre to CuIn
+
+  var LtrIn = (a * 61.0237);
+  var LtrToCuIn = Math.abs(LtrIn);
+  document.getElementById('inputCuInch').value = LtrToCuIn.toFixed(5);
+
+  // Litre to CuFt
+
+  var LtrFt = (a * 0.0353147);
+  var LtrToCuFt = Math.abs(LtrFt);
+  document.getElementById('inputCuFt').value = LtrToCuFt.toFixed(5);
+
+  // Litre to Cumm
+
+  var LtrMm = (a * 1000000);
+  var LtrToCuMm = Math.abs(LtrMm);
+  document.getElementById('inputCuMm').value = LtrToCuMm.toFixed(5);
+    
+  // Litre to CuCm
+
+  var LtrCm = (a * 1000);
+  var LtrToCuCm = Math.abs(LtrCm);
+  document.getElementById('inputCuCm').value = LtrToCuCm.toFixed(5);
+    
+  // Litre to CuM
+
+  var LtrM = (a * 0.001);
+  var LtrToCuM = Math.abs(LtrM);
+  document.getElementById('inputCuM').value = LtrToCuM.toFixed(5);
 
 };
