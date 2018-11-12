@@ -31,7 +31,7 @@ ol{
 }
 
 .update{
-  background-color: #80bfff ;
+  background-color: lightgoldenrodyellow;
 }
 
 /*Pseudo Classes*/
@@ -263,11 +263,15 @@ section {
     display: none;
 }
 
-/* #go-to:hover > ul {
+#go-to:hover > ul {
     display: block;
     box-shadow: 2px 2px 5px lightgray;
-} */
+}
 
+#drop-down li:active #drop-down {
+    display: none;
+}
+ 
 #nav-bar ul li:hover {
     background-color: #f1f1f1;
 }
