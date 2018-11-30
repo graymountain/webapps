@@ -43,31 +43,35 @@ footer {
   right: 0;
   bottom: 0;
   left: 0;
-  padding: 1rem;
+  margin-bottom: 1rem;
   text-align: center;
 }
 
-footer a {
-  color: black;
-  font-family: 'Montserrat', sans-serif;
-  border: 1px solid black;
-  border-radius: 5px;
-  padding: 5px;
-  background-color: none;
-  -webkit-transition-duration: .2s;
-  transition-duration: .2s;
+footer ul {
+    margin: auto;
+    width: 300px;
+    padding-left: 0px;
 }
 
-footer a:link {
-  text-decoration: none;
+footer ul li{
+    padding: 15px;
+    height: 50px;
+    width: 50px;
+    display: inline-block;
 }
 
-footer a:hover {
-  color: Black;
-  background-color: rgba(0, 0, 0, 0.1);
-  border: 1px solid black;
-  -webkit-transition: ease-in-out;
-  transition: ease-in-out;
-  -webkit-transition-duration: .2s;
-  transition-duration: .2s;
+footer ul li a img {
+    list-style: none;
+    height: 50px;
+    width: 50px;
+    margin: auto;
+    transform: scale(1);
+    transform-origin: bottom center;
+    transition: transform ease-in-out .3s;
+}
+
+footer ul li a img:hover {
+    transform: scale(1.5);
+    transform-origin: bottom center;
+    transition: transform ease-in-out .025s;
 }
