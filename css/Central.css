@@ -21,6 +21,7 @@ div {
 *********************/
 
 h4 {
+  user-select: none;
   font-family: 'Open Sans Condensed', sans-serif;
   font-size: 20px;
   color: rgb(0,144,240);
@@ -33,7 +34,13 @@ h4 {
   padding: 5px 20px 5px 20px;
   background-color: white;
   margin-top: 0;
-  box-shadow: 0px 3px 20px black; 
+  box-shadow: 0px 5px 20px black;
+  transition: box-shadow ease-in-out .3s;
+}
+
+h4:hover {
+  box-shadow: 0px 1px 5px black;
+  transition: box-shadow ease-in-out .025s;
 }
 
 /*Style Footer Button
