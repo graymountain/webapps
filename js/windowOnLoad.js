@@ -56,6 +56,20 @@ window.onload = function() {
       document.getElementById('selectionMsg').innerHTML = "Please select any of options";
     }
   });
-
+    
+  $('#scaleConv').on('change', function() {
+    if (this.value == "convScale") {
+      $('#convScale').show();
+      $('#findScale,#selectionMsg').hide();
+    } else if (this.value == "findScale") {
+      $('#findScale').show();
+      $('#convScale,#selectionMsg').hide();
+    } else {
+      $('#selectionMsg').show();
+      $('#convScale,#findScale').hide();
+      document.getElementById('selectionMsg').innerHTML = "Please select any of options";
+    }
+  });
+    
 
 };

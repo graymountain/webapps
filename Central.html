@@ -14,19 +14,31 @@
 </head>
 
 <body>
+
+    <!--  Video is muted & autoplays, placed after major DOM elements for performance & has an image fallback
+    <video autoplay loop id="video-background" muted plays-inline>
+        <source src="../data/images/Walkthrough.mp4" type="video/mp4">
+    </video>   -->
+
     <!-- The caption text for the image being displayed -->
     <div>
-        <h4>Visual of On-Going project of Bharuch Bus Terminal | Work Credit: Team Bharuch</h4>
+        <h4>Addition to the tools - Scale converter | Work Credit: Team R &amp; B </h4>
     </div>
 
     <!-- This link to the Main MSA Central Page -->
     <footer>
         <ul>
-            <li><a href="ContactList.html"><img src="..\data\images\Directory.png"></a></li>
-            
-            <li><a href="main.html"><img src="..\data\images\msaLogo.png"></a></li>
-            
-            <li><a href="Tools.html"><img src="..\data\images\Tools.png"></a></li>
+            <li id="directoryIcon" class="popUp">
+                <a href="ContactList.html"><img src="..\data\images\Directory.png" title="Directory"></a>
+            </li>
+
+            <li id="centralIcon" class="popUp">
+                <a href="main.html"><img src="..\data\images\msaLogo.png" title="Central"></a>
+            </li>
+
+            <li id="toolsIcon" class="popUp">
+                <a href="Tools.html"><img src="..\data\images\Tools.png" title="Tools"></a>
+            </li>
         </ul>
     </footer>
 </body>

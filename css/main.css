@@ -268,7 +268,7 @@ section {
     box-shadow: 2px 2px 5px lightgray;
 }
 
-#drop-down li:active #drop-down {
+#drop-down > li:active #drop-down{
     display: none;
 }
  

@@ -5,8 +5,8 @@
 *********************/
 
 body {
-  background: url(../../data/images/181203.jpg) no-repeat center center fixed;
-  background-size: cover;
+  background: url(../../data/images/190309.JPG) no-repeat center center fixed;
+  background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
 }
@@ -15,6 +15,18 @@ body {
 
 div {
   text-align: center;
+}
+
+/* Styling Video */
+
+#video-background {
+/*  making the video fullscreen  */
+  position: fixed;
+  right: 0; 
+  top: 0;
+  width: 100%;
+  overflow: hidden;
+  z-index: -100;
 }
 
 /*Caption for the Image

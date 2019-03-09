@@ -13,6 +13,7 @@
   <script src="js\arcProperties.js"></script>
   <script src="js\slopeCalc.js"></script>
   <script src="js\unitConverter.js"></script>
+  <script src="js\scaleConverter.js"></script>
   <!-- Link to MSA Logo -->
   <link rel="icon" type="image/png" href="..\data\images\Tools.png">
 </head>
@@ -224,7 +225,7 @@
   <section id="sanitaryWare">
     <h3>Sanitary Ware Calculator</h3>
     <p>Tool expects you to enter Carpet Area and the Percentage you expect for the male population. Tool assumes percentage of Female population accordingly</p>
-    <p>Calculations are done as per <a href="../data/reference/Comprehensive GDCR.pdf#page=193" target="_blank">this</a>.</p>
+    <p>Calculations are done as per <a href="../data/reference/Comprehensive GDCR.pdf#page=256" target="_blank">this</a>.</p>
 
     <!-- User Inputs -->
     <div class="options">
@@ -269,6 +270,46 @@
 
     <!-- Output -->
     <p id="resultSanitaryWare"></p>
+  </section>
+    
+<!-- following function converts  the scales -->
+  <section id="scaleConversion">
+    <h3>Scale Converter</h3>
+    <p>Tool is used to calculate various conversions of Scale</p>
+    <p>Please maintain same units for all inputs</p>
+
+    <!-- User Inputs -->
+    <div class="options">
+      <select id="scaleConv">
+          <option>Select One</option>
+          <option value="convScale">Convert Scale</option>
+          <option value="findScale">Find Scale</option>
+        </select>
+    </div> <br /><br />
+
+    <div>
+
+      <div id="convScale" style="display:none;">
+        <label>Dimension: </label><br /><input type="number" id="currentDimension">
+        <label>Current Scale: </label><br /><label>1 :&nbsp;</label><input type="number" id="currentScale">
+        <label>Expected Scale: </label><br /><label>1 :&nbsp;</label><input type="number" id="expectedScale">
+        <p><button type="button" onclick="convScale()">Calculate</button></p>   
+        <!-- Output -->
+        <p id="resultScaleValue"></p>
+        <p id="selectionErr"></p>
+      </div>
+
+      <div id="findScale" style="display:none;">
+        <label>Actual Dimension: </label><br /><input type="number" id="actualDimension">
+        <label>Dimension in Drawing: </label><br /><input type="number" id="modelDimension">
+        <p><button type="button" onclick="findScale()">Calculate</button></p>
+        <!-- Output -->
+        <p id="resultScale"></p>
+        <p id="selectionErr"></p>
+      </div>
+
+    </div>
+
   </section>
 
 </body>
