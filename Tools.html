@@ -14,6 +14,7 @@
   <script src="js\slopeCalc.js"></script>
   <script src="js\unitConverter.js"></script>
   <script src="js\scaleConverter.js"></script>
+  <script src="js\pythagoreanTheorem.js"></script>
   <!-- Link to MSA Logo -->
   <link rel="icon" type="image/png" href="..\data\images\Tools.png">
 </head>
@@ -306,6 +307,28 @@
         <!-- Output -->
         <p id="resultScale"></p>
         <p id="selectionErr"></p>
+      </div>
+
+    </div>
+
+  </section>
+    
+<!-- following function finds missing side of a triangle -->
+  <section id="scaleConversion">
+    <h3>The Pythagorean Theorem</h3>
+    <p>Tool is used to find a hypotenuse side of a right angle triangle</p>
+    <p>Please maintain same units for all inputs</p>
+
+    <!-- User Inputs -->
+
+    <div>
+
+      <div id="findSide">
+        <label>Side A: </label><br /><input type="number" id="sideA">
+        <label>Side B: </label><br /><input type="number" id="sideB">
+        <p><button type="button" onclick="findSide()">Calculate</button></p>   
+        <!-- Output -->
+        <label>Side C: &nbsp; </label><p style="display:inline" id="resultMissingSide"></p>
       </div>
 
     </div>
