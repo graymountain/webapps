@@ -134,7 +134,7 @@ section {
     height: 50px;
 }
 
-#nav-bar > section > img {
+#nav-bar > section > a > img {
     float: left;
     width: 40px;
     margin: 5px 10px auto auto;
@@ -594,4 +594,28 @@ tr:nth-child(odd){
 
 .info:hover ~ .notes {
   display: inline-block;
+}
+
+/* Style the Scroll-Bar
+--------------------------------------- */
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track { 
+    background-color: none;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #80bfff; 
+  border-radius: 10px;
+}
+
+/* Handle on active */
+::-webkit-scrollbar-thumb:active {
+  background: #41A0F2; 
 }

@@ -33,6 +33,7 @@ label {
 .inputs input {
   display: inline-block;
   float: left;
+  margin-bottom: 5px;
 }
 
 .inputs {
@@ -59,3 +60,26 @@ label {
   display: inline-block;
 }
 
+/* Style the Scroll-Bar
+--------------------------------------- */
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track { 
+    background-color: none;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #80bfff; 
+  border-radius: 10px;
+}
+
+/* Handle on active */
+::-webkit-scrollbar-thumb:active {
+  background: #41A0F2; 
+}

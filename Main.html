@@ -24,12 +24,13 @@
   <!-- This is Navigation Bar-->
   <nav id="nav-bar">
     <section>
-      <img src="../data/images/msaLogo.png">
-      <h2 id="withoutBottomBorder">MSA Central</h2>
+      <a href="central.html" title="Central Page"><img src="../data/images/msaLogo.png"></a>
+      <h2 id="withoutBottomBorder" href="central.html">MSA Central</h2>
 
       <i class="naviCons">
         <a href="contactList.html" target="_blank" title="Directory"><img src="..\data\images\Directory.png" class="directoryIcon"/></a>
         <a href="Tools.html" target="_blank" title="Tools"><img src="..\data\images\Tools.png" class="toolsIcon"/></a>
+        <a href="projects.html" target="_blank" title="Projects"><img src="..\data\images\Projects.png"/></a>
       </i>
 
       <ul>
@@ -291,6 +292,27 @@
         </div>
         <div class="tiles">
           <div>
+            <h4>Layers - Studio 01</h4>
+            <p>Standard Layers for creating Workign Drawings - Studio 01</p>
+            <a href="../data/autoCad/MSA_Standard%20Layer_Int.dwg" class="masterButton">View</a>
+          </div>
+        </div> 
+        <div class="tiles">
+          <div>
+            <h4>Layers - Presentation</h4>
+            <p>Standard Layers for creating Presentation Drawings</p>
+            <a href="../data/autoCad/MSA_Standard Layer_Presentation.dwg" class="masterButton">View</a>
+          </div>
+        </div> 
+        <div class="tiles">
+          <div>
+            <h4>Hatch - Studio 01</h4>
+            <p>Standard Layers, Patterns &amp; Types of Hatches used in Studio 01</p>
+            <a href="../data/autoCad/MSA_Standard_Hatch_Studio 01.dwg" class="masterButton">View</a>
+          </div>
+        </div>
+        <div class="tiles">
+          <div>
             <h4>Text, Dimensions &amp; Annotation_MM</h4>
             <p>All the items mentioned in title to be used from this Standard file</p>
             <a href="../data/autoCad/MSA_Standard_Text_MM.dwg" class="masterButton">View</a>
@@ -312,23 +334,9 @@
         </div>
         <div class="tiles">
           <div>
-            <h4>Layers - Presentation</h4>
-            <p>Standard Layers for creating Presentation Drawings</p>
-            <a href="../data/autoCad/MSA_Standard Layer_Presentation.dwg" class="masterButton">View</a>
-          </div>
-        </div>
-        <div class="tiles">
-          <div>
             <h4>MColor - CFG</h4>
             <p>Standard CFG for MColor Presentation</p>
             <a href="../data/autoCad/MSA_MColor_Standard.cfg" class="masterButton">View</a>
-          </div>
-        </div>
-        <div class="tiles">
-          <div>
-            <h4>Hatch - Studio 01</h4>
-            <p>Standard Layers, Patterns &amp; Types of Hatches used in Studio 01</p>
-            <a href="../data/autoCad/MSA_Standard_Hatch_Studio 01.dwg" class="masterButton">View</a>
           </div>
         </div>
         <div class="tiles">
@@ -385,9 +393,23 @@
       <div class="tileContainer">
         <div class="tiles">
           <div>
-            <h4>Comprehensive GDCR</h4>
-            <p>Comprehensive GDCR for the Gujarat State</p>
-            <a href="../data/reference/Comprehensive GDCR.pdf" class="masterButton" target="_blank">View</a>
+            <h4>CGDCR Gujarat - Part I</h4>
+            <p>Procedure Regulations</p>
+            <a href="../data/reference/Final%20Notification%20CGDCR-2017%20PART-I%20PROCEDURE%20REGULATIONS.pdf" class="masterButton" target="_blank">View</a>
+          </div>
+        </div>
+        <div class="tiles">
+          <div>
+            <h4>CGDCR Gujarat - Part II</h4>
+            <p>Planning Regulations</p>
+            <a href="../data/reference/Final%20Notification%20CGDCR-2017%20PART%20II%20PLANNING%20REGULATION.pdf" class="masterButton" target="_blank">View</a>
+          </div>
+        </div>
+        <div class="tiles">
+          <div>
+            <h4>CGDCR Gujarat - Part III</h4>
+            <p>Perfornamce Regulations</p>
+            <a href="../data/reference/Final%20Notification%20CGDCR-2017%20PART%20III%20PERFORMANCE%20REGULATION.pdf" class="masterButton" target="_blank">View</a>
           </div>
         </div>
         <div class="tiles">
@@ -476,6 +498,9 @@
           <li><a href="javascript:void(0)" class="tablinks" onclick="openCity(event, 'plan')">Plan</a></li>
           <li><a href="javascript:void(0)" class="tablinks" onclick="openCity(event, 'section')">Section</a></li>
           <li><a href="javascript:void(0)" class="tablinks" onclick="openCity(event, 'master-layout')">Master Layout</a></li>
+          <li><a href="javascript:void(0)" class="tablinks" onclick="openCity(event, 'toilet-block')">Toilet Block</a></li>
+          <li><a href="javascript:void(0)" class="tablinks" onclick="openCity(event, 'commercial-block')">Commercial</a></li>
+          <li><a href="javascript:void(0)" class="tablinks" onclick="openCity(event, 'lighting-ventilation')">Lighting &amp; Ventilation</a></li>
         </ul>
 
         <div id="general-notes" class="tabcontent">
@@ -1314,6 +1339,59 @@
                         <p>No. of Four-Wheelers Accommodated</p>
                     </label>
         </div>
+          
+        <!-- Toilet Block -->
+        <div id="toilet-block" class="tabcontent">
+          <label>
+                        <input type="checkbox">
+                        <p>Minimum dimension from Wall to Washbasin Centre shall be 450mm</p>
+                    </label>
+          <label>
+                        <input type="checkbox">
+                        <p>Minimum Centre to Centre dimension of Washbasins shall be 900mm</p>
+                    </label>
+          <label>
+                        <input type="checkbox">
+                        <p>Minimum Centre to Centre dimension of Urinals shall be 700mm</p>
+                    </label>
+        <label>
+                        <input type="checkbox">
+                        <p>Minimum  Wall to Wall dimension, if two rows of Urinals are sharing a passage, shall be 3000mm</p>
+                    </label>
+        <label>
+                        <input type="checkbox">
+                        <p>Minimum clear dimension between WC Cubicals, if two rows of WC Cubicals are sharing a passage, shall be 1500mm</p>
+                    </label>
+        <label>
+                        <input type="checkbox">
+                        <p>Nanhi Trap and connection for Water supply shall be provided in Janitor's Cabin</p>
+                    </label>
+        <label>
+                        <input type="checkbox">
+                        <p>Multiple shelves for storage shall be provided in Janitor's Cabin</p>
+                    </label>
+        <label>
+                        <input type="checkbox">
+                        <p>Minimum height of ledge wall shall be 900mm with Granite on top for a WC</p>
+                    </label>
+        </div>
+          
+        <!-- Commercial -->
+        <div id="commercial-block" class="tabcontent">
+          <label>
+                        <input type="checkbox">
+                        <p>Minimum clear dimension of Shop width shall be 3000mm</p>
+                    </label>
+        </div>  
+          
+        <!-- Lighting & Ventilation -->
+        <div id="lighting-ventilation" class="tabcontent">
+          <label>
+                        <input type="checkbox">
+                        <p>The aggregate of all openings including doors, windows and ventilators in a room shall be minimum one-seventh of the floor area of the room.</p>
+                    </label>
+        </div> 
+          
       </div>
     </section>
 
@@ -1374,7 +1452,7 @@
 
         <li>You all are also requested to use email to share your work with Interior, estimating, and 3D visualization teams. While sending you files, <strong>'For Working'</strong> shall be used in the beginning of email subject body.</li>
 
-        <li>You are requested to self checke drawings/ documents as against MSA Standards.</li>
+        <li>You are requested to self check drawings/ documents as against MSA Standards.</li>
 
         <li>Please also make sure you document your own comments remarks on the drawing / document using AutoDesk Design Review. </li>
 
@@ -1409,7 +1487,6 @@
             <li>Meeting - So and So Party</li>
             <li>Site Visit - Site Name</li>
           </ul>
-          </>
           <li>For any challenge with Asana, speak with Bijit immediately.</li>
       </ol>
       <a href="../data/reference/Asana Workflow.pdf" class="button" target="_blank">Asana Workflow</a>

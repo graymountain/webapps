@@ -10,6 +10,7 @@
   <script src="js\jquery-3.2.1.min.js"></script>
   <script src="js\windowOnLoad.js"></script>
   <script src="js\sanitarywareCalc.js"></script>
+  <script src="js\OccupancyCalc.js"></script>
   <script src="js\arcProperties.js"></script>
   <script src="js\slopeCalc.js"></script>
   <script src="js\unitConverter.js"></script>
@@ -58,6 +59,8 @@
         <label>Square mm:</label><br /><input type="number" id="inputSqMm" oninput="SqMmTo()" value="0"><br />
         <label>Square cm:</label><br /><input type="number" id="inputSqCm" oninput="SqCmTo()" value="0"><br />
         <label>Square m:</label><br /><input type="number" id="inputSqM" oninput="SqMTo()" value="0"><br />
+        <label>Acre:</label><br /><input type="number" id="inputAcre" oninput="AcreTo()" value="0"><br />
+        <label>Hectare:</label><br /><input type="number" id="inputHectare" oninput="HectareTo()" value="0"><br />
       </div>
         
       <div id="volumeInput" style="display:none">
@@ -195,19 +198,19 @@
 
     <div>
 
-      <div id="div1" style="display:none;">
+      <div id="div1" class="inputs" style="display:none;">
         <label>Radius:</label><br /><input type="number" id="inputRadius">
         <label>Angle:</label><br /><input type="number" id="inputAngle">
         <p><button type="button" onclick="resultArcLength()">Calculate Arc Length</button></p>
       </div>
 
-      <div id="div2" style="display:none;">
+      <div id="div2" class="inputs" style="display:none;">
         <label>Arc Length:</label><br /><input type="number" id="inputArcLength">
         <label>Angle:</label><br /><input type="number" id="inputAngle2">
         <p><button type="button" onclick="resultArcRadius()">Calculate Arc Radius</button></p>
       </div>
 
-      <div id="div3" style="display:none;">
+      <div id="div3" class="inputs" style="display:none;">
         <label>Arc Length:</label><br /><input type="number" id="inputArcLength2">
         <label>Radius:</label><br /><input type="number" id="inputRadius2">
         <p><button type="button" onclick="resultCentreAngle()">Calculate Centre Angle</button></p>
@@ -241,25 +244,25 @@
 
     <div>
 
-      <div id="educational" style="display:none;">
+      <div id="educational" class="inputs" style="display:none;">
         <label>Carpet Area (m²): </label><br /><input type="number" id="carpetArea-educational">
         <label>Male (%): </label><br /><input type="number" id="percentageOfMale-educational">
         <p><button type="button" onclick="educationalType()">Calculate Sanitary Ware</button></p>
       </div>
 
-      <div id="business" style="display:none;">
+      <div id="business" class="inputs" style="display:none;">
         <label>Carpet Area (m²): </label><br /><input type="number" id="carpetArea-business">
         <label>Male (%): </label><br /><input type="number" id="percentageOfMale-business">
         <p><button type="button" onclick="businessType()">Calculate Sanitary Ware</button></p>
       </div>
 
-      <div id="industrial" style="display:none;">
+      <div id="industrial" class="inputs" style="display:none;">
         <label>Carpet Area (m²): </label><br /><input type="number" id="carpetArea-industrial">
         <label>Male (%): </label><br /><input type="number" id="percentageOfMale-industrial">
         <p><button type="button" onclick="industrialType()">Calculate Sanitary Ware</button></p>
       </div>
 
-      <div id="special" style="display:none;">
+      <div id="special" class="inputs" style="display:none;">
         <label>Number of Seats: </label><br /><input type="number" id="seats-special">
         <label>Male (%): </label><br /><input type="number" id="percentageOfMale-special">
         <p><button type="button" onclick="specialType()">Calculate Sanitary Ware</button></p>
@@ -273,6 +276,105 @@
     <p id="resultSanitaryWare"></p>
   </section>
     
+<!-- following function calculates the Occupancy according to NBC 2016 Part II, p.g.no. 622 -->
+  <section id="occupancyData">
+    <h3>Occupancy data for Water Requirement</h3>
+    <p>The tool is used to find <i>Proposed Occupancy</i>, from which the total quantity of water per day is estimated as per NBC 2016</p>
+    <p>Calculations are done as per <a href="../data/reference/NBC 2016-VOL-02.pdf#page=622" target="_blank">this</a>.</p>
+
+    <!-- User Inputs -->
+    <div class="options">
+      <select id="selectOccupancy">
+          <option>Select One</option>
+          <option value="office">Office</option>
+          <option value="residential">Residential</option>
+          <option value="schools">Schools</option>
+          <option value="hostels">Hostels</option>
+          <option value="hotels">Hotels</option>
+          <option value="hospitals">Hospitals</option>
+          <option value="mercantile">Mercantile</option>
+          <option value="tts">Traffic Terminal Stations</option>
+        </select>
+    </div> <br /><br />
+
+    <div>
+
+      <!-- Office Occupancy -->
+      <div id="occupancy-office" class="inputs" style="display:none;">
+        <label>Carpet Area (m²): </label><br /><input type="number" id="occupancy-carpetArea-office">
+        <label>Number of Working Shifts: </label><br /><input type="number" id="occupancy-workingShifts">
+        <p><button type="button" onclick="officeType()">Calculate Occupancy</button></p>
+      </div>
+        
+      <!-- Residence Occupancy -->       
+      <div id="occupancy-residence" class="inputs" style="display:none;">
+        <label>Number of Bedrooms: </label><br /><br />
+        <input type="range" min="1" max="4" value="1" id="bedroomNumber-residential" oninput="displayRangeValue();" list="tickmarks"><p id="bednum-value" style="display:inline;">1</p>
+          
+        <datalist id="tickmarks">
+            <option value="1">
+            <option value="2">
+            <option value="3">
+            <option value="4">
+        </datalist>
+          
+        <p><button type="button" onclick="residentialType()">Calculate Occupancy</button></p>
+      </div>
+        
+      <!-- School Occupancy -->    
+      <div id="occupancy-schools" class="inputs" style="display:none;">
+        <label>Strength of School (No.): </label><br /><input type="number" id="schoolStrength-school">
+        <label>Non-Teaching Staff (No.): </label><br /><input type="number" id="nonTeachingStaff-school">
+        <label>Teaching Staff (No.): </label><br /><input type="number" id="teachingStaff-school">
+        <p><button type="button" onclick="schoolType()">Calculate Occupancy</button></p>
+      </div>
+        
+      <!-- Hostels Occupancy -->
+      <div id="occupancy-hostels" class="inputs" style="display:none;">
+        <label>Number of Beds: </label><br /><input type="number" id="bedNumber-hostel">
+        <label>Warden's Residence (No.): </label><br /><input type="number" id="wardenResidence-hostel">
+        <label>Staff (No.): </label><br /><input type="number" id="staffNumber-hostel">
+        <p><button type="button" onclick="hostelType()">Calculate Occupancy</button></p>
+      </div>
+        
+      <!-- Hotels Occupancy -->
+      <div id="occupancy-hotels" class="inputs" style="display:none;">
+        <label>Number of Beds: </label><br /><input type="number" id="bedNumber-hotel">
+        <label>Staff (No.): </label><br /><input type="number" id="staffNumber-hotel">
+        <label>Restaurant Seats (No.): </label><br /><input type="number" id="restaurantSeats-hotel">
+        <p><button type="button" onclick="hotelType()">Calculate Occupancy</button></p>
+      </div>
+          
+      <!-- Hospitals Occupancy -->
+      <div id="occupancy-hospitals" class="inputs" style="display:none;">
+        <label>Number of Beds: </label><br /><input type="number" id="bedNumber-hospital">
+        <label>Patient attendants (No.): </label><br /><input type="number" id="patientAttendants-hospital">
+        <p><button type="button" onclick="hospitalType()">Calculate Occupancy</button></p>       
+      </div>
+        
+      <!-- Mercantile Occupancy -->
+      <div id="occupancy-mercantile" class="inputs" style="display:none;">
+        <label>Carpet Area of Ground Floor (m²): </label><br /><input type="number" id="carpetAreaGround-mercantile">
+        <label>Carpet Area of Upper Floors (m²): </label><br /><input type="number" id="carpetAreaUpper-mercantile">
+        <p><button type="button" onclick="mercantileType()">Calculate Occupancy</button></p>
+      </div>
+        
+      <!-- TTS Occupancy -->
+      <div id="occupancy-tts" class="inputs" style="display:none;">
+        <label>Users (No.): </label><br /><input type="number" id="userNumber-tts">
+        <label>Staff (No.): </label><br /><input type="number" id="staffNumber-tts">
+        <label>Vendors (No.): </label><br /><input type="number" id="vendorNumber-tts">
+        <p><button type="button" onclick="ttsType()">Calculate Occupancy</button></p>
+      </div>
+
+    </div>
+
+    <p id="selectionErr-occupancy"></p>
+
+    <!-- Output -->
+    <p id="resultOccupancy"></p>
+  </section>    
+
 <!-- following function converts  the scales -->
   <section id="scaleConversion">
     <h3>Scale Converter</h3>
@@ -290,7 +392,7 @@
 
     <div>
 
-      <div id="convScale" style="display:none;">
+      <div id="convScale" class="inputs" style="display:none;">
         <label>Dimension: </label><br /><input type="number" id="currentDimension">
         <label>Current Scale: </label><br /><label>1 :&nbsp;</label><input type="number" id="currentScale">
         <label>Expected Scale: </label><br /><label>1 :&nbsp;</label><input type="number" id="expectedScale">
@@ -300,11 +402,12 @@
         <p id="selectionErr"></p>
       </div>
 
-      <div id="findScale" style="display:none;">
+      <div id="findScale" class="inputs" style="display:none;">
         <label>Actual Dimension: </label><br /><input type="number" id="actualDimension">
         <label>Dimension in Drawing: </label><br /><input type="number" id="modelDimension">
-        <p><button type="button" onclick="findScale()">Calculate</button></p>
+        
         <!-- Output -->
+        <p><button type="button" onclick="findScale()">Calculate</button></p>
         <p id="resultScale"></p>
         <p id="selectionErr"></p>
       </div>
@@ -314,7 +417,7 @@
   </section>
     
 <!-- following function finds missing side of a triangle -->
-  <section id="scaleConversion">
+  <section id="pythagoreanTheorem">
     <h3>The Pythagorean Theorem</h3>
     <p>Tool is used to find a hypotenuse side of a right angle triangle</p>
     <p>Please maintain same units for all inputs</p>
@@ -323,14 +426,14 @@
 
     <div>
 
-      <div id="findSide">
+      <div id="findSide" class="inputs">
         <label>Side A: </label><br /><input type="number" id="sideA">
-        <label>Side B: </label><br /><input type="number" id="sideB">
-        <p><button type="button" onclick="findSide()">Calculate</button></p>   
+        <label>Side B: </label><br /><input type="number" id="sideB">   
         <!-- Output -->
+        <p><button type="button" onclick="findSide()">Calculate</button></p>
         <label>Side C: &nbsp; </label><p style="display:inline" id="resultMissingSide"></p>
       </div>
-
+        
     </div>
 
   </section>
