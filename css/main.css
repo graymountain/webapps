@@ -31,7 +31,7 @@ ol{
 }
 
 .update{
-  background-color: #80bfff ;
+  background-color: lightgoldenrodyellow;
 }
 
 /*Pseudo Classes*/
@@ -134,7 +134,7 @@ section {
     height: 50px;
 }
 
-#nav-bar > section > img {
+#nav-bar > section > a > img {
     float: left;
     width: 40px;
     margin: 5px 10px auto auto;
@@ -156,7 +156,6 @@ section {
 
 .naviCons a img{
   width: 30px;
-  padding-right: 10px;
   margin: 10px 10px auto auto;
   opacity: .5;
   transition-property: opacity;
@@ -181,11 +180,11 @@ section {
 
 @keyframes shakeTools {
   from {
-    -webkit-transform: rotate(-10deg);
+    -webkit-transform: rotate(0deg);
  }
  to {
    -webkit-transform-origin:center center;
-   -webkit-transform: rotate(0deg);
+   -webkit-transform: rotate(359deg);
  }
 }
 
@@ -194,7 +193,7 @@ section {
 }
 
 .toolsIcon:hover {
-  -webkit-animation: shakeTools .5s ease-in-out 0.1s infinite alternate;
+  -webkit-animation: shakeTools 3s infinite linear;
 }
 
 /*Following is done to keep the header fixed*/
@@ -264,11 +263,15 @@ section {
     display: none;
 }
 
-/* #go-to:hover > ul {
+#go-to:hover > ul {
     display: block;
     box-shadow: 2px 2px 5px lightgray;
-} */
+}
 
+#drop-down > li:active #drop-down{
+    display: none;
+}
+ 
 #nav-bar ul li:hover {
     background-color: #f1f1f1;
 }
@@ -550,6 +553,12 @@ tr:nth-child(odd){
   background: #f1f1f1;
 }
 
+@media print{
+    body{
+        font-size: larger;
+    }
+}
+
 
 /* FAQ
 --------------------------------------- */
@@ -585,4 +594,28 @@ tr:nth-child(odd){
 
 .info:hover ~ .notes {
   display: inline-block;
+}
+
+/* Style the Scroll-Bar
+--------------------------------------- */
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track { 
+    background-color: none;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #80bfff; 
+  border-radius: 10px;
+}
+
+/* Handle on active */
+::-webkit-scrollbar-thumb:active {
+  background: #41A0F2; 
 }

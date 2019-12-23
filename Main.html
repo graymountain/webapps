@@ -24,24 +24,24 @@
   <!-- This is Navigation Bar-->
   <nav id="nav-bar">
     <section>
-      <img src="../data/images/msaLogo.png">
-      <h2 id="withoutBottomBorder">MSA Central</h2>
+      <a href="central.html" title="Central Page"><img src="../data/images/msaLogo.png"></a>
+      <h2 id="withoutBottomBorder" href="central.html">MSA Central</h2>
 
       <i class="naviCons">
         <a href="contactList.html" target="_blank" title="Directory"><img src="..\data\images\Directory.png" class="directoryIcon"/></a>
         <a href="Tools.html" target="_blank" title="Tools"><img src="..\data\images\Tools.png" class="toolsIcon"/></a>
-      </img>
+        <a href="projects.html" target="_blank" title="Projects"><img src="..\data\images\Projects.png"/></a>
       </i>
 
       <ul>
-        <li id="go-to" onclick="openMenu()">Menu
+        <li id="go-to">Menu
           <ul id="drop-down">
             <li> <a href="#presentation">Presentations &amp; Meetings</a> </li>
             <li> <a href="#policies">Policies &amp; Guidelines</a> </li>
             <li> <a href="#folder-system">Folder System</a> </li>
             <li> <a href="#doc-standard">Document Standard</a> </li>
             <li> <a href="#cad-standard">AutoCAD Standard</a> </li>
-            <li> <a href="#ref-books">Reference Books</a> </li>
+            <li> <a href="#ref-books">Reference Documents</a> </li>
             <li> <a href="#CAD-guidelines">AutoCAD Guidelines</a> </li>
             <li> <a href="#checklists">Checklists</a> </li>
             <li> <a href="#design-basis">Design Basis Approach</a> </li>
@@ -97,7 +97,7 @@
         <div id="working-hours" class="tabcontent">
           <p>Typical business hours at MSA are 9:30 A.M. to 6:30 P.M. Monday to Saturday. You are expected to report latest by 9:40 A.M. In case, you are not able to report at time due to some challenge, you are expected to convey the same to MSA admin via
             a phone call along with your estimated time for arrival.You’re entitled to half an hour paid Lunch Break.</p>
-          <a href="../data/reference/List of Holidays_2017.pdf" class="button" target="_blank">List of Holidays</a>
+          <a href="../data/reference/List of Holidays.pdf" class="button" target="_blank">List of Holidays</a>
           <br>
         </div>
         <div id="leave-policy" class="tabcontent">
@@ -242,6 +242,20 @@
         </div>
         <div class="tiles">
           <div>
+            <h4>Letter Template</h4>
+            <p>Standard Letter Template as a Word Document</p>
+            <a href="../data/templates/XXXX_LTR_XXX_YYMMDD.docx" class="masterButton">View</a>
+          </div>
+        </div>
+        <div class="tiles">
+          <div>
+            <h4>DRS Template</h4>
+            <p>Data Requirement Sheet - Requirements to be completed by Consultants and Client</p>
+            <a href="../data/templates/XXXX_DRS_XXX_YYMMDD.xls" class="masterButton">View</a>
+          </div>
+        </div>
+        <div class="tiles">
+          <div>
             <h4>Stamps</h4>
             <p>Standard Stamps to add in any type of documents before releasing them</p>
             <a href="../data/autoCad/MSA_Standard_Stamps.pdf" class="masterButton">View</a>
@@ -278,6 +292,27 @@
         </div>
         <div class="tiles">
           <div>
+            <h4>Layers - Studio 01</h4>
+            <p>Standard Layers for creating Workign Drawings - Studio 01</p>
+            <a href="../data/autoCad/MSA_Standard%20Layer_Int.dwg" class="masterButton">View</a>
+          </div>
+        </div> 
+        <div class="tiles">
+          <div>
+            <h4>Layers - Presentation</h4>
+            <p>Standard Layers for creating Presentation Drawings</p>
+            <a href="../data/autoCad/MSA_Standard Layer_Presentation.dwg" class="masterButton">View</a>
+          </div>
+        </div> 
+        <div class="tiles">
+          <div>
+            <h4>Hatch - Studio 01</h4>
+            <p>Standard Layers, Patterns &amp; Types of Hatches used in Studio 01</p>
+            <a href="../data/autoCad/MSA_Standard_Hatch_Studio 01.dwg" class="masterButton">View</a>
+          </div>
+        </div>
+        <div class="tiles">
+          <div>
             <h4>Text, Dimensions &amp; Annotation_MM</h4>
             <p>All the items mentioned in title to be used from this Standard file</p>
             <a href="../data/autoCad/MSA_Standard_Text_MM.dwg" class="masterButton">View</a>
@@ -299,23 +334,9 @@
         </div>
         <div class="tiles">
           <div>
-            <h4>Layers - Presentation</h4>
-            <p>Standard Layers for creating Presentation Drawings</p>
-            <a href="../data/autoCad/MSA_Standard Layer_Presentation.dwg" class="masterButton">View</a>
-          </div>
-        </div>
-        <div class="tiles">
-          <div>
             <h4>MColor - CFG</h4>
             <p>Standard CFG for MColor Presentation</p>
             <a href="../data/autoCad/MSA_MColor_Standard.cfg" class="masterButton">View</a>
-          </div>
-        </div>
-        <div class="tiles">
-          <div>
-            <h4>Hatch - Studio 01</h4>
-            <p>Standard Layers, Patterns &amp; Types of Hatches used in Studio 01</p>
-            <a href="../data/autoCad/MSA_Standard_Hatch_Studio 01.dwg" class="masterButton">View</a>
           </div>
         </div>
         <div class="tiles">
@@ -353,6 +374,13 @@
             <a href="../data/autoCad/MSA_Standard_Landscape_Blocks_Ft.dwg" class="masterButton">View</a>
           </div>
         </div>
+        <div class="tiles">
+          <div>
+            <h4>Layer States</h4>
+            <p>Standard Layer States for controlling layers easily</p>
+            <a href="../data/autoCad/layerStates.zip" class="masterButton">View</a>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -360,14 +388,36 @@
     <!-- Document Standards -->
     <section id="ref-books">
       <header>
-        <h2>Reference Books</h2>
+        <h2>Reference Documents</h2>
       </header>
       <div class="tileContainer">
         <div class="tiles">
           <div>
-            <h4>Comprehensive GDCR</h4>
-            <p>Comprehensive GDCR for the Gujarat State</p>
-            <a href="../data/reference/Comprehensive GDCR.pdf" class="masterButton" target="_blank">View</a>
+            <h4>CGDCR Gujarat - Part I</h4>
+            <p>Procedure Regulations</p>
+            <a href="../data/reference/Final%20Notification%20CGDCR-2017%20PART-I%20PROCEDURE%20REGULATIONS.pdf" class="masterButton" target="_blank">View</a>
+          </div>
+        </div>
+        <div class="tiles">
+          <div>
+            <h4>CGDCR Gujarat - Part II</h4>
+            <p>Planning Regulations</p>
+            <a href="../data/reference/Final%20Notification%20CGDCR-2017%20PART%20II%20PLANNING%20REGULATION.pdf" class="masterButton" target="_blank">View</a>
+          </div>
+        </div>
+        <div class="tiles">
+          <div>
+            <h4>CGDCR Gujarat - Part III</h4>
+            <p>Perfornamce Regulations</p>
+            <a href="../data/reference/Final%20Notification%20CGDCR-2017%20PART%20III%20PERFORMANCE%20REGULATION.pdf" class="masterButton" target="_blank">View</a>
+          </div>
+        </div>
+        <div class="tiles">
+          <div>
+            <h4>Fire Prevention &amp; Life Safety</h4>
+            <p>Gujarat Fire Prevention and Life Safety Measures Regulations 2016
+              <br><a href="../data/reference/Gujarat%20Fire%20Prevention%20and%20Life%20Safety%20Measures%20Regulations%202016_Modification.pdf" target="_blank">Here</a> is the latest Modification</p>
+            <a href="../data/reference/Gujarat%20Fire%20Prevention%20and%20Life%20Safety%20Measures%20Regulations%202016.pdf" class="masterButton" target="_blank">View</a>
           </div>
         </div>
         <div class="tiles">
@@ -386,6 +436,13 @@
         </div>
         <div class="tiles">
           <div>
+            <h4>IGBC Guidelines</h4>
+            <p>Link to the references for IGBC Rating System Guides</p>
+            <a href="https://igbc.in/igbc/redirectHtml.htm?redVal=showratingSysnosign" class="masterButton" target="_blank">View</a>
+          </div>
+        </div>
+          <div class="tiles">
+          <div>
             <h4>The Architects' Handbook</h4>
             <p>This book provides visual and technical information for most building types</p>
             <a href="../data/reference/The Architects' Handbook.pdf" class="masterButton" target="_blank">View</a>
@@ -403,11 +460,12 @@
       <p>While preparing CAD drawings, please keep following things in mind.</p>
       <ol class="noBullets">
         <li>One should never use lines, only p-lines to be used.</li>
+        <li class="update">Drawing &amp; Dimensions must be in a precision of 8 digits after a decimal point.</li>
+        <li class="update">Dimension override is forbidden.</li>
         <li>Every hatch must be associative and with its Boundary.</li>
         <li>No separate leaders to be provided, Use Standard Leaders from MSA Standard.</li>
         <li>In model space, only relevant and final information shall be kept. All the unnecessary information must be deleted.</li>
-        <li>Create blocks as and when necessary. Name of blocks must be relevant. Also make sure the blocks are not in a layer that is unplottable. Such as Gen_Viewport Boundary.
-          <bold class="update">The blocks shall be placed in relevant layer and not in layer 0.</bold>
+        <li>Create blocks as and when necessary. Name of blocks must be relevant. Also make sure the blocks are not in a layer that is unplottable. Such as Gen_Viewport Boundary. The blocks shall be placed in relevant layer and not in layer 0.
         </li>
         <li>Use of array is forbidden.</li>
         <li>No layer other than MSA Standard Layers should exist in the drawing. If due to some reason you are not able achieve this, please speak with the team leader.</li>
@@ -440,6 +498,9 @@
           <li><a href="javascript:void(0)" class="tablinks" onclick="openCity(event, 'plan')">Plan</a></li>
           <li><a href="javascript:void(0)" class="tablinks" onclick="openCity(event, 'section')">Section</a></li>
           <li><a href="javascript:void(0)" class="tablinks" onclick="openCity(event, 'master-layout')">Master Layout</a></li>
+          <li><a href="javascript:void(0)" class="tablinks" onclick="openCity(event, 'toilet-block')">Toilet Block</a></li>
+          <li><a href="javascript:void(0)" class="tablinks" onclick="openCity(event, 'commercial-block')">Commercial</a></li>
+          <li><a href="javascript:void(0)" class="tablinks" onclick="openCity(event, 'lighting-ventilation')">Lighting &amp; Ventilation</a></li>
         </ul>
 
         <div id="general-notes" class="tabcontent">
@@ -707,6 +768,10 @@
                         <input type="checkbox">
                         <p>All the nomenclature must be readable at print scale</p>
                     </label>
+          <label>
+                        <input type="checkbox">
+                        <p>Access to Lifts must be provided atleast within every 11m of height</p>
+                    </label>
 
           <h3 id="planDim">Dimension</h3>
           <label>
@@ -728,6 +793,10 @@
           <label>
                         <input type="checkbox">
                         <p>Room (X x Y) dimension (Un-finished) cordinated with nomenclature</p>
+                    </label>
+          <label>
+                        <input type="checkbox">
+                        <p>Room (X x Y) dimension (Un-finished) should be in meters</p>
                     </label>
           <label>
                         <input type="checkbox">
@@ -1270,6 +1339,59 @@
                         <p>No. of Four-Wheelers Accommodated</p>
                     </label>
         </div>
+          
+        <!-- Toilet Block -->
+        <div id="toilet-block" class="tabcontent">
+          <label>
+                        <input type="checkbox">
+                        <p>Minimum dimension from Wall to Washbasin Centre shall be 450mm</p>
+                    </label>
+          <label>
+                        <input type="checkbox">
+                        <p>Minimum Centre to Centre dimension of Washbasins shall be 900mm</p>
+                    </label>
+          <label>
+                        <input type="checkbox">
+                        <p>Minimum Centre to Centre dimension of Urinals shall be 700mm</p>
+                    </label>
+        <label>
+                        <input type="checkbox">
+                        <p>Minimum  Wall to Wall dimension, if two rows of Urinals are sharing a passage, shall be 3000mm</p>
+                    </label>
+        <label>
+                        <input type="checkbox">
+                        <p>Minimum clear dimension between WC Cubicals, if two rows of WC Cubicals are sharing a passage, shall be 1500mm</p>
+                    </label>
+        <label>
+                        <input type="checkbox">
+                        <p>Nanhi Trap and connection for Water supply shall be provided in Janitor's Cabin</p>
+                    </label>
+        <label>
+                        <input type="checkbox">
+                        <p>Multiple shelves for storage shall be provided in Janitor's Cabin</p>
+                    </label>
+        <label>
+                        <input type="checkbox">
+                        <p>Minimum height of ledge wall shall be 900mm with Granite on top for a WC</p>
+                    </label>
+        </div>
+          
+        <!-- Commercial -->
+        <div id="commercial-block" class="tabcontent">
+          <label>
+                        <input type="checkbox">
+                        <p>Minimum clear dimension of Shop width shall be 3000mm</p>
+                    </label>
+        </div>  
+          
+        <!-- Lighting & Ventilation -->
+        <div id="lighting-ventilation" class="tabcontent">
+          <label>
+                        <input type="checkbox">
+                        <p>The aggregate of all openings including doors, windows and ventilators in a room shall be minimum one-seventh of the floor area of the room.</p>
+                    </label>
+        </div> 
+          
       </div>
     </section>
 
@@ -1297,9 +1419,8 @@
       </header>
       <h4>General Email Guidelines</h4>
       <ol>
-        <li>Subject of email should be <strong>relevant</strong> to the items being sent via email. The subject of email must have the name of the project_Site / plot name if applicable_Type of Drawings / Documents being sent.
-          <bold class="update"><strong>The name of the project</strong> must form the beginning of your email subject line. Make sure this name of the project is maintained all the communication related to the project throughout the course of the project cycle.</bold> Following
-          are a few examples;
+        <li>Subject of email should be <strong>relevant</strong> to the items being sent via email. The subject of email must have the name of the project_Site / plot name if applicable_Type of Drawings / Documents being sent. The name of the project must
+          form the beginning of your email subject line. Make sure this name of the project is maintained all the communication related to the project throughout the course of the project cycle. Following are a few examples;
           <ul class="squareBullets">
             <li>GSRTC Bus Terminal_Navsari_Site Layout</li>
             <li>GSRTC Bus Terminal_Navsari_Sections &amp; elevations</li>
@@ -1331,7 +1452,7 @@
 
         <li>You all are also requested to use email to share your work with Interior, estimating, and 3D visualization teams. While sending you files, <strong>'For Working'</strong> shall be used in the beginning of email subject body.</li>
 
-        <li>You are requested to self checke drawings/ documents as against MSA Standards.</li>
+        <li>You are requested to self check drawings/ documents as against MSA Standards.</li>
 
         <li>Please also make sure you document your own comments remarks on the drawing / document using AutoDesk Design Review. </li>
 
@@ -1366,8 +1487,7 @@
             <li>Meeting - So and So Party</li>
             <li>Site Visit - Site Name</li>
           </ul>
-          </>
-          <li>For any challenge with Asana, speak with Devang immediately.</li>
+          <li>For any challenge with Asana, speak with Bijit immediately.</li>
       </ol>
       <a href="../data/reference/Asana Workflow.pdf" class="button" target="_blank">Asana Workflow</a>
     </section>
@@ -1403,6 +1523,9 @@
           <li><a href="../data/tutorials/Tutorial - Setup Layout Space.html" target="_blank">Setup Layout Space</a></li>
 
           <li><a href="../data/tutorials/Tutorial - Dimensioning Method.html" target="_blank">Dimensioning Method</a></li>
+            
+          <li><a href="../data/tutorials/Tutorial - Copy as Picture.html" target="_blank" class="update">Copy as Picture in AutoCAD</a></li>
+            
         </ul>
       </div>
     </section>
@@ -1456,7 +1579,7 @@
         <header>
           <h2>Contact</h2>
         </header>
-        <p>This website is maintained by <strong>Bijit</strong> and <strong>Devang</strong>. For any help regarding this page, the content uploaded on it, or if you have any suggestion, please <a href="mailto:bsoni@msa.com; dchauhan@msa.com">write</a> to
+        <p>This website is created by <strong>Bijit</strong> and <strong>Devang</strong>. For any help regarding this page, the content uploaded on it, or if you have any suggestion, please <a href="mailto:bsoni@msa.com">write</a> to
           us.
         </p>
       </div>

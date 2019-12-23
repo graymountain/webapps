@@ -1,0 +1,15 @@
+section {
+    position: fixed;
+    border: 1px solid black;
+    opacity: .5;
+    width: 90%;
+}
+
+section:hover {
+    opacity: 1;
+}
+
+ul {
+    padding: 0px;
+    list-style: none;
+}
