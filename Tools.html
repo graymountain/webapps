@@ -11,11 +11,17 @@
   <script src="js\windowOnLoad.js"></script>
   <script src="js\sanitarywareCalc.js"></script>
   <script src="js\OccupancyCalc.js"></script>
+  <script src="js\WaterRequirementCalc.js"></script>
+  <script src="js\WaterTankCalc.js"></script>
   <script src="js\arcProperties.js"></script>
   <script src="js\slopeCalc.js"></script>
   <script src="js\unitConverter.js"></script>
   <script src="js\scaleConverter.js"></script>
   <script src="js\pythagoreanTheorem.js"></script>
+  <script src="js\solarLoadGen.js"></script>
+  <script src="js\energyLoadDem.js"></script>
+  <script src="js\slopeAngle.js"></script>
+  <script src="js\EWSIICalc.js"></script>
   <!-- Link to MSA Logo -->
   <link rel="icon" type="image/png" href="..\data\images\Tools.png">
 </head>
@@ -158,13 +164,12 @@
       
     <div class="notes">
         <p>
-            This tool is used to calculate the level of next point, <strong>PointA</strong> below is the first level, <strong>Distance</strong> indicates the distance between two points and <strong>Slope</strong> indicates the slope ratio</p>
+            This tool is used to calculate the distance between two points/ levels, <strong>PointA</strong> below is the first level, <strong>PointB</strong> is the second level <strong>Slope</strong> indicates the slope ratio</p>
         <ol>
           <lh><strong>Calculation Method</strong></lh>
-          <li>A = Divide distance with slope</li>
-          <li>B = Add (If location of point is Up) or subtract (If location of point is Down) A with PointA </li>
-          <li>Resulting value gives value of second point</li>
-          <li>D =Subtract PointA from B, will give difference between two points</li>
+          <li>A = Subtract PointA from PointB</li>
+          <li>B = Multiply the result with slope </li>
+          <li>Resulting value gives distance</li>
         </ol>
       </div>
       
@@ -181,7 +186,27 @@
     <p><button type="button" onclick="distanceBwPoints()">Calculate Distance</button></p>
     <p id="distanceBwPoints"></p>
   </section>
+    
+  <!-- following function finds angle of slope -->
+  <section id="slopeAngle">
+    <h3>Angle of Slope</h3>
+    <p>Tool is used to find an angle of the slope and otherwise</p>
+    <p>Please maintain same units for all inputs</p>
 
+    <!-- User Inputs -->
+
+    <div>
+
+      <div id="findAngleofSlope" class="inputs">
+        <label>Slope: &nbsp; 1:</label><input type="number" id="inputSlope" oninput="findAngleOfSlope()" value="0">
+        <label>Angle: &nbsp; ϴ:</label><input  type="number" id="inputAngle" oninput="findSlopeOfAngle()" value="0">
+      </div>
+        
+    </div>
+
+  </section>
+    
+  <!-- following function finds Arc properties -->
   <section id="arcProperty">
     <h3>Calculate Arc length or Radious or Angle</h3>
     <p>Please maintain same units for all inputs</p>
@@ -199,8 +224,8 @@
     <div>
 
       <div id="div1" class="inputs" style="display:none;">
-        <label>Radius:</label><br /><input type="number" id="inputRadius">
-        <label>Angle:</label><br /><input type="number" id="inputAngle">
+        <label>Radius:</label><br /><input type="number" id="inputRadius1">
+        <label>Angle:</label><br /><input type="number" id="inputAngle1">
         <p><button type="button" onclick="resultArcLength()">Calculate Arc Length</button></p>
       </div>
 
@@ -223,7 +248,6 @@
     <!-- Output -->
     <p id="arcValue"></p>
   </section>
-
 
   <!-- following function calculates the number of Sanitary Ware to be provided according to Comprehensive GDCR -->
   <section id="sanitaryWare">
@@ -276,7 +300,63 @@
     <p id="resultSanitaryWare"></p>
   </section>
     
-<!-- following function calculates the Occupancy according to NBC 2016 Part II, p.g.no. 622 -->
+  <!-- following function finds Solar Power Generation -->
+  <section id="solarLoadGen">
+    <h3>Solar Power Generation - On-site</h3>
+    <p>Please use Imperial System of units for all inputs</p>
+    <p><i>Note that these calculations are for quick reference only and it may vary in detailed calculations</i></p>
+    <p>Download an editable format from <a href="../data/templates/Solar%20Power%20Generation.xlsx" target="_blank">here</a>.</p>
+
+    <!-- User Inputs -->
+
+    <div>
+
+      <div id="findSolarLoad" class="inputs">
+        <label>Terrace Area (ft²): </label><br /><input type="number" id="terraceArea">
+        <label>Area for Generating 1 kWh (ft²): </label><br /><input type="number" id="genratingArea" value="100">
+          
+        <!-- Output -->
+        <br><br>
+        <p><button type="button" onclick="findSolarLoad()">Calculate</button></p>
+        <p id="resultDivFac"></p>
+        <p id="resultGenHours"></p>
+        <p id="resultSolarLoad"></p>
+        <p id="resultMaxSolarLoad"></p>
+        <p id="resultUnitsPerDay"></p>
+        <p id="resultUnitsPerMonth"></p>
+      </div>
+        
+    </div>
+
+  </section>
+    
+  <!-- following function generates Energy Load Demand -->
+  <section id="EnergyLoadDem">
+    <h3>Energy Load Demand Calculation - Internal</h3>
+    <p>Tool is used to calculate the requirement of Energy Load</p>
+    <p>Please use Imperial System of units for all inputs</p>
+    <p>Power Demand(W/ft²) | Lighting: 1, Power: 2, HVAC:12</p>
+    <p>Diversity factor | Lighting: 1, Power: 0.8, HVAC:0.8</p>
+    <p><i>Note that these calculations are for quick reference only and it may vary in detailed calculations</i></p>
+    <p>Download an editable format from <a href="../data/templates/Energy%20Load%20Demand.xlsx" target="_blank">here</a>.</p>
+
+    <div id="energyLoadCalc" class="inputs">
+        <label>Carpet Area (ft²): </label><br /><input type="number" id="energyCarpetArea">
+          
+        <!-- Output -->
+        <br>
+        <p><button type="button" onclick="findEnergyLoad()">Calculate</button></p>
+        <p id="resultLightingLoadkW"></p>
+        <p id="resultPowerLoadkW"></p>
+        <p id="resultHVACLoadkW"></p>
+        <p id="resultTotConLoad"></p>
+        <p id="overallEnergyDiversity"></p>
+        <p id="maxEnergyDemand"></p>
+    </div>
+
+  </section>
+    
+  <!-- following function calculates the Occupancy according to NBC 2016 Part II, p.g.no. 622 -->
   <section id="occupancyData">
     <h3>Occupancy data for Water Requirement</h3>
     <p>The tool is used to find <i>Proposed Occupancy</i>, from which the total quantity of water per day is estimated as per NBC 2016</p>
@@ -373,9 +453,224 @@
 
     <!-- Output -->
     <p id="resultOccupancy"></p>
-  </section>    
+  </section>  
+    
+  <!-- following function calculates the Water Demand according to NBC 2016 Part II, p.g.no. 623 -->
+  <section id="WRData">
+    <h3>Water Requirement Calculation</h3>
+    <p>The tool is used to find Water Requirement as per NBC 2016</p>
+    <p>Calculations are done as per <a href="../data/reference/NBC 2016-VOL-02.pdf#page=623" target="_blank">this</a>.</p>
 
-<!-- following function converts  the scales -->
+    <!-- User Inputs -->
+    <div class="options">
+      <select id="selectWRBuildingType">
+          <option>Select One</option>
+          <option value="residential">Residential</option>
+          <option value="factory">Factory</option>
+          <option value="hospital">Hospital</option>
+          <option value="medquarter">Medical quarters</option>
+          <option value="hostel">Hostel</option>
+          <option value="hotel">Hotel</option>
+          <option value="office">Office</option>
+          <option value="restaurant">Restaurant</option>
+          <option value="clubhouse">Clubhouse</option>
+          <option value="stadiums">Stadiums</option>
+          <option value="cinemas">Cinemas</option>
+          <option value="schools">Schools</option>
+          <option value="mall">Mall</option>
+          <option value="tts">Traffic terminal stations</option>
+        </select>
+    </div> <br /><br />
+
+    <div>
+
+      <!-- Residential -->
+      <div id="WR-residential" class="inputs" style="display:none;">
+        <label>Occupancy: </label><br /><input type="number" id="occupancy-number-residential">
+        <p><button type="button" onclick="WRResidential()">Calculate</button></p>
+      </div>
+        
+      <!-- Factory -->       
+      <div id="WR-factory" class="inputs" style="display:none;">
+        
+        <lable><input type="radio" name="direction" value="1" id="fac-w-bath" />With bathrooms</lable><br>
+        <lable><input type="radio" name="direction" value="2" id="fac-wo-bath" />Without bathrooms</lable><br>
+        <label>Occupancy: </label><br /><input type="number" id="occupancy-number-factory"><br>
+          
+        <p><button type="button" onclick="WRFactory()">Calculate</button></p>
+      </div>
+        
+      <!-- Hospital -->       
+      <div id="WR-hospital" class="inputs" style="display:none;">
+        
+        <lable><input type="radio" name="direction" value="1" id="bed-lt-100" />Beds &lt; 100</lable><br>
+        <lable><input type="radio" name="direction" value="2" id="bed-gt-100" />Beds &gt; 100</lable><br>
+        <lable><input type="radio" name="direction" value="3" id="hos-opd" />OPD</lable><br>
+        <label>Occupancy: </label><br /><input type="number" id="occupancy-number-hospital"><br>
+          
+        <p><button type="button" onclick="WRHospital()">Calculate</button></p>
+      </div>
+        
+      <!-- Medical Quarters -->       
+      <div id="WR-med-qtr" class="inputs" style="display:none;">
+        
+        <label>Occupancy: </label><br /><input type="number" id="occupancy-number-medqtr">
+        <p><button type="button" onclick="WRMedQtr()">Calculate</button></p>
+      </div>
+
+      <!-- Hostels -->       
+      <div id="WR-hostel" class="inputs" style="display:none;">
+        
+        <label>Occupancy: </label><br /><input type="number" id="occupancy-number-hostel">
+        <p><button type="button" onclick="WRHostel()">Calculate</button></p>
+      </div>
+        
+      <!-- Hotel -->       
+      <div id="WR-hotel" class="inputs" style="display:none;">
+        
+        <lable><input type="radio" name="direction" value="1" id="hot-ut-3" />Upto 3 star</lable><br>
+        <lable><input type="radio" name="direction" value="2" id="hot-gt-3" />4 star &amp; above</lable><br>
+        <label>Occupancy: </label><br /><input type="number" id="occupancy-number-hotel"><br>
+          
+        <p><button type="button" onclick="WRHotel()">Calculate</button></p>
+      </div>
+        
+      <!-- Office -->       
+      <div id="WR-office" class="inputs" style="display:none;">
+        
+        <label>Occupancy: </label><br /><input type="number" id="occupancy-number-office">
+        <p><button type="button" onclick="WROffice()">Calculate</button></p>
+      </div>
+        
+      <!-- Restaurant -->       
+      <div id="WR-restaurant" class="inputs" style="display:none;">
+        
+        <lable><input type="radio" name="direction" value="1" id="res-res" />Restaurant</lable><br>
+        <lable><input type="radio" name="direction" value="2" id="res-fc" />Food court</lable><br>
+        <label>Occupancy: </label><br /><input type="number" id="occupancy-number-restaurant"><br>
+          
+        <p><button type="button" onclick="WRRestaurant()">Calculate</button></p>
+      </div>
+        
+      <!-- Clubhouse -->       
+      <div id="WR-clubhouse" class="inputs" style="display:none;">
+        
+        <label>Occupancy: </label><br /><input type="number" id="occupancy-number-clubhouse">
+        <p><button type="button" onclick="WRClubhouse()">Calculate</button></p>
+      </div>
+        
+      <!-- Stadium -->       
+      <div id="WR-stadium" class="inputs" style="display:none;">
+        
+        <label>Occupancy: </label><br /><input type="number" id="occupancy-number-stadium">
+        <p><button type="button" onclick="WRStadium()">Calculate</button></p>
+      </div>
+        
+      <!-- Cinema -->       
+      <div id="WR-cinema" class="inputs" style="display:none;">
+        
+        <label>Occupancy: </label><br /><input type="number" id="occupancy-number-cinema">
+        <p><button type="button" onclick="WRCinema()">Calculate</button></p>
+      </div>
+        
+      <!-- School -->       
+      <div id="WR-school" class="inputs" style="display:none;">
+        
+        <lable><input type="radio" name="direction" value="1" id="sch-bor" />Without boarding facilities</lable><br>
+        <lable><input type="radio" name="direction" value="2" id="sch-non-bor" />With boarding facilities</lable><br>
+        <label>Occupancy: </label><br /><input type="number" id="occupancy-number-school"><br>
+          
+        <p><button type="button" onclick="WRSchool()">Calculate</button></p>
+      </div>
+        
+      <!-- Mall -->       
+      <div id="WR-mall" class="inputs" style="display:none;">
+        
+        <label>Staff Occupancy: </label><br /><input type="number" id="occupancy-number-mall-staff">
+        <label>Visitors' Occupancy: </label><br /><input type="number" id="occupancy-number-mall-visit">
+          
+        <p><button type="button" onclick="WRMall()">Calculate</button></p>
+      </div>
+        
+      <!-- Traffic Terminal Stations -->       
+      <div id="WR-tts" class="inputs" style="display:none;">
+        
+        <lable><input type="radio" name="direction" value="1" id="tts-air" />Airport</lable><br>
+        <lable><input type="radio" name="direction" value="2" id="tts-rlw-jc-w-bath" />Railway Stations (Junctions) with bathing facility</lable><br>
+        <lable><input type="radio" name="direction" value="3" id="tts-rlw-jc-wo-bath" />Railway Stations (Junctions) without bathing facility</lable><br>
+        <lable><input type="radio" name="direction" value="4" id="tts-rlw-in-w-bath" />Railway Stations (Intermediate) with bathing facility</lable><br>
+        <lable><input type="radio" name="direction" value="5" id="tts-rlw-in-wo-bath" />Railway Stations (Intermediate) without bathing facility</lable><br>
+        <lable><input type="radio" name="direction" value="6" id="tts-inters-bt" />Interstate bus terminals</lable><br>
+        <lable><input type="radio" name="direction" value="7" id="tts-intras-bt" />Intrastate bus terminals</lable><br>
+          
+        <label>Occupancy: </label><br /><input type="number" id="occupancy-number-tts"><br>
+          
+        <p><button type="button" onclick="WRTts()">Calculate</button></p>
+      </div>
+     
+    </div>
+
+    <p id="selectionErr-WR"></p>
+
+    <!-- Output -->
+    <p id="resultDomWR"></p>
+    <p id="resultFlushingWR"></p>
+    <p id="resultTotalWR"></p>
+  </section>
+    
+  <!-- following function calculates the Water Tank Capacity according to NBC 2016 Part II, p.g.no. 623 -->
+  <section id="WTData">
+    <h3>Water Tank Calculation</h3>
+    <p>The tool is used to find capacity of Domestic &amp; Flushing Water Tank as per NBC 2016</p>
+    <p>Calculations are done as per <a href="../data/reference/NBC 2016-VOL-02.pdf#page=627" target="_blank">this</a>.</p>
+
+    <!-- User Inputs -->
+    <div class="options">
+      <select id="selectWTType">
+          <option>Select One</option>
+          <option value="onlyOHT">Only Overhead Tank</option>
+          <option value="onlyUGWT">Only Underground Tank</option>
+          <option value="OHTandUGWT">Overhead + Underground Tank</option>
+        </select>
+    </div> <br /><br />
+
+    <div>
+
+      <!-- Only OHT -->
+      <div id="WT-OHT" class="inputs" style="display:none;">
+        <label>Domestic/ Day (litre): </label><br /><input type="number" id="WR-domestic-OHT">
+        <label>Flushing/ Day (litre): </label><br /><input type="number" id="WR-flushing-OHT">
+        <p><button type="button" onclick="onlyOHT()">Calculate</button></p>
+      </div>
+        
+      <!-- Only UGWT -->
+      <div id="WT-UGWT" class="inputs" style="display:none;">
+        <label>Domestic/ Day (litre): </label><br /><input type="number" id="WR-domestic-UGWT">
+        <label>Flushing/ Day (litre): </label><br /><input type="number" id="WR-flushing-UGWT">
+        <p><button type="button" onclick="onlyUGWT()">Calculate</button></p>
+      </div>
+        
+      <!-- OHT + UGWT -->
+      <div id="WT-OHT-UGWT" class="inputs" style="display:none;">
+        <label>Domestic/ Day (litre): </label><br /><input type="number" id="WR-domestic-U-O">
+        <label>Flushing/ Day (litre): </label><br /><input type="number" id="WR-flushing-U-O">
+        <p><button type="button" onclick="bothOHTandUGWT()">Calculate</button></p>
+      </div>
+     
+    </div>
+
+    <p id="selectionErr-WT"></p>
+
+    <!-- Output -->
+    <p id="resultOHTDom"></p>
+    <p id="resultOHTFlu"></p>
+    <p id="resultOHTTot"></p>
+    <p id="resultUGWTDom"></p>
+    <p id="resultUGWTFlu"></p>
+    <p id="resultUGWTTot"></p>
+  </section>
+
+  <!-- following function converts  the scales -->
   <section id="scaleConversion">
     <h3>Scale Converter</h3>
     <p>Tool is used to calculate various conversions of Scale</p>
@@ -416,7 +711,7 @@
 
   </section>
     
-<!-- following function finds missing side of a triangle -->
+  <!-- following function finds missing side of a triangle -->
   <section id="pythagoreanTheorem">
     <h3>The Pythagorean Theorem</h3>
     <p>Tool is used to find a hypotenuse side of a right angle triangle</p>
@@ -431,12 +726,34 @@
         <label>Side B: </label><br /><input type="number" id="sideB">   
         <!-- Output -->
         <p><button type="button" onclick="findSide()">Calculate</button></p>
-        <label>Side C: &nbsp; </label><p style="display:inline" id="resultMissingSide"></p>
+        <p style="display:inline" id="resultMissingSide"></p>
       </div>
         
     </div>
 
   </section>
+    
+  <!-- following function finds number of EWSII Units -->
+  <section id="numberEWSII">
+    <h3>EWSII Unit Calculator</h3>
+    <p>Tool is used to find a number of EWSII apartments of 40sqm carpet area, Height of Tower is considered Low Rise</p>
+    <p>Please enter area in square meter</p>
+
+    <!-- User Inputs -->
+
+    <div>
+
+      <div id="calcEWSII" class="inputs">
+        <label>Site Area: </label><br /><input type="number" id="site-area">
+        <!-- Output -->
+        <p><button type="button" onclick="EWSIICalc()">Calculate</button></p>
+        <label> &nbsp; </label><p style="display:inline" id="resultUnits"></p>
+      </div>
+        
+    </div>
+
+  </section>
+  <br>
     
   <footer>
     <div>

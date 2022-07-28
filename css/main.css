@@ -332,7 +332,7 @@ ul.tab {
     border: 1px solid #ccc;
     background-color: #f1f1f1;
     box-shadow: 3px 3px 5px lightgray;
-    display: inline-flex;
+    display: block;
 }
 
 

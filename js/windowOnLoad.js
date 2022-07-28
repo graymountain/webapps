@@ -117,5 +117,73 @@ window.onload = function() {
     }
   });  
     
+  //Water Requirement
+  $('#selectWRBuildingType').on('change', function() {
+    if (this.value == "residential") {
+      $('#WR-residential').show();
+      $('#WR-factory,#WR-hospital,#WR-med-qtr,#WR-hostel,#WR-hotel,#WR-office,#WR-restaurant,#WR-clubhouse,#WR-stadium,#WR-cinema,#WR-school,#WR-mall,#WR-tts,#selectionErr-WR').hide();
+    } else if (this.value == "factory") {
+      $('#WR-factory').show();
+      $('#WR-residential,#WR-hospital,#WR-med-qtr,#WR-hostel,#WR-hotel,#WR-office,#WR-restaurant,#WR-clubhouse,#WR-stadium,#WR-cinema,#WR-school,#WR-mall,#WR-tts,#selectionErr-WR').hide();
+    } else if (this.value == "hospital") {
+      $('#WR-hospital').show();
+      $('#WR-residential,#WR-factory,#WR-med-qtr,#WR-hostel,#WR-hotel,#WR-office,#WR-restaurant,#WR-clubhouse,#WR-stadium,#WR-cinema,#WR-school,#WR-mall,#WR-tts,#selectionErr-WR').hide();
+    } else if (this.value == "medquarter") {
+      $('#WR-med-qtr').show();
+      $('#WR-residential,#WR-factory,#WR-hospital,#WR-hostel,#WR-hotel,#WR-office,#WR-restaurant,#WR-clubhouse,#WR-stadium,#WR-cinema,#WR-school,#WR-mall,#WR-tts,#selectionErr-WR').hide();
+    } else if (this.value == "hostel") {
+      $('#WR-hostel').show();
+      $('#WR-residential,#WR-factory,#WR-hospital,#WR-med-qtr,#WR-hotel,#WR-office,#WR-restaurant,#WR-clubhouse,#WR-stadium,#WR-cinema,#WR-school,#WR-mall,#WR-tts,#selectionErr-WR').hide();
+    } else if (this.value == "hotel") {
+      $('#WR-hotel').show();
+      $('#WR-residential,#WR-factory,#WR-hospital,#WR-med-qtr,#WR-hostel,#WR-office,#WR-restaurant,#WR-clubhouse,#WR-stadium,#WR-cinema,#WR-school,#WR-mall,#WR-tts,#selectionErr-WR').hide();
+    } else if (this.value == "office") {
+      $('#WR-office').show();
+      $('#WR-residential,#WR-factory,#WR-hospital,#WR-med-qtr,#WR-hostel,#WR-hotel,#WR-restaurant,#WR-clubhouse,#WR-stadium,#WR-cinema,#WR-school,#WR-mall,#WR-tts,#selectionErr-WR').hide();
+    } else if (this.value == "restaurant") {
+      $('#WR-restaurant').show();
+      $('#WR-residential,#WR-factory,#WR-hospital,#WR-med-qtr,#WR-hostel,#WR-hotel,#WR-office,#WR-clubhouse,#WR-stadium,#WR-cinema,#WR-school,#WR-mall,#WR-tts,#selectionErr-WR').hide();
+    } else if (this.value == "clubhouse") {
+      $('#WR-clubhouse').show();
+      $('#WR-residential,#WR-factory,#WR-hospital,#WR-med-qtr,#WR-hostel,#WR-hotel,#WR-office,#WR-restaurant,,#WR-stadium,#WR-cinema,#WR-school,#WR-mall,#WR-tts,#selectionErr-WR').hide();
+    } else if (this.value == "stadiums") {
+      $('#WR-stadium').show();
+      $('#WR-residential,#WR-factory,#WR-hospital,#WR-med-qtr,#WR-hostel,#WR-hotel,#WR-office,#WR-restaurant,#WR-clubhouse,#WR-cinema,#WR-school,#WR-mall,#WR-tts,#selectionErr-WR').hide();
+    } else if (this.value == "cinemas") {
+      $('#WR-cinema').show();
+      $('#WR-residential,#WR-factory,#WR-hospital,#WR-med-qtr,#WR-hostel,#WR-hotel,#WR-office,#WR-restaurant,#WR-clubhouse,#WR-stadium,#WR-school,#WR-mall,#WR-tts,#selectionErr-WR').hide();
+    } else if (this.value == "schools") {
+      $('#WR-school').show();
+      $('#WR-residential,#WR-factory,#WR-hospital,#WR-med-qtr,#WR-hostel,#WR-hotel,#WR-office,#WR-restaurant,#WR-clubhouse,#WR-stadium,#WR-cinema,#WR-mall,#WR-tts,#selectionErr-WR').hide();
+    } else if (this.value == "mall") {
+      $('#WR-mall').show();
+      $('#WR-residential,#WR-factory,#WR-hospital,#WR-med-qtr,#WR-hostel,#WR-hotel,#WR-office,#WR-restaurant,#WR-clubhouse,#WR-stadium,#WR-cinema,#WR-school,#WR-tts,#selectionErr-WR').hide();
+    } else if (this.value == "tts") {
+      $('#WR-tts').show();
+      $('#WR-residential,#WR-factory,#WR-hospital,#WR-med-qtr,#WR-hostel,#WR-hotel,#WR-office,#WR-restaurant,#WR-clubhouse,#WR-stadium,#WR-cinema,#WR-school,#WR-mall,#selectionErr-WR').hide();
+    } else {
+      $('#selectionErr-WR').show();
+      $('#WR-residential,#WR-factory,#WR-hospital,#WR-med-qtr,#WR-hostel,#WR-hotel,#WR-office,#WR-restaurant,#WR-clubhouse,#WR-stadium,#WR-cinema,#WR-school,#WR-mall,#WR-tts').hide();
+      document.getElementById('selectionErr-WR').innerHTML = "Please select any of options";
+    }
+  });
+    
+  //Water Tank
+  $('#selectWTType').on('change', function() {
+    if (this.value == "onlyOHT") {
+      $('#WT-OHT').show();
+      $('#WT-UGWT,#WT-OHT-UGWT,#selectionErr-WT').hide();
+    } else if (this.value == "onlyUGWT") {
+      $('#WT-UGWT').show();
+      $('#WT-OHT,#WT-OHT-UGWT,#selectionErr-WT').hide();
+    } else if (this.value == "OHTandUGWT") {
+      $('#WT-OHT-UGWT').show();
+      $('#WT-OHT,#WT-UGWT,#selectionErr-WT').hide();
+    } else {
+      $('#selectionErr-WT').show();
+      $('#WT-OHT,#WT-UGWT,#WT-OHT-UGWT').hide();
+      document.getElementById('selectionErr-WT').innerHTML = "Please select any of options";
+    }
+  }); 
 
 };

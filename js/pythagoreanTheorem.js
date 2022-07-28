@@ -2,7 +2,7 @@
 function toInteger(number) {
   // Making float to show 2 decimal places
   return parseFloat(number).toFixed(2);
-};
+}
 
 //Pythagorean Theorem
 function findSide() {
@@ -16,12 +16,12 @@ function findSide() {
     var floatingResult = toInteger(result);
 
     return floatingResult;
-  };
+  }
 
   var resultFindSide = function() {
     // Declaring Result
-    document.getElementById('resultMissingSide').innerHTML = findMissingSide();
-  };
+    document.getElementById('resultMissingSide').innerHTML = "Side C: " + findMissingSide();
+  }
 
   return resultFindSide();
-};
+}

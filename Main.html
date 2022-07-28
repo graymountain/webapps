@@ -30,7 +30,7 @@
       <i class="naviCons">
         <a href="contactList.html" target="_blank" title="Directory"><img src="..\data\images\Directory.png" class="directoryIcon"/></a>
         <a href="Tools.html" target="_blank" title="Tools"><img src="..\data\images\Tools.png" class="toolsIcon"/></a>
-        <a href="projects.html" target="_blank" title="Projects"><img src="..\data\images\Projects.png"/></a>
+        <!--<a href="projects.html" target="_blank" title="Projects"><img src="..\data\images\Projects.png"/></a>-->
       </i>
 
       <ul>
@@ -256,6 +256,20 @@
         </div>
         <div class="tiles">
           <div>
+            <h4>CCS Template</h4>
+            <p>Comment Compliance Sheet - For documentation of Comments</p>
+            <a href="../data/templates/XXXX_CCS_XXX_YYMMDD.xls" class="masterButton">View</a>
+          </div>
+        </div>
+        <div class="tiles">
+          <div>
+            <h4>Site Visit Checklist</h4>
+            <p>Checklist to carry in a hardcopy format while visiting the site</p>
+            <a href="../data/templates/MSA_Site%20Visit%20Checklist.xlsx" class="masterButton">View</a>
+          </div>
+        </div>
+        <div class="tiles">
+          <div>
             <h4>Stamps</h4>
             <p>Standard Stamps to add in any type of documents before releasing them</p>
             <a href="../data/autoCad/MSA_Standard_Stamps.pdf" class="masterButton">View</a>
@@ -327,9 +341,16 @@
         </div>
         <div class="tiles">
           <div>
-            <h4>Title Blocks</h4>
-            <p>Standard Title Blocks to use in Layouts, Format of Title Blocks can defer in some projects</p>
-            <a href="../data/autoCad/MSA_Title Blocks.dwg" class="masterButton">View</a>
+            <h4 class="update">Title Blocks_MM</h4>
+            <p>Standard Title Blocks in MM to use in Layouts, Format of Title Blocks can defer in some projects</p>
+            <a href="../data/autoCad/MSA_Title Blocks_MM.dwg" class="masterButton">View</a>
+          </div>
+        </div>
+        <div class="tiles">
+          <div>
+            <h4 class="update">Title Blocks_Ft</h4>
+            <p>Standard Title Blocks in Ft-in to use in Layouts, Format of Title Blocks can defer in some projects</p>
+            <a href="../data/autoCad/MSA_Title Blocks_Ft.dwg" class="masterButton">View</a>
           </div>
         </div>
         <div class="tiles">
@@ -414,6 +435,13 @@
         </div>
         <div class="tiles">
           <div>
+            <h4>CGDCR Gujarat Notification</h4>
+            <p>Midification dated 11/11/2020</p>
+            <a href="../data/reference/CGDCR%20Modifications.pdf" class="masterButton" target="_blank">View</a>
+          </div>
+        </div>
+        <div class="tiles">
+          <div>
             <h4>Fire Prevention &amp; Life Safety</h4>
             <p>Gujarat Fire Prevention and Life Safety Measures Regulations 2016
               <br><a href="../data/reference/Gujarat%20Fire%20Prevention%20and%20Life%20Safety%20Measures%20Regulations%202016_Modification.pdf" target="_blank">Here</a> is the latest Modification</p>
@@ -436,18 +464,25 @@
         </div>
         <div class="tiles">
           <div>
+            <h4>Barrier Free Design</h4>
+            <p>Standards for Barrier Free built environment for persons with disablity and elders</p>
+            <a href="../data/reference/Barrier%20Free%20Design.pdf" class="masterButton" target="_blank">View</a>
+          </div>
+        </div>
+        <div class="tiles">
+          <div>
             <h4>IGBC Guidelines</h4>
             <p>Link to the references for IGBC Rating System Guides</p>
             <a href="https://igbc.in/igbc/redirectHtml.htm?redVal=showratingSysnosign" class="masterButton" target="_blank">View</a>
           </div>
         </div>
-          <div class="tiles">
+        <!--<div class="tiles">
           <div>
             <h4>The Architects' Handbook</h4>
             <p>This book provides visual and technical information for most building types</p>
             <a href="../data/reference/The Architects' Handbook.pdf" class="masterButton" target="_blank">View</a>
           </div>
-        </div>
+        </div>-->
       </div>
     </section>
 
@@ -460,14 +495,13 @@
       <p>While preparing CAD drawings, please keep following things in mind.</p>
       <ol class="noBullets">
         <li>One should never use lines, only p-lines to be used.</li>
-        <li class="update">Drawing &amp; Dimensions must be in a precision of 8 digits after a decimal point.</li>
-        <li class="update">Dimension override is forbidden.</li>
+        <li>Drawing &amp; Dimensions must be in a precision of 8 digits after a decimal point.</li>
+        <li>Dimension override is forbidden.</li>
         <li>Every hatch must be associative and with its Boundary.</li>
         <li>No separate leaders to be provided, Use Standard Leaders from MSA Standard.</li>
         <li>In model space, only relevant and final information shall be kept. All the unnecessary information must be deleted.</li>
         <li>Create blocks as and when necessary. Name of blocks must be relevant. Also make sure the blocks are not in a layer that is unplottable. Such as Gen_Viewport Boundary. The blocks shall be placed in relevant layer and not in layer 0.
         </li>
-        <li>Use of array is forbidden.</li>
         <li>No layer other than MSA Standard Layers should exist in the drawing. If due to some reason you are not able achieve this, please speak with the team leader.</li>
         <li>Frozen or Turned Off layers should be deleted before releasing the drawing.</li>
         <li>Size of Text, Dimensions, and Annotations must be as per the scale of Viewport in Layout and MSA Standards.</li>
@@ -498,6 +532,7 @@
           <li><a href="javascript:void(0)" class="tablinks" onclick="openCity(event, 'plan')">Plan</a></li>
           <li><a href="javascript:void(0)" class="tablinks" onclick="openCity(event, 'section')">Section</a></li>
           <li><a href="javascript:void(0)" class="tablinks" onclick="openCity(event, 'master-layout')">Master Layout</a></li>
+          <li><a href="javascript:void(0)" class="tablinks" onclick="openCity(event, 'passing-drawing')">Passing Drawing</a></li>
           <li><a href="javascript:void(0)" class="tablinks" onclick="openCity(event, 'toilet-block')">Toilet Block</a></li>
           <li><a href="javascript:void(0)" class="tablinks" onclick="openCity(event, 'commercial-block')">Commercial</a></li>
           <li><a href="javascript:void(0)" class="tablinks" onclick="openCity(event, 'lighting-ventilation')">Lighting &amp; Ventilation</a></li>
@@ -1341,6 +1376,144 @@
         </div>
           
         <!-- Toilet Block -->
+        <div id="passing-drawing" class="tabcontent">
+          <label>
+                        <input type="checkbox">
+                        <p>Layers must be as described in latest CGDCR</p>
+                    </label>
+          <label>
+                        <input type="checkbox">
+                        <p>Scale of the drawing must be as described in latest CGDCR</p>
+                    </label>
+          <label>
+                        <input type="checkbox">
+                        <p>Sheet sizes should be standard A1/A2. Use A0 only when required.</p>
+                    </label>
+          <h3 id="passingSite">Site Plan (First Sheet)</h3>
+          <label>
+                        <input type="checkbox">
+                        <p>Site Plan</p>
+                    </label>
+          <label>
+                        <input type="checkbox">
+                        <p>Key Plan</p>
+                    </label>
+          <label>
+                        <input type="checkbox">
+                        <p>Form no.3, See Regulation No. 3.2(IX) (Area Table)</p>
+                    </label>
+          <label>
+                        <input type="checkbox">
+                        <p>Built-up Area Statement</p>
+                    </label>
+          <label>
+                        <input type="checkbox">
+                        <p>FSI Area Statement</p>
+                    </label>
+          <label>
+                        <input type="checkbox">
+                        <p>Tower wise Built-up Area Calculation</p>
+                    </label>
+          <label>
+                        <input type="checkbox">
+                        <p>Tower wise FSI Area Calculation</p>
+                    </label>
+          <label>
+                        <input type="checkbox">
+                        <p>Tower wise Unit Calculation</p>
+                    </label>
+          <label>
+                        <input type="checkbox">
+                        <p>Unit wise Carpet &amp; Built-up Area Calculation</p>
+                    </label>
+          <label>
+                        <input type="checkbox">
+                        <p>Percolation Well Calculation</p>
+                    </label>
+          <label>
+                        <input type="checkbox">
+                        <p>Tree Plantation Calculation</p>
+                    </label>
+          <label>
+                        <input type="checkbox">
+                        <p>Common Toilet &amp; Urinals Calculation for Commercial</p>
+                    </label>
+          <label>
+                        <input type="checkbox">
+                        <p>Solid Waste Bin Calculation for Commercial</p>
+                    </label>
+          <label>
+                        <input type="checkbox">
+                        <p>Solid Waste Bin Calculation for Residential</p>
+                    </label>
+          <label>
+                        <input type="checkbox">
+                        <p>Legends</p>
+                    </label>
+          <label>
+                        <input type="checkbox">
+                        <p>North sign at required locations</p>
+                    </label>
+          <h3 id="passingDim">Dimensions &amp; Annotations</h3>
+          <label>
+                        <input type="checkbox">
+                        <p>Dimension of Road Length, Width, Turning Radius</p>
+                    </label>
+          <label>
+                        <input type="checkbox">
+                        <p>Dimension of Road side, Sides &amp; Rear Margins</p>
+                    </label>
+          <label>
+                        <input type="checkbox">
+                        <p>Dimension of between Building margin</p>
+                    </label>
+          <label>
+                        <input type="checkbox">
+                        <p>Dimension of margins between Buildings &amp; Common Plot</p>
+                    </label>
+          <label>
+                        <input type="checkbox">
+                        <p>Dimension of margins between Proposed buildings &amp; Existing buildings if any.</p>
+                    </label>
+          <label>
+                        <input type="checkbox">
+                        <p>Dimension of margins between Buildings &amp; Waterbodies/ Nala if any.</p>
+                    </label>
+          <label>
+                        <input type="checkbox">
+                        <p>Dimension of margins between Buildings &amp; HT lines, Gas lines if any.</p>
+                    </label>
+          <label>
+                        <input type="checkbox">
+                        <p>Dimension of Building outer boundary</p>
+                    </label>
+          <label>
+                        <input type="checkbox">
+                        <p>Dimension of Common Plot</p>
+                    </label>
+           <label>
+                        <input type="checkbox">
+                        <p>Dimension of Building height</p>
+                    </label>
+          <label>
+                        <input type="checkbox">
+                        <p>Dimension of indivisual units (Commercial/ Residential)</p>
+                    </label>
+          <label>
+                        <input type="checkbox">
+                        <p>Building/ unit name tag</p>
+                    </label>
+          <label>
+                        <input type="checkbox">
+                        <p>Entry tag of Campus/ Unit</p>
+                    </label>
+          <label>
+                        <input type="checkbox">
+                        <p>Tag of Survey no./ FP no. of adjoining plots</p>
+                    </label>
+        </div>
+          
+        <!-- Toilet Block -->
         <div id="toilet-block" class="tabcontent">
           <label>
                         <input type="checkbox">
@@ -1524,7 +1697,9 @@
 
           <li><a href="../data/tutorials/Tutorial - Dimensioning Method.html" target="_blank">Dimensioning Method</a></li>
             
-          <li><a href="../data/tutorials/Tutorial - Copy as Picture.html" target="_blank" class="update">Copy as Picture in AutoCAD</a></li>
+          <li><a href="../data/tutorials/Tutorial - Copy as Picture.html" target="_blank">Copy as Picture in AutoCAD</a></li>
+            
+          <li><a href="../data/tutorials/Tutorial - Change Dimension Units.html" target="_blank" class="update">Change dimension units in AutoCAD</a></li>
             
         </ul>
       </div>

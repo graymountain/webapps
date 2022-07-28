@@ -2,17 +2,17 @@
 function toInteger(number) {
   // Making float to show 2 decimal places
   return parseFloat(number).toFixed(2);
-};
+}
 
 // Function for calculating arc length
 function resultArcLength() {
   // Taking input
-  var a = document.getElementById('inputRadius').valueAsNumber;
-  var b = document.getElementById('inputAngle').valueAsNumber;
+  var a = document.getElementById('inputRadius1').valueAsNumber;
+  var b = document.getElementById('inputAngle1').valueAsNumber;
   // Calculating Arc Length
   var result = 2 * Math.PI * a * (b / 360);
   var positiveResult = toInteger(Math.abs(result));
-  // Appending result
+  // Appending Result
   document.getElementById('arcValue').innerHTML = "The result is: " + positiveResult;
 }
 

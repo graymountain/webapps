@@ -37,7 +37,7 @@ function educationalType() {
 
   var calcUrinals = function() {
     // Calculating Number of Urinals
-    if (calcPax() > 0 && calcPax() <= 250) {
+    if (calcMale() > 0 && calcMale() <= 250) {
       var positiveResult = 5;
     } else if (calcPax() > 250) {
       var result = calcMale() / 50;
@@ -51,7 +51,7 @@ function educationalType() {
 
   var calcWCMale = function() {
     // Calculating Number of WC for Male
-    if (calcPax() > 0 && calcPax() <= 400) {
+    if (calcMale() > 0 && calcMale() <= 400) {
       var positiveResult = 2;
     } else if (calcPax() > 400) {
       var result = calcMale() / 200;
@@ -65,7 +65,7 @@ function educationalType() {
 
   var calcWCFemale = function() {
     // Calculating Number of WC for Male
-    if (calcPax() > 0 && calcPax() <= 400) {
+    if (calcFemale() > 0 && calcFemale() <= 400) {
       var positiveResult = 2;
     } else if (calcPax() > 400) {
       var result = calcFemale() / 200;
@@ -117,15 +117,15 @@ function businessType() {
 
   var calcUrinals = function() {
     // Calculating Number of Urinals
-    if (calcPax() > 0 && calcPax() <= 20) {
+    if (calcMale() > 0 && calcMale() <= 20) {
       var positiveResult = 1;
-    } else if (calcPax() > 20 && calcPax() <= 100) {
+    } else if (calcMale() > 20 && calcMale() <= 100) {
       var result = calcMale() / 25;
       var positiveResult = Math.ceil(result);
-    } else if (calcPax() > 100 && calcPax() <= 500) {
+    } else if (calcMale() > 100 && calcMale() <= 500) {
       var result = calcMale() / 50;
       var positiveResult = Math.ceil(result);
-    } else if (calcPax() > 500) {
+    } else if (calcMale() > 500) {
       var result = calcMale() / 50;
       var positiveResult = Math.ceil(result);
     } else {
@@ -137,15 +137,15 @@ function businessType() {
 
   var calcWCMale = function() {
     // Calculating Number of WC for Male
-    if (calcPax() > 0 && calcPax() <= 20) {
+    if (calcMale() > 0 && calcMale() <= 20) {
       var positiveResult = 1;
-    } else if (calcPax() > 20 && calcPax() <= 100) {
+    } else if (calcMale() > 20 && calcMale() <= 100) {
       var result = calcMale() / 25;
       var positiveResult = Math.ceil(result);
-    } else if (calcPax() > 100 && calcPax() <= 500) {
+    } else if (calcMale() > 100 && calcMale() <= 500) {
       var result = calcMale() / 50;
       var positiveResult = Math.ceil(result);
-    } else if (calcPax() > 500) {
+    } else if (calcMale() > 500) {
       var result = calcMale() / 100;
       var positiveResult = Math.ceil(result);
     } else {
@@ -157,15 +157,15 @@ function businessType() {
 
   var calcWCFemale = function() {
     // Calculating Number of WC for Male
-    if (calcPax() > 0 && calcPax() <= 20) {
+    if (calcFemale() > 0 && calcFemale() <= 20) {
       var positiveResult = 1;
-    } else if (calcPax() > 20 && calcPax() <= 100) {
+    } else if (calcFemale() > 20 && calcFemale() <= 100) {
       var result = calcFemale() / 25;
       var positiveResult = Math.ceil(result);
-    } else if (calcPax() > 100 && calcPax() <= 500) {
+    } else if (calcFemale() > 100 && calcFemale() <= 500) {
       var result = calcFemale() / 50;
       var positiveResult = Math.ceil(result);
-    } else if (calcPax() > 500) {
+    } else if (calcFemale() > 500) {
       var result = calcFemale() / 100;
       var positiveResult = Math.ceil(result);
     } else {
@@ -215,10 +215,10 @@ function industrialType() {
 
   var calcUrinals = function() {
     // Calculating Number of Urinals
-    if (calcPax() > 0 && calcPax() <= 100) {
+    if (calcMale() > 0 && calcMale() <= 100) {
       var result = calcMale() / 100;
       var positiveResult = Math.ceil(result);
-    } else if (calcPax() > 100) {
+    } else if (calcMale() > 100) {
       var result = calcMale() / 50;
       var positiveResult = Math.ceil(result);
     } else {
@@ -230,10 +230,10 @@ function industrialType() {
 
   var calcWCMale = function() {
     // Calculating Number of WC for Male
-    if (calcPax() > 0 && calcPax() <= 100) {
+    if (calcMale() > 0 && calcMale() <= 100) {
       var result = calcMale() / 25;
       var positiveResult = Math.ceil(result);
-    } else if (calcPax() > 100) {
+    } else if (calcMale() > 100) {
       var result = calcMale() / 50;
       var positiveResult = Math.ceil(result);
     } else {
@@ -245,10 +245,10 @@ function industrialType() {
 
   var calcWCFemale = function() {
     // Calculating Number of WC for Male
-    if (calcPax() > 0 && calcPax() <= 100) {
+    if (calcFemale() > 0 && calcFemale() <= 100) {
       var result = calcFemale() / 25;
       var positiveResult = Math.ceil(result);
-    } else if (calcPax() > 100) {
+    } else if (calcFemale() > 100) {
       var result = calcFemale() / 50;
       var positiveResult = Math.ceil(result);
     } else {
@@ -297,7 +297,7 @@ function specialType() {
 
   var calcUrinals = function() {
     // Calculating Number of Urinals
-    if (calcPax() > 0) {
+    if (calcMale() > 0) {
       var result = (calcMale() / 75) * 2;
       var positiveResult = Math.ceil(result);
     } else {
@@ -309,7 +309,7 @@ function specialType() {
 
   var calcWCMale = function() {
     // Calculating Number of WC for Male
-    if (calcPax() > 0) {
+    if (calcMale() > 0) {
       var result = calcMale() / 100;
       var positiveResult = Math.ceil(result);
     } else {
@@ -321,7 +321,7 @@ function specialType() {
 
   var calcWBMale = function() {
     // Calculating Number of WC for Male
-    if (calcPax() > 0) {
+    if (calcMale() > 0) {
       var result = calcMale() / 200;
       var positiveResult = Math.ceil(result);
     } else {
@@ -333,7 +333,7 @@ function specialType() {
 
   var calcWCFemale = function() {
     // Calculating Number of WC for Male
-    if (calcPax() > 0) {
+    if (calcFemale() > 0) {
       var result = calcFemale() / 100;
       var positiveResult = Math.ceil(result);
     } else {
@@ -345,7 +345,7 @@ function specialType() {
 
   var calcWBFemale = function() {
     // Calculating Number of WC for Male
-    if (calcPax() > 0) {
+    if (calcFemale() > 0) {
       var result = calcFemale() / 200;
       var positiveResult = Math.ceil(result);
     } else {

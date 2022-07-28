@@ -7,6 +7,10 @@
 
 body {
     font-family: sans-serif;
+    /*background-image: url(../../data/images/crackers.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-origin: border-box;*/
 }
 
 /* Styling Slideshow
@@ -70,9 +74,17 @@ header section {
     top: 0;
 }
 
-/*Controlling Image Size*/
+/*Controlling Image & Video Size*/
 .slideshow-container img {
   vertical-align: middle;
+  height: 65vh;
+  margin: auto;
+  object-fit: scale-down;
+}
+
+.slideshow-container video {
+  vertical-align: middle;
+  display: block;
   height: 65vh;
   margin: auto;
   object-fit: scale-down;
@@ -165,18 +177,19 @@ footer ul li a img {
     margin: auto;
     transform: scale(1);
     transform-origin: bottom center;
-    transition: transform ease-in-out .3s;
+    transition: all ease-in-out .3s;
     border: 0px solid transparent;
     border-radius: 50px;
     background-color: white;
     padding: 10px;
-    box-shadow: 0px 10px 20px black;
+    box-shadow: 0px 7.5px 15px rgb(120 120 120);
 }
 
 footer ul li a img:hover {
     transform: scale(1.5);
     transform-origin: bottom center;
-    transition: transform ease-in-out .025s;
+    transition: all ease-in-out .025s;
+    box-shadow: 0px 5px 20px rgb(130 130 130);
 }
 
 footer ul li a img:active {

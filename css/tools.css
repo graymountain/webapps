@@ -60,6 +60,13 @@ label {
   display: inline-block;
 }
 
+/* Turn Radio buttons of Water Requirement as block
+--------------------------------------- */
+
+#WRData lable {
+    display: block;
+}
+
 /* Style the Scroll-Bar
 --------------------------------------- */
 
